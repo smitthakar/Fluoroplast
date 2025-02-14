@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full relative">
-      <nav className="bg-white w-full h-21 border-b border-gray-200 pt-3 relative z-50">
+      <nav className="bg-white  w-full h-22 border-b border-gray-200 pt-3 relative">
         <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between relative">
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-10 font-medium text-gray-700 flex-grow justify-start">
@@ -42,9 +42,13 @@ export default function Navbar() {
 
           {/* Logo */}
           <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-            <img src={logo} alt="Company Logo" className="h-12" />
-            <p className="text-xs text-gray-500 mt-1 text-center">
-              Welcome to the world of possibilities
+            <img
+              src={logo}
+              alt="Fluoroplast Engineers Pvt. Ltd."
+              className="h-12"
+            />
+            <p className="text-xs text-gray-500 mt-1 mb-4 text-center">
+              welcome to the world of possibilities
             </p>
           </div>
 
