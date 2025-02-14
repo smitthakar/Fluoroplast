@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        redhat: ["Red Hat Display", "sans-serif"],
+        redhat: ["Red Hat Display", "sans-serif","Manrope"],
       },
     },
   },

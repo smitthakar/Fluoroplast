@@ -55,7 +55,7 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <section className="text-center py-16 relative">
+    <section className="text-center py-16 relative z-20">
      
 
       {/* Section Title */}

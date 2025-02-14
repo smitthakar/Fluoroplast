@@ -4,7 +4,7 @@ import arr from "../../assets/Arrow rigth.png"
 
 const GlobalPresence = () => {
   return (
-    <div className="relative w-full h-[1354px] bg-[#400000] flex flex-col items-center justify-center text-white pt-[200px]">
+    <div className="mt-[-180px] relative w-full h-[1354px] bg-[#400000] flex flex-col items-center justify-center text-white pt-[200px]">
       {/* Title */}
       <motion.h2 
         className="text-lg font-semibold uppercase"
@@ -26,7 +26,7 @@ const GlobalPresence = () => {
 
       {/* CTA Button */}
       <button
-  className="mt-4 pt-[16px] pb-[16px] pr-[16px] pl-[24px] gap-[8px] bg-white text-red-700 rounded-full font-semibold shadow-md border-[2px] border-red-700 transition-all duration-500 w-[200px] h-[50px] rounded-[48px] bo
+  className="mt-4 pt-[16px] pb-[16px] pr-[16px] pl-[24px] gap-[8px] bg-white text-red-700 rounded-full font-semibold shadow-md border-[2px] border-red-700 transition-all duration-500 w-[200px] h-[50px] rounded-[48px]
   hover:bg-gradient-to-r hover:from-[#9D0A0E] hover:to-[#F15922] hover:text-white hover:shadow-lg flex items-center justify-center space-x-2 overflow-hidden group"
 >
   <span className="whitespace-nowrap">Find A Distributor</span>
