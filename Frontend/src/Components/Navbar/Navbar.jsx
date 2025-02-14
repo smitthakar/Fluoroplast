@@ -43,13 +43,13 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-2">
             <img
               src={logo}
               alt="Fluoroplast Engineers Pvt. Ltd."
               className="h-12"
             />
-            <p className="text-xs text-gray-500 mt-1 text-center">
+            <p className="text-xs text-gray-500 mt-1 mb-4 text-center">
               welcome to the world of possibilities
             </p>
           </div>
