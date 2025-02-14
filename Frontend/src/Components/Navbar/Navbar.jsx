@@ -20,7 +20,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       <nav className="bg-white  w-full h-22 border-b border-gray-200 pt-3 relative">
         <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between relative">
           <div className="hidden md:flex space-x-10 font-medium text-gray-700 flex-grow justify-start">
@@ -46,7 +46,7 @@ export default function Navbar() {
               alt="Fluoroplast Engineers Pvt. Ltd."
               className="h-12"
             />
-            <p className="text-xs text-gray-500 mt-1 text-center">
+            <p className="text-xs text-gray-500 mt-1 mb-4 text-center">
               welcome to the world of possibilities
             </p>
           </div>
