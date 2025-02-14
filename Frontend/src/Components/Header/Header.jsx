@@ -37,30 +37,26 @@ const HeroSlider = () => {
     }
   }, [currentIndex]);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => prevIndex - 1);
-  };
-
   const handleDotClick = (index) => {
     setCurrentIndex(index + 1); // Adjust to match extended array index
   };
 
   return (
     <>
-      <div className="w-full   mx-auto  relative h-[700px]">
-        <div className="absolute  w[1632px] h-[667px] gap-[40px] inset-0 flex flex-col items-center justify-center text-white px-6 z-10">
-          <h1 className="text-[65px] w-[1232px] font-medium justify-center text-center text-6xl  font-redhat ">
-            Global Leaders in Engineering Plastics, <br /> Hydraulic Seals, &
-            <br />
+      <div className="w-full mx-auto relative h-[700px] overflow-hidden">
+        {/* Hero Text Overlay */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-6 z-10">
+          <h1 className="text-6xl w-full font-bold text-center">
+            Global Leaders in Engineering Plastics, <br /> Hydraulic Seals, & <br />
             Advanced Industrial Solutions.
           </h1>
-          <p className="text-2xl">
+          <p className="mt-5 text-2xl">
             Innovating for Over 30 Years | Expanding for the Future.
           </p>
-          <button className="bg-red-500 text-white px-6 py-2 rounded-full text-lg transition duration-300 ease-in-out border border-red-500 flex items-center space-x-2 group shadow-md hover:bg-white hover:text-red-500">
-          <span className="transition-all duration-300 ease-in-out">Explore Our Products</span>
-          <span className="transition-all duration-300 ease-in-out">→</span>
-        </button>
+          <button className="mt-4 bg-red-500 text-white px-6 py-2 rounded-full text-lg transition duration-300 ease-in-out border border-red-500 flex items-center space-x-2 group shadow-md hover:bg-white hover:text-red-500">
+            <span className="transition-all duration-300 ease-in-out">Explore Our Products</span>
+            <span className="transition-all duration-300 ease-in-out">→</span>
+          </button>
         </div>
 
         {/* Image Slider */}
@@ -85,33 +81,41 @@ const HeroSlider = () => {
             ></div>
           ))}
         </div>
+
+        {/* Dot Indicators */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`w-[15px] h-[15px] rounded-full border-2 border-white cursor-pointer transition-all duration-500 ease-in-out ${
+                index === (currentIndex - 1 + images.length) % images.length ? "bg-white" : "bg-transparent"
+              }`}
+              onClick={() => handleDotClick(index)}
+            />
+          ))}
+        </div>
       </div>
-      <div className="w-full bg-white  mt-0 mb-20 flex justify-center border-b border-gray-300">
-        <div className="grid grid-cols-5   text-center pl-[144px] pr-[144px] text-red-700 font-bold text-3xl w-full border-b border-gray-300">
-          <div className="border-r rounded-[8px] border-gray-300 py-4 flex flex-col items-center  pt-[56px] pr-[48px] pb-[56px] pl-[48px] ">
-            <p className="text-4xl font-redhat">25,000</p>
-            <span className="text-gray-600 text-sm  ">
-              Sq Feet Area of Manufacturing
-            </span>
-          </div>
-          <div className="border-r rounded-[8px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
-            <p className="text-4xl font-redhat ">25,000</p>
-            <span className="text-gray-600 text-sm">SKU Products</span>
-          </div>
-          <div className="border-r rounded-[8px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
-            <p className="text-4xl font-redhat ">500+</p>
-            <span className="text-gray-600 text-sm ">
-              Products in Portfolio
-            </span>
-          </div>
-          <div className="border-r rounded-[8px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
-            <p className="text-4xl font-redhat">500+</p>
-            <span className="text-gray-600 text-sm">Customers Network</span>
-          </div>
-          <div className="py-4 flex flex-col rounded-[8px] items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
-            <p className="text-4xl font-redhat">7+</p>
-            <span className="text-gray-600 text-sm">Countries Served</span>
-          </div>
+
+      {/* Stats Section */}
+      <div className="w-full bg-white mt-0 mb-20 flex justify-center border-b border-gray-300">
+        <div className="grid grid-cols-5 text-center px-20 text-red-700 font-bold text-3xl w-full border-b border-gray-300">
+          {[
+            { value: "25,000", label: "Sq Feet Area of Manufacturing" },
+            { value: "25,000", label: "SKU Products" },
+            { value: "500+", label: "Products in Portfolio" },
+            { value: "500+", label: "Customers Network" },
+            { value: "7+", label: "Countries Served" },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className={`py-10 flex flex-col items-center ${
+                idx !== 4 ? "border-r border-gray-300" : ""
+              }`}
+            >
+              <p className="text-4xl">{item.value}</p>
+              <span className="text-gray-600 text-sm">{item.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </>
