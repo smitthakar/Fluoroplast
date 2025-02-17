@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
 import slider1 from "../../assets/HeroOne.png";
 import slider2 from "../../assets/HeroTwo.png";
 import slider3 from "../../assets/HeroThree.png";

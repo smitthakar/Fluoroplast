@@ -5,13 +5,12 @@ import { SlArrowRight } from "react-icons/sl";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
-import { useEffect, useRef } from "react";
 
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false); // Track ☰ menu state
-  const dropdownRef = useRef(null);
+
 
   const handleSectionClick = (section) => {
     setActiveSection((prevSection) => (prevSection === section ? null : section));
@@ -24,7 +23,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full font-manrope">
-      <nav className="bg-white  w-full h-22 border-b border-gray-200 pt-3 relative">
+      <nav className=" absolute top-0 left-0 z-50 bg-white  w-full h-22 border-b border-gray-200 pt-3 relative">
         <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between relative">
           <div className="hidden md:flex space-x-10 font-medium text-gray-700 flex-grow justify-start">
             {["Products", "Industries Served", "Resources"].map((section) => (
@@ -85,7 +84,7 @@ export default function Navbar() {
       {(activeSection || menuOpen) && <div className="w-full h-[3px] bg-red-600"></div>}
 
       {!menuOpen && activeSection && (
-        <div className="w-full bg-white transition-all duration-300  py-10 px-6" onMouseLeave={() => setActiveSection(null)}>
+        <div className="absolute w-full bg-white transition-all duration-300  py-10 px-6 z-50" onMouseLeave={() => setActiveSection(null)}>
           <div className="max-w-screen-xl mx-auto">
             {activeSection === "Products" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
