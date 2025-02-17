@@ -6,6 +6,8 @@ import "@fontsource/red-hat-display"; // Defaults to 400 weight
 import "@fontsource/red-hat-display/700.css"; // Bold variant
 import Services from "./Components/Services/Services";
 import GlobalPresence from "./Components/GlobalPresence/GlobalPresence ";
+import NewProduct from "./Components/NewProduct/NewProduct";
+import BlogSection from "./Components/BlogSection/BlogSection";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <HeroSlider />
       <Services />
       <GlobalPresence />
+      <NewProduct />
+      <BlogSection />
     </>
   );
 }

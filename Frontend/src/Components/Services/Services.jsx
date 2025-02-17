@@ -83,7 +83,7 @@ const ServicesCarousel = () => {
       {/* Carousel Wrapper */}
       <div className="relative w-full flex justify-end text-start mt-10 ">
         {/* Slider Container */}
-        <div className="w-[85%] flex overflow-hidden mr-[-40px] ">
+        <div className="w-[90%] flex overflow-hidden ">
           {services
             .slice(currentIndex, currentIndex + itemsPerPage)
             .map((service, index) => (

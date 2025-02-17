@@ -46,7 +46,7 @@ const HeroSlider = () => {
       <div className="w-full mx-auto relative h-[700px] overflow-hidden">
         {/* Hero Text Overlay */}
         <div className="absolute  w[1632px] h-[667px] gap-[40px] inset-0 flex flex-col items-center justify-center text-white px-6 z-10">
-          <h1 className="text-[65px] w-[1232px] font-medium justify-center text-center text-6xl  font-redhat ">
+          <h1 className="text-[65px] w-[1232px] font-medium justify-center text-center text-6xl  font-redhat leading-[75px] ">
             Global Leaders in Engineering Plastics, <br /> Hydraulic Seals, & <br />
             Advanced Industrial Solutions.
           </h1>
