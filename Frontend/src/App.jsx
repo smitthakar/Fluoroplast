@@ -9,6 +9,9 @@ import GlobalPresence from "./Components/GlobalPresence/GlobalPresence ";
 import IndustriesCarousel from "./Components/IndustriesServed/IndustriesServed";
 import AboutUsSection from "./Components/AboutUsSection/AboutUsSection";
 import WhyChooseUsSection from "./Components/WhyChooseUsSection/WhyChooseUsSection";
+import BlogSection from "./Components/BlogSection/BlogSection";
+import NewProduct from "./Components/NewProduct/NewProduct";
+import Testimonials from "./Components/Testimonials/Testimonials";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
       <IndustriesCarousel />
       <AboutUsSection />
       <WhyChooseUsSection />
+      <NewProduct />
+      <Testimonials />
+      <BlogSection />
     </>
   );
 }

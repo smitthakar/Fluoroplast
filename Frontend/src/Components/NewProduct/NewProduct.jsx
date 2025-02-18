@@ -28,7 +28,7 @@ export default function GridLayout() {
   ];
 
   return (
-    <div className="p-20 pt-[112px] pr-[144px] pl-[144px] pb-[112px] w-full h-auto">
+    <div className="p-20 pt-[112px] pr-[144px] pl-[144px] pb-[12px] w-full h-auto">
       <div className="text-center mb-8">
         <p className="text-[#9D0A0E] text-[24px] leading-[33.6px] font-semibold font-redhat">
           NEW PRODUCTS/EXPANSIONS
