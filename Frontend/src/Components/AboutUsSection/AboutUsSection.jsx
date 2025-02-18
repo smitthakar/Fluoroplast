@@ -8,10 +8,10 @@ const AboutUsSection = () => {
 
       {/* Right Content - Text */}
       <div className="w-full lg:w-[50%] flex flex-col gap-6">
-        <h3 className="text-red-600 font-extrabold font-['Red Hat Display'] text-[24px] uppercase tracking-widest">
+        <h3 className="text-red-600 font-semibold font-['Red Hat Display'] text-[24px] uppercase tracking-widest -mb-8">
           About Us
         </h3>
-        <h2 className="text-black font-extrabold font-['Red Hat Display'] text-[60px] leading-tight whitespace-nowrap overflow-hidden text-clip">
+        <h2 className="text-black font-extrabold font-['Red Hat Display'] text-[55px] leading-tight whitespace-nowrap overflow-hidden text-clip">
   Delivering Excellence
 </h2>
 

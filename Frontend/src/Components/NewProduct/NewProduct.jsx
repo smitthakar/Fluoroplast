@@ -28,7 +28,7 @@ export default function GridLayout() {
   ];
 
   return (
-    <div className="p-20 pt-[112px] pr-[144px] pl-[144px] pb-[12px] w-full h-auto">
+    <div className="p-20 pt-[80px] px-[80px] pb-[12px] w-full h-auto">
       <div className="text-center mb-8">
         <p className="text-[#9D0A0E] text-[24px] leading-[33.6px] font-semibold font-redhat">
           NEW PRODUCTS/EXPANSIONS
@@ -38,48 +38,46 @@ export default function GridLayout() {
         </h2>
       </div>
       
-      {/* Grid Container with Reduced Gap */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-[10px] w-full h-auto rounded-[8px] py-[16px]">
-        {items.map((item) => (
-          <div
-            key={item.id}
-            className="relative bg-white shadow-lg rounded-[8px] flex flex-col items-center w-[250px] h-[328px] overflow-hidden group transition-all duration-300"
-          >
-            {/* Product Image (Hidden on Hover) */}
-            <img
-              src={item.image}
-              alt={item.label}
-              className="h-full w-full object-contain rounded-md transition-all duration-300 group-hover:opacity-0"
-            />
+      {/* Grid Container with Fixed Width for Exactly 6 Images Per Row */}
+      <div className="w-full">
+        <div className="grid grid-cols-6 gap-[24px] justify-center">
+          {items.map((item) => (
+            <div
+              key={item.id}
+              className="relative bg-white shadow-lg rounded-[8px] flex flex-col items-center w-[210px] h-[300px] overflow-hidden group transition-all duration-300"
+            >
+              {/* Image Container - Centered Image */}
+              <div className="flex-grow flex justify-center items-center w-full h-[250px]">
+                <img
+                  src={item.image}
+                  alt={item.label}
+                  className="max-h-full max-w-full object-contain transition-all duration-300 group-hover:opacity-0"
+                />
+              </div>
+              <div className="absolute inset-0 bg-[#9D0A0E] flex flex-col items-start justify-between p-4 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                <div>
+                  <p className="text-white font-manrope font-semibold text-[16px] leading-[24px]">
+                    {item.label}
+                  </p>
+                  <p className="text-white text-sm mt-2">{item.description}</p>
+                </div>
 
-            {/* Hover Overlay (Red Background) */}
-            <div className="absolute inset-0 bg-[#9D0A0E] flex flex-col items-start justify-between p-4 opacity-0 transition-all duration-300 group-hover:opacity-100">
-              {/* Product Info */}
-              <div>
-                <p className="text-white font-manrope font-semibold text-[16px] leading-[28px]">
-                  {item.label}
-                </p>
-                <p className="text-white text-sm mt-2">{item.description}</p>
+                {/* Bottom Section - Read More */}
+                <div className="w-full">
+                  <div className="w-full h-[1px] bg-white my-2"></div>
+                  <button className="flex items-center justify-between text-white font-manrope font-semibold text-[16px] leading-[24px] w-full">
+                    <span>Read More</span> <FaArrowRight />
+                  </button>
+                </div>
               </div>
 
-              {/* Bottom Section - Read More */}
-              <div className="w-full">
-                {/* White Separator Line */}
-                <div className="w-full h-[1px] bg-white my-2"></div>
-
-                {/* Read More Button */}
-                <button className="flex items-center justify-between text-white font-manrope font-semibold text-[16px] leading-[28px] w-full">
-                  <span>Read More</span> <FaArrowRight />
-                </button>
-              </div>
+              {/* Bottom Product Title - Always at the Bottom */}
+              <p className="text-center text-gray-700 font-manrope font-semibold text-[16px] leading-[24px] w-full pb-4">
+                {item.label}
+              </p>
             </div>
-
-            {/* Bottom Product Title (Hidden on Hover) */}
-            <p className="text-center text-gray-700 font-manrope font-semibold text-[16px] leading-[28px] w-[204px] h-[28px] transition-all duration-300 group-hover:opacity-0">
-              {item.label}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

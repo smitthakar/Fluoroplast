@@ -33,7 +33,7 @@ const IndustriesCarousel = () => {
       <h3 className="text-red-600 font-semibold text-sm">INDUSTRIES SERVED</h3>
       <h2 className="text-3xl font-bold text-black">Our Best Industries</h2>
 
-      <div className="relative flex items-center mt-6 overflow-hidden w-4/5">
+      <div className="relative flex  items-center mt-6 overflow-hidden w-4/5">
         {/* Left Button */}
         <button 
           className="absolute left-7 bg-red-500 p-3 rounded-full z-10 text-white shadow-lg -ml-4"
@@ -42,15 +42,15 @@ const IndustriesCarousel = () => {
           <FaArrowLeft size={20} />
         </button>
 
-        <div className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${index * (100 / totalSlides)}%)`, width: `${totalSlides * 100}%` }}>
+        <div className="flex transition-transform duration-500 ">
+          {/* // style={{ transform: `translateX(-${index * (100 / totalSlides)}%)`, width: `${totalSlides * 100}%` }} */}
           {industries.map((industry, idx) => (
-            <div key={idx} className="w-1/6 flex-shrink-0 shadow-md rounded-lg text-center bg-white">
-              <div className="p-2">
+            <div key={idx} className="w-1/6 flex-row-0  rounded-lg text-center bg-white">
+              <div className="">
                 <img
                   src={industry.src}
                   alt={industry.name}
-                  className=" w-full h-40 object-cover"
+                  className=" w-[550px] [h-550px] object-contain"
                 />
               </div>
               <p className="text-black mt-2 text-base font-semibold">{industry.name}</p>
