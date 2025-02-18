@@ -6,7 +6,7 @@ export default function CallToAction() {
       className="relative bg-[#510002] text-white flex justify-between items-center bg-cover bg-center ml-[80px] mb-[-70px]"
       style={{ 
         backgroundImage: `linear-gradient(rgba(128, 0, 0, 0.85), rgba(128, 0, 0, 0.85)), url(${backgroundImage})`,
-        width: "1432px",
+        width: "1332px",
         height: "112px",
         paddingTop: "64px",
         paddingRight: "40px",
