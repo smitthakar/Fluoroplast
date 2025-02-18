@@ -145,7 +145,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center justify-center cursor-pointer rounded-full ">
             {/* Uncomment & Use an SVG or Image for Chat Icon */}
-            <img src={frame} alt="Chat" className="w-[88px] h-[80px]  gap-[10px]" />
+            <img src={frame} alt="Chat" className="w-[88px] h-[75px]  gap-[10px]" />
           </div>
         </div>
       </div>
