@@ -42,7 +42,7 @@ export default function BlogSection() {
   ];
 
   return (
-    <div className="w-full h-[1269px] pt-[112px] px-[144px] gap-[40px]">
+    <div className="w-full h-[1139px] pt-[112px] px-[144px] gap-[40px]">
       {/* Section Title */}
       <div className="text-center mb-6">
         <p className="text-red-600 font-['Red Hat Display'] font-bold text-[24px] leading-[33.6px] tracking-[6%] text-center uppercase">

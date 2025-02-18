@@ -12,6 +12,8 @@ import WhyChooseUsSection from "./Components/WhyChooseUsSection/WhyChooseUsSecti
 import BlogSection from "./Components/BlogSection/BlogSection";
 import NewProduct from "./Components/NewProduct/NewProduct";
 import Testimonials from "./Components/Testimonials/Testimonials";
+import CallToAction from "./Components/NeedHelp/NeedHelp";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
       <NewProduct />
       <Testimonials />
       <BlogSection />
+      <CallToAction />
+      <Footer />
     </>
   );
 }
