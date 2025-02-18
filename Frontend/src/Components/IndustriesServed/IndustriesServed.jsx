@@ -29,7 +29,7 @@ const IndustriesCarousel = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center py-10 ">
+    <div className="w-full flex flex-col items-center py-10 bg-white">
       <h3 className="text-red-600 font-semibold text-sm">INDUSTRIES SERVED</h3>
       <h2 className="text-3xl font-bold text-black">Our Best Industries</h2>
 
@@ -45,7 +45,7 @@ const IndustriesCarousel = () => {
         <div className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${index * (100 / totalSlides)}%)`, width: `${totalSlides * 100}%` }}>
           {industries.map((industry, idx) => (
-            <div key={idx} className="w-1/6 flex-shrink-0 text-center bg-white">
+            <div key={idx} className="w-1/6 flex-shrink-0 shadow-md rounded-lg text-center bg-white">
               <div className="p-2">
                 <img
                   src={industry.src}

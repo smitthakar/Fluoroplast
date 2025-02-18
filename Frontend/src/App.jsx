@@ -9,6 +9,8 @@ import GlobalPresence from "./Components/GlobalPresence/GlobalPresence ";
 import IndustriesCarousel from "./Components/IndustriesServed/IndustriesServed";
 import AboutUsSection from "./Components/AboutUsSection/AboutUsSection";
 import WhyChooseUsSection from "./Components/WhyChooseUsSection/WhyChooseUsSection";
+import CallToAction from "./Components/NeedHelp/NeedHelp";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <IndustriesCarousel />
       <AboutUsSection />
       <WhyChooseUsSection />
+      <CallToAction />
+      <Footer />
     </>
   );
 }
