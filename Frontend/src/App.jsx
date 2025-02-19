@@ -10,6 +10,7 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Gallery from "./Pages/Gallery/Gallery";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AutomotivePage from "./Pages/AutomotivePage/AutomotivePage";
+import Event from "./Pages/New&Event/Event";
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/certificates" element={<Certificates />} />
       <Route path = "/industryserved" element={<AutomotivePage />} />
+      <Route path = "/news&events" element={<Event />} />
     </Routes>
+    // <Event />
   );
 }
 

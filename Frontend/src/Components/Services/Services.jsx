@@ -63,7 +63,7 @@ const ServicesCarousel = () => {
   });
 
   return (
-    <section className="text-center py-16 relative z-20">
+    <section className="text-center py-16 pl-[170px] relative z-20">
       {/* Section Title */}
       <p className="text-red-700 font-bold uppercase tracking-widest">
         The Best Industry and Company Services
@@ -90,7 +90,7 @@ const ServicesCarousel = () => {
       {/* Carousel Wrapper with Left Side Cutoff */}
       <div {...handlers} className="relative w-full flex justify-start text-start mt-10 overflow-hidden pl-[5%]">
         {/* Slider Container */}
-        <div className="w-[90%] flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}>
+        <div className="w-[95%] flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}>
           {services.map((service, index) => (
             <div
               key={index}
@@ -115,7 +115,7 @@ const ServicesCarousel = () => {
                 {/* Fixed Read More Button */}
                 <a
                   href="#"
-                  className="text-red-600 font-bold mt-auto block pt-2 transition-all group-hover:text-white flex justify-between items-center"
+                  className="text-red-600 font-bold mt-auto  pt-2 transition-all group-hover:text-white flex justify-between items-center"
                 >
                   Read More
                   <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2 group-hover:scale-125 text-lg">

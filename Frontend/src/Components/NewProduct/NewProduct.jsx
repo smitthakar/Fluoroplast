@@ -28,7 +28,7 @@ export default function GridLayout() {
   ];
 
   return (
-    <div className="p-20 pt-[80px] px-[80px] pb-[12px] w-full h-auto">
+    <div className="p-20 pt-[80px] px-[144px] py-[112px] w-full h-auto">
       <div className="text-center mb-8">
         <p className="text-[#9D0A0E] text-[24px] leading-[33.6px] font-semibold font-redhat">
           NEW PRODUCTS/EXPANSIONS
@@ -44,7 +44,7 @@ export default function GridLayout() {
           {items.map((item) => (
             <div
               key={item.id}
-              className="relative bg-white shadow-lg rounded-[8px] flex flex-col items-center w-[210px] h-[300px] overflow-hidden group transition-all duration-300"
+              className="relative bg-white shadow-lg rounded-[8px] flex flex-col items-center w-[200px] h-[300px] overflow-hidden group transition-all duration-300"
             >
               {/* Image Container - Centered Image */}
               <div className="flex-grow flex justify-center items-center w-full h-[250px]">

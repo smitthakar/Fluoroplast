@@ -287,7 +287,7 @@ export default function Navbar() {
                  </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600" />
-                  <span className="hover:text-red-900 font-['Red Hat Display']">News & Events</span>
+                 <Link to= "/news&events" ><span className="hover:text-red-900 font-['Red Hat Display']">News & Events</span></Link>
                 </li>
               </ul>
             </div>
