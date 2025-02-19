@@ -14,7 +14,7 @@ import Footer from "../../Components/Footer/Footer";
 export const Home = () => {
   return (
     <>
-    <Navbar />
+        <Navbar />
       <HeroSlider />
       <Services />
       <GlobalPresence />
