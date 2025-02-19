@@ -52,7 +52,7 @@ const AboutUs = () => {
             creating innovative sealing solutions. From the beginning, our
             company has been committed to using only the highest quality
             materials and cutting-edge technology to manufacture products that
-            meet and exceed our customer's expectations.
+            meet and exceed our customer&rsquo;s expectations.
           </p>
 
           <p className="text-gray-600 text-[16px] leading-[28px]">
@@ -142,10 +142,6 @@ const AboutUs = () => {
     className="w-[20px] h-[20px] transform translate-x-[-10px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100 group-hover:invert"
   />
 </button>
-
-
-
-
       {/* Map Section with Background */}
       <div className="relative w-[100%] h-[70%] mt-8">
         <img
