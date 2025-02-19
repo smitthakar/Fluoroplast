@@ -69,18 +69,19 @@ export default function Footer() {
         <div className="w-[20%]">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
           <ul className="space-y-3 text-gray-400 text-sm">
-            {[
-              "Engineering Plastics",
-              "Hydraulic Seals",
-              "Compressor Replacement Parts",
-              "Hydraulic Cylinders",
-              "FEP and PFA Lined Valves & Fittings",
-            ].map((item, index) => (
-              <li key={index} className="flex items-center gap-2">
-                › {item}
-              </li>
-            ))}
-          </ul>
+  {[
+    { name: "Engineering Plastics", link: "/engineering-plastics" },
+    { name: "Hydraulic Seals", link: "/hydraulic-seals" },
+    { name: "Compressor Replacement Parts", link: "/compressor-replacement" },
+    { name: "Hydraulic Cylinders", link: "/hydraulic-cylinders" },
+    { name: "FEP and PFA Lined Valves & Fittings", link: "/fep-pfa-valves" },
+  ].map((item, index) => (
+    <li key={index} className="flex items-center gap-2">
+      › <a href={item.link} className="hover:text-white transition duration-300">{item.name}</a>
+    </li>
+  ))}
+</ul>
+
         </div>
 
         {/* Newsletter */}

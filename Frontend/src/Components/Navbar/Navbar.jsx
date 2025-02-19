@@ -81,7 +81,6 @@ export default function Navbar() {
         </div>
 
         <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-5">
-          <Link to="/">
         <Link to="/">
           <img
             src={logo}
@@ -155,63 +154,63 @@ export default function Navbar() {
                     </p>
                   </div>
                   <div>
-                    <ul className="text-lg text-gray-800 font-medium space-y-4 ">
-                      {" "}
-                      {/* Adds vertical gap between items */}
-                      {[
-                        "Engineering Plastics",
-                        "Hydraulic Seals",
-                        "Compressor Replacement Parts",
-                        "Hydraulic Cylinders",
-                        "FEP and PFA Lined Valves & Fittings",
-                      ].map((item, index) => (
-                        <li key={index} className="flex items-center space-x-3 font-['Red Hat Display']">
-                          <span className="text-black-600">
-                            <SlArrowRight />
-                          </span>
-                          <span className="hover:text-red-900 ">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <ul className="text-lg text-gray-800 font-medium space-y-4">
+  {[
+    { name: "Engineering Plastics", link: "/engineering-plastics" },
+    { name: "Hydraulic Seals", link: "/hydraulic-seals" },
+    { name: "Compressor Replacement Parts", link: "/compressor-replacement" },
+    { name: "Hydraulic Cylinders", link: "/hydraulic-cylinders" },
+    { name: "FEP and PFA Lined Valves & Fittings", link: "/fep-pfa-valves" },
+  ].map((item, index) => (
+    <li key={index} className="flex items-center space-x-3 font-['Red Hat Display']">
+      <span className="text-black-600">
+        <SlArrowRight />
+      </span>
+      <a href={item.link} className="hover:text-red-900">{item.name}</a>
+    </li>
+  ))}
+</ul>
+
                   </div>
                 </div>
               )}
 
               {activeSection === "Industries Served" && (
                 <div className="grid grid-cols-4 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
-                  {[
-                    "Hydraulic & Pneumatic Cylinders",
-                    "Valve Industry",
-                    "Steel Industry",
-                    "Food & Pharma Industry",
-                    "Press Forming Industry",
-                    "Pump Motor & Gear Boxes",
-                    "Oil & Gas Industry",
-                    "Earthmoving Industry",
-                    "Tyre Industry",
-                    "Engineering & Fabrication Industry",
-                    "Automobile Industry",
-                    "Aluminum Industry",
-                    "Textile Industry",
-                    "Wind Mill Industry",
-                    "Cement Industry",
-                    "Pulp & Paper Industry",
-                    "Sugar Industry",
-                    "Chemical & Fertilizer Industry",
-                    "Gems and Jewellery Industry",
-                    "Plastic Industry",
-                    "Pharmaceutical Industry",
-                    "Chemical Industry",
-                    "Marine Industry",
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center space-x-3 font-['Red Hat Display']">
-                      <span className="text-black-600">
-                        <SlArrowRight />
-                      </span>
-                      <span className="hover:text-red-900">{item}</span>
-                    </div>
-                  ))}
-                </div>
+                {[
+                  { name: "Hydraulic & Pneumatic Cylinders", link: "/hydraulic-pneumatic" },
+                  { name: "Valve Industry", link: "/valve-industry" },
+                  { name: "Steel Industry", link: "/steel-industry" },
+                  { name: "Food & Pharma Industry", link: "/food-pharma" },
+                  { name: "Press Forming Industry", link: "/press-forming" },
+                  { name: "Pump Motor & Gear Boxes", link: "/pump-motor-gearbox" },
+                  { name: "Oil & Gas Industry", link: "/oil-gas" },
+                  { name: "Earthmoving Industry", link: "/earthmoving" },
+                  { name: "Tyre Industry", link: "/tyre" },
+                  { name: "Engineering & Fabrication Industry", link: "/engineering-fabrication" },
+                  { name: "Automobile Industry", link: "/automobile" },
+                  { name: "Aluminum Industry", link: "/aluminum" },
+                  { name: "Textile Industry", link: "/textile" },
+                  { name: "Wind Mill Industry", link: "/wind-mill" },
+                  { name: "Cement Industry", link: "/cement" },
+                  { name: "Pulp & Paper Industry", link: "/pulp-paper" },
+                  { name: "Sugar Industry", link: "/sugar" },
+                  { name: "Chemical & Fertilizer Industry", link: "/chemical-fertilizer" },
+                  { name: "Gems and Jewellery Industry", link: "/gems-jewellery" },
+                  { name: "Plastic Industry", link: "/plastic" },
+                  { name: "Pharmaceutical Industry", link: "/pharmaceutical" },
+                  { name: "Chemical Industry", link: "/chemical" },
+                  { name: "Marine Industry", link: "/marine" },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center space-x-3 font-['Red Hat Display']">
+                    <span className="text-black-600">
+                      <SlArrowRight />
+                    </span>
+                    <a href={item.link} className="hover:text-red-900">{item.name}</a>
+                  </div>
+                ))}
+              </div>
+              
               )}
 
 {activeSection === "Resources" && (
@@ -229,29 +228,42 @@ export default function Navbar() {
 
     {/* Splitting into Two Columns */}
     <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
-      <div>
-        {["Blog", "Case Studies", "Technical Documents", "Downloads"].map(
-          (item, index) => (
-            <div key={index} className="flex items-center space-x-3 py-2">
-              <span className="text-black-600">
-                <SlArrowRight />
-              </span>
-              <span className="hover:text-red-900">{item}</span>
-            </div>
-          )
-        )}
-      </div>
+    <div>
+  {[
+    { name: "Blog", link: "/blog" },
+    { name: "Case Studies", link: "/case-studies" },
+    { name: "Technical Documents", link: "/technical-documents" },
+    { name: "Downloads", link: "/downloads" },
+  ].map((item, index) => (
+    <div key={index} className="flex items-center space-x-3 py-2">
+      <span className="text-black-600">
+        <SlArrowRight />
+      </span>
+      <a href={item.link} className="hover:text-red-900">
+        {item.name}
+      </a>
+    </div>
+  ))}
+</div>
+
 
       <div>
-        {["Online Tools", "Certificates", "Gallery"].map((item, index) => (
-          <div key={index} className="flex items-center space-x-3 py-2">
-            <span className="text-black-600">
-              <SlArrowRight />
-            </span>
-            <span className="hover:text-red-900">{item}</span>
-          </div>
-        ))}
-      </div>
+  {[
+    { name: "Online Tools", link: "/online-tools" },
+    { name: "Certificates", link: "/certificates" },
+    { name: "Gallery", link: "/gallery" },
+  ].map((item, index) => (
+    <div key={index} className="flex items-center space-x-3 py-2">
+      <span className="text-black-600">
+        <SlArrowRight />
+      </span>
+      <a href={item.link} className="hover:text-red-900">
+        {item.name}
+      </a>
+    </div>
+  ))}
+</div>
+
     </div>
   </div>
 )}
@@ -269,14 +281,9 @@ export default function Navbar() {
                 Our Company
               </h3>
               <ul className="mt-3 space-y-4 text-gray-700 font-medium">
-                <li className="flex items-center space-x-2">
+                <li className="flex items-center space-x-2" />
                   <SlArrowRight className="text-black-600" />
-<<<<<<< HEAD
-                  <Link to="/about"><span className="hover:text-red-900 font-['Red Hat Display']">About Us</span></Link>
-=======
                  <Link to ="/aboutus"> <span className="hover:text-red-900 font-['Red Hat Display']">About Us</span></Link>
->>>>>>> 7b897e54f1cb59ce69dbfc48ab445f29598a0d71
-                </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600" />
                   <span className="hover:text-red-900 font-['Red Hat Display']">News & Events</span>
