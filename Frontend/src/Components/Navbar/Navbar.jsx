@@ -4,6 +4,7 @@ import logo from "../../assets/logo.jpeg";
 import { IoCaretDownOutline, IoClose } from "react-icons/io5";
 import { SlArrowRight } from "react-icons/sl";
 import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState(null);
@@ -59,7 +60,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full font-manropen fixed top-0 left-0 w-full bg-white shadow-md z-50 border-b border-gray-200">
+    <div className="w-full font-manropen fixed top-0 left-0 bg-white shadow-md z-50 border-b border-gray-200">
       {/* <nav className="bg-white w-full h-22 pt-3 relative"> */}
       <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between relative">
         <div className="hidden md:flex space-x-10 font-medium text-gray-700 flex-grow justify-start">
@@ -80,11 +81,14 @@ export default function Navbar() {
         </div>
 
         <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-5">
+        <Link to="/">
           <img
             src={logo}
             alt="Fluoroplast Engineers Pvt. Ltd."
             className="h-12"
+
           />
+          </Link>
           <p className="text-xs text-gray-500 mt-1 mb-6 text-center">
             Welcome to the world of possibilities
           </p>

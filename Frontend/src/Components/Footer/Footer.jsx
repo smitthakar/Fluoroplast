@@ -8,6 +8,7 @@ import call from "../../assets/call.png";
 import email from "../../assets/mail.png";
 import location from "../../assets/location.png";
 import frame from "../../assets/frame.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -48,20 +49,20 @@ export default function Footer() {
         <div className="w-[15%]">
           <h3 className="text-lg font-semibold mb-4">Our Company</h3>
           <ul className="space-y-3 text-gray-400 text-sm">
-            {[
-              "Home",
-              "About Us",
-              "Downloads",
-              "Technical Documents",
-              "Gallery",
-              "Case Studies",
-              "Contact Us",
-            ].map((item, index) => (
-              <li key={index} className="flex items-center gap-2">
-                › {item}
-              </li>
-            ))}
-          </ul>
+    {[
+      { name: "Home", path: "/" },
+      { name: "About Us", path: "/about" },
+      { name: "Downloads", path: "/downloads" },
+      { name: "Technical Documents", path: "/document" },
+      { name: "Gallery", path: "/gallery" },
+      { name: "Case Studies", path: "/case-studies" },
+      { name: "Contact Us", path: "/contactus" },
+    ].map((item, index) => (
+      <li key={index} className="flex items-center gap-2">
+        › <Link to={item.path} className="hover:text-white transition">{item.name}</Link>
+      </li>
+    ))}
+  </ul>
         </div>
 
         {/* Products */}
