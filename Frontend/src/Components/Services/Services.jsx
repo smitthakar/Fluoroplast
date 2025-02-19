@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useSwipeable } from "react-swipeable";
 import GroupOne from "../../assets/GroupOne.png";
 import GroupTwo from "../../assets/GroupTwo.png";
@@ -43,27 +43,56 @@ const services = [
 const ServicesCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 4;
+  const carouselRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
+  // Move to next slide
   const nextSlide = () => {
-    if (currentIndex + itemsPerPage < services.length) {
+    if (currentIndex < services.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
 
+  // Move to previous slide
   const prevSlide = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevIndex) => prevIndex - 1);
     }
   };
 
+  // Swipeable gesture handling
   const handlers = useSwipeable({
-    onSwipedLeft: nextSlide,
-    onSwipedRight: prevSlide,
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+    trackTouch: true,
     trackMouse: true,
+    preventScrollOnSwipe: true,
+    delta: 10,
   });
 
+  // Handle touchpad & mouse drag (no clicking required)
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5; // Adjust sensitivity
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
   return (
-    <section className="text-center py-16 relative z-20">
+    <section className="text-center py-16 pl-[170px] relative z-20 select-none">
       {/* Section Title */}
       <p className="text-red-700 font-bold uppercase tracking-widest">
         The Best Industry and Company Services
@@ -71,8 +100,9 @@ const ServicesCarousel = () => {
       <h2 className="text-4xl font-bold mt-2">
         Provides High Performance Services
       </h2>
+
       {/* Navigation Buttons */}
-      <div className="flex justify-end items-center gap-4 mb-35 mt-[-50px] pr-40">
+      <div className="flex justify-end items-center gap-4 mb-6 mt-[-50px] pr-40">
         <button
           onClick={prevSlide}
           className="w-10 h-10 flex items-center justify-center bg-red-100 text-red-600 rounded-full shadow-lg hover:bg-red-200 transition"
@@ -87,15 +117,25 @@ const ServicesCarousel = () => {
         </button>
       </div>
 
-      {/* Carousel Wrapper with Left Side Cutoff */}
-      <div {...handlers} className="relative w-full flex justify-start text-start mt-10 overflow-hidden pl-[5%]">
+      {/* Carousel Wrapper (Handles Touchpad Dragging) */}
+      <div
+        {...handlers}
+        ref={carouselRef}
+        className="relative w-full flex justify-start text-start mt-10 overflow-hidden pl-[5%] cursor-grab active:cursor-grabbing"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      >
         {/* Slider Container */}
-        <div className="w-[90%] flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}>
+        <div
+          className="w-[90%] flex transition-transform duration-500 ease-in-out"
+          style={{
+            transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)`,
+          }}
+        >
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="flex-none w-full sm:w-1/2 lg:w-1/4 px-4 duration-500"
-            >
+            <div key={index} className="flex-none w-full sm:w-1/2 lg:w-1/4 px-4 duration-500">
               <div className="bg-white shadow-lg rounded-xl p-6 h-[300px] transition-all hover:bg-red-700 flex flex-col justify-start group">
                 {/* Icon & Title */}
                 <div>

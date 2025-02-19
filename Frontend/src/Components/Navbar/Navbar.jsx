@@ -306,9 +306,8 @@ export default function Navbar() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600 " />
-                  <span className="hover:text-red-900">
-                    Quality Assurance & Certifications
-                  </span>
+                  <Link to="/quality-assurance"><span className="hover:text-red-900">Quality Assurance & Certifications</span></Link>
+        
                 </li>
               </ul>
             </div>

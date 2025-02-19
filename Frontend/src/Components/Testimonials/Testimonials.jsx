@@ -50,7 +50,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white text-black w-full h-[704px] gap-[20px] px-[144px] py-[112px]">
+    <div className="flex flex-col items-center justify-center bg-white text-black w-full h-[704px] gap-[20px] px-[144px] py-[112px] ">
       {/* Header */}
       <div className="h-[202px] w-full flex flex-col items-center justify-center text-center">
         <h3 className="text-red-600 font-semibold text-[24px] leading-[33.6px] uppercase w-[197px] h-[34px] font-['Red Hat Display']">
@@ -126,7 +126,7 @@ const Testimonial = () => {
               alt="Quote Close"
               width={60}
               height={60}
-              className="absolute right-[630px] bottom-[-20px] w-[100px] h-[100px]"
+              className="absolute right-[700px] bottom-[-20px] w-[100px] h-[100px]"
             />
       </div>
 

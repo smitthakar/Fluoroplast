@@ -10,6 +10,7 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Gallery from "./Pages/Gallery/Gallery";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AutomotivePage from "./Pages/AutomotivePage/AutomotivePage";
+import QualityAssurance from "./Pages/QualityAssurance/QualityAssurance";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/certificates" element={<Certificates />} />
       <Route path = "/industryserved" element={<AutomotivePage />} />
+      <Route path = "/quality-assurance" element={<QualityAssurance />} />
     </Routes>
   );
 }
