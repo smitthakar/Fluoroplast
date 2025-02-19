@@ -263,7 +263,7 @@ export default function Navbar() {
               <ul className="mt-3 space-y-4 text-gray-700 font-medium">
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600" />
-                  <span className="hover:text-red-900 font-['Red Hat Display']">About Us</span>
+                 <Link to ="/aboutus"> <span className="hover:text-red-900 font-['Red Hat Display']">About Us</span></Link>
                 </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600" />

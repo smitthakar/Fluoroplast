@@ -6,7 +6,7 @@ import ORings from "../../assets/DocThree.png";
 import Corporate from "../../assets/DocFour.png";
 import Chemical from "../../assets/DocFive.png";
 import Download from "../../assets/pdfIcon.png";
-
+import NeedHelp from "../../Components/NeedHelp/NeedHelp";  
 const documents = [
   { image: HydraulicSeal, title: "Hydraulic Seal Catalogue" },
   { image: RotarySeal, title: "Rotary Seal Catalogue" },
@@ -38,6 +38,7 @@ const Document = () => {
         </div>
       </div>
       </div>
+      <NeedHelp />
       <Footer />
     </>
   );
