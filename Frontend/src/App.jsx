@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import "./App.css";
 import "./index.css"; // Or the correct path to your global CSS
 import "@fontsource/red-hat-display"; // Defaults to 400 weight
@@ -15,7 +15,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<AboutUs />} />
+      <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/contactus" element={<ContactUs />} />
       <Route path="/document" element={<Document />} />
       <Route path="/gallery" element={<Gallery />} />
