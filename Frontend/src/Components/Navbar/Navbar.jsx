@@ -4,6 +4,7 @@ import logo from "../../assets/logo.jpeg";
 import { IoCaretDownOutline, IoClose } from "react-icons/io5";
 import { SlArrowRight } from "react-icons/sl";
 import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState(null);
@@ -80,11 +81,13 @@ export default function Navbar() {
         </div>
 
         <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-5">
+          <Link to="/">
           <img
             src={logo}
             alt="Fluoroplast Engineers Pvt. Ltd."
             className="h-12"
           />
+          </Link>
           <p className="text-xs text-gray-500 mt-1 mb-6 text-center">
             Welcome to the world of possibilities
           </p>
@@ -209,41 +212,48 @@ export default function Navbar() {
                 </div>
               )}
 
-              {activeSection === "Resources" && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-                  <div>
-                    <h2 className="text-4xl font-bold text-gray-900 font-['Red Hat Display']">
-                      Resources
-                    </h2>
-                    <p className="text-black-600 mt-2 text-lg font-['Red Hat Display']">
-                      Our comprehensive resources include advanced manufacturing
-                      technologies, a skilled workforce, and cutting-edge
-                      facilities to ensure top-tier production capabilities and
-                      customer satisfaction.
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4   text-lg text-gray-800 font-medium font-['Red Hat Display']">
-                    <div>
-                      {[
-                        "Blog",
-                        "Case Studies",
-                        "Technical Documents",
-                        "Downloads",
-                      ].map((item, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-3 py-2  font-['Red Hat Display']"
-                        >
-                          <span className="text-black-600">
-                            <SlArrowRight />
-                          </span>
-                          <span className="hover:text-red-900 font-['Red Hat Display']">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
+{activeSection === "Resources" && (
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+    <div>
+      <h2 className="text-4xl font-bold text-gray-900 font-['Red Hat Display']">
+        Resources
+      </h2>
+      <p className="text-black-600 mt-2 text-lg font-['Red Hat Display']">
+        Our comprehensive resources include advanced manufacturing technologies,
+        a skilled workforce, and cutting-edge facilities to ensure top-tier
+        production capabilities and customer satisfaction.
+      </p>
+    </div>
+
+    {/* Splitting into Two Columns */}
+    <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
+      <div>
+        {["Blog", "Case Studies", "Technical Documents", "Downloads"].map(
+          (item, index) => (
+            <div key={index} className="flex items-center space-x-3 py-2">
+              <span className="text-black-600">
+                <SlArrowRight />
+              </span>
+              <span className="hover:text-red-900">{item}</span>
+            </div>
+          )
+        )}
+      </div>
+
+      <div>
+        {["Online Tools", "Certificates", "Gallery"].map((item, index) => (
+          <div key={index} className="flex items-center space-x-3 py-2">
+            <span className="text-black-600">
+              <SlArrowRight />
+            </span>
+            <span className="hover:text-red-900">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
             </motion.div>
           </div>
         </div>
@@ -259,7 +269,7 @@ export default function Navbar() {
               <ul className="mt-3 space-y-4 text-gray-700 font-medium">
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600" />
-                  <span className="hover:text-red-900 font-['Red Hat Display']">About Us</span>
+                  <Link to="/about"><span className="hover:text-red-900 font-['Red Hat Display']">About Us</span></Link>
                 </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600" />
