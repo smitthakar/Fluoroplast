@@ -11,6 +11,7 @@ import Gallery from "./Pages/Gallery/Gallery";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AutomotivePage from "./Pages/AutomotivePage/AutomotivePage";
 import QualityAssurance from "./Pages/QualityAssurance/QualityAssurance";
+import Event from "./Pages/New&Event/Event";
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
       <Route path="/certificates" element={<Certificates />} />
       <Route path = "/industryserved" element={<AutomotivePage />} />
       <Route path = "/quality-assurance" element={<QualityAssurance />} />
+      <Route path = "/news&events" element={<Event />} />
     </Routes>
+    // <Event />
   );
 }
 

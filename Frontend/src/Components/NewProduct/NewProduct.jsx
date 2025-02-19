@@ -44,7 +44,7 @@ export default function GridLayout() {
           {items.map((item) => (
             <div
               key={item.id}
-              className="relative bg-white shadow-lg rounded-[8px] flex flex-col items-center w-[210px] h-[300px] overflow-hidden group transition-all duration-300"
+              className="relative bg-white shadow-lg rounded-[8px] flex flex-col items-center w-[200px] h-[300px] overflow-hidden group transition-all duration-300"
             >
               {/* Image Container - Centered Image */}
               <div className="flex-grow flex justify-center items-center w-full h-[250px]">

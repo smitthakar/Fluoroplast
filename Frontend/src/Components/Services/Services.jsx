@@ -92,7 +92,7 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <section className="text-center py-16 pl-[170px] relative z-20 select-none">
+    <section className="text-center py-16 pl-[170px] relative z-20">
       {/* Section Title */}
       <p className="text-red-700 font-bold uppercase tracking-widest">
         The Best Industry and Company Services
@@ -128,12 +128,7 @@ const ServicesCarousel = () => {
         onMouseLeave={handleMouseUp}
       >
         {/* Slider Container */}
-        <div
-          className="w-[90%] flex transition-transform duration-500 ease-in-out"
-          style={{
-            transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)`,
-          }}
-        >
+        <div className="w-[95%] flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}>
           {services.map((service, index) => (
             <div key={index} className="flex-none w-full sm:w-1/2 lg:w-1/4 px-4 duration-500">
               <div className="bg-white shadow-lg rounded-xl p-6 h-[300px] transition-all hover:bg-red-700 flex flex-col justify-start group">
@@ -155,7 +150,7 @@ const ServicesCarousel = () => {
                 {/* Fixed Read More Button */}
                 <a
                   href="#"
-                  className="text-red-600 font-bold mt-auto block pt-2 transition-all group-hover:text-white flex justify-between items-center"
+                  className="text-red-600 font-bold mt-auto  pt-2 transition-all group-hover:text-white flex justify-between items-center"
                 >
                   Read More
                   <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2 group-hover:scale-125 text-lg">
