@@ -14,6 +14,7 @@ import QualityAssurance from "./Pages/QualityAssurance/QualityAssurance";
 import Event from "./Pages/New&Event/Event";
 import Blogs from "./Pages/Blogs/Blogs";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import BlogDetails from "./Pages/BlogDetails/BlogPost";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/quality-assurance" element={<QualityAssurance />} />
         <Route path="/news&events" element={<Event />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog-details" element={<BlogDetails />} />
       </Routes>
     </>
   );

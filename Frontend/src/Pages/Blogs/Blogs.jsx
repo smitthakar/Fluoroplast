@@ -5,16 +5,18 @@ import AvatarOne from "../../assets/AvatarOne.png"; // Update with actual image 
 import Footer from "../../Components/Footer/Footer";
 import NeedHelp from "../../Components/NeedHelp/NeedHelp";
 import Navbar from "../../Components/Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 // Generate an array of 12 blog posts
 const blogPosts = new Array(12).fill({
-  title: "Importers achieve cost savings through the First Sale rule!",
-  date: "Jan 21, 2024",
-  category: "Oil & Gas Insights",
-  description:
-    "Engineering plastics are high-performance materials with mechanical and thermal properties, used in automotive, aerospace, and electronics.",
-  author: "Nakul Dholakiya",
-  image: BG, // ✅ Ensure correct image path
+        image: BG,
+        date: "Jan 21, 2024",
+        category: "Oil & Gas Insights",
+        title: "Importers achieve cost savings through the First Sale rule!",
+        description:
+          "Engineering plastics are high-performance materials with mechanical and thermal properties, used in automotive, aerospace, and electronics.",
+        author: "Nakul Dholakiya",
+        authorImage: AvatarOne,
 });
 
 const Blogs = () => {
@@ -25,12 +27,12 @@ const Blogs = () => {
   const totalPages = Math.ceil(blogPosts.length / postsPerPage);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const blogs = blogPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   return (
     <>
     <Navbar />
-    <div className="p-9  w-[1432px] top-[114px] h-[2100px] left-[100px]  relative">
+    <div className="p-9  w-[1432px] top-[114px] h-[2500px] left-[100px]  relative">
       {/* Title */}
        {/* Title */}
        <h2 className="text-3xl font-bold mb-6 font-redhat">Blogs</h2>
@@ -61,40 +63,59 @@ const Blogs = () => {
 </p>
 
 {/* Read More */}
-<a href="#" className="text-red-500 font-semibold mt-4 inline-block">
+<Link to="/blog-details" className="text-red-500 font-semibold mt-4 inline-block">
   Read More
-</a>
+</Link>
 
   </div>
 </div>
 
       {/* Blog Grid - 9 Cards per Page */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
-        {currentPosts.map((post, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-xl overflow-hidden w-[450px] h-[470px] ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] mt-10 w-full h-[667px]">
+        {blogs.map((blog) => (
+          <div
+            key={blog.id}
+            className="bg-white h-[590px] shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 group  "
+          >
             {/* Blog Image */}
-            <img src={post.image} alt="Blog" className="w-[450px] h-[240px] object-cover" />
+            <img
+              src={blog.image}
+              alt={blog.title}
+              className="w-full h-[300px] object-cover"
+            />
 
-            {/* Blog Content */}
-            <div className="p-4  w-[480px]">
+            {/* Bottom Section - Changes on Hover */}
+            <div className="p-5 bg-white group-hover:bg-[#9D0A0E] transition-all duration-300 h-[343px] gap-[16px]">
               {/* Date & Category */}
-              <p className="text-gray-500 text-xs">
-                {post.date}
-                <span className="text-red-500 font-semibold ml-[250px]">  {post.category}</span>
+              <p className="text-gray-500 text-sm group-hover:text-white transition-all duration-300 flex justify-between font-['Manrope']">
+                {blog.date}{" "}
+                <span className="text-red-500 font-medium group-hover:text-white font-['Manrope']">
+                  {blog.category}
+                </span>
               </p>
 
-              {/* Title */}
-              <h3 className="text-xl font-bold mt-2 border-l-2 border-red-500 pl-2 font-redhat">
-                {post.title}
+              {/* Title with Standing Line */}
+              <h3 className="mt-2 font-['Manrope'] font-semibold text-[18px] leading-[25.2px] tracking-[0] text-black group-hover:text-white transition-all duration-300 relative pl-4">
+                {/* Custom Rounded Vertical Border */}
+                <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-red-600 group-hover:bg-white rounded-full font-['Manrope'] "></span>
+                {blog.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-l mt-2">{post.description}</p>
+              <p className="mt-1 font-['Manrope'] font-semibold text-[16px] leading-[28px] tracking-[0] text-gray-600 group-hover:text-white transition-all duration-300 ">
+                {blog.description}
+              </p>
 
-              {/* Author Section */}
-              <div className="mt-4 flex items-center">
-                <img src={AvatarOne} alt="Author" className="w-6 h-6 rounded-full mr-2" />
-                <p className="text-gray-700 text-xs font-medium">{post.author}</p>
+              {/* Author Info */}
+              <div className="mt-5 flex items-center w-[326px] h-[40px] gap-[12px] ">
+              <img
+  src={blog.authorImage} // ✅ Corrected
+  alt={blog.author}
+  className="w-[40px] h-[40px] rounded-full mr-1"
+/>
+                <p className="text-gray-800  font-['Manrope'] font-medium group-hover:text-white transition-all duration-300 w-[412px] h-[28px] ">
+                  {blog.author}
+                </p>
               </div>
             </div>
           </div>

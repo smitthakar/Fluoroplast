@@ -24,7 +24,7 @@ const QualityAssurance = () => {
           <h1 className="text-5xl font-bold mb-4 font-redhat">Quality Within The <br /> Organization</h1>
           <p className="text-gray-700">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
+            the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of 
             type and scrambled it to make a type specimen book.
           </p>
           <p className="text-gray-700 mt-4">
