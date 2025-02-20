@@ -230,7 +230,7 @@ export default function Navbar() {
     <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
     <div>
   {[
-    { name: "Blog", link: "/blog" },
+    { name: "Blog", link: "/blogs" },
     { name: "Case Studies", link: "/case-studies" },
     { name: "Technical Documents", link: "/technical-documents" },
     { name: "Downloads", link: "/downloads" },
@@ -306,7 +306,7 @@ export default function Navbar() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600 " />
-                  <Link to="/quality-assurance"><span className="hover:text-red-900">Quality Assurance & Certifications</span></Link>
+                  <Link to="/quality-assurance"  ><span className="hover:text-red-900">Quality Assurance & Certifications</span></Link>
         
                 </li>
               </ul>
