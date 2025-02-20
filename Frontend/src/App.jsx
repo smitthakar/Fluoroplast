@@ -12,6 +12,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import AutomotivePage from "./Pages/AutomotivePage/AutomotivePage";
 import QualityAssurance from "./Pages/QualityAssurance/QualityAssurance";
 import Event from "./Pages/New&Event/Event";
+import BlogPost from "./Pages/BlogDetails/BlogPost";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path = "/industryserved" element={<AutomotivePage />} />
       <Route path = "/quality-assurance" element={<QualityAssurance />} />
       <Route path = "/news&events" element={<Event />} />
+      <Route path = "/blog-details" element={<BlogPost />} />
     </Routes>
     // <Event />
   );

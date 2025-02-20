@@ -230,7 +230,7 @@ export default function Navbar() {
     <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
     <div>
   {[
-    { name: "Blog", link: "/blog" },
+    { name: "Blog", link: "/blogs" },
     { name: "Case Studies", link: "/case-studies" },
     { name: "Technical Documents", link: "/technical-documents" },
     { name: "Downloads", link: "/downloads" },
