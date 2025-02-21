@@ -81,13 +81,12 @@ export default function Navbar() {
         </div>
 
         <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-5">
-        <Link to="/">
-          <img
-            src={logo}
-            alt="Fluoroplast Engineers Pvt. Ltd."
-            className="h-12"
-
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Fluoroplast Engineers Pvt. Ltd."
+              className="h-12"
+            />
           </Link>
           <p className="text-xs text-gray-500 mt-1 mb-6 text-center">
             Welcome to the world of possibilities
@@ -154,120 +153,162 @@ export default function Navbar() {
                     </p>
                   </div>
                   <div>
-                  <ul className="text-lg text-gray-800 font-medium space-y-4">
-  {[
-    { name: "Engineering Plastics", link: "/engineering-plastics" },
-    { name: "Hydraulic Seals", link: "/hydraulic-seals" },
-    { name: "Compressor Replacement Parts", link: "/compressor-replacement" },
-    { name: "Hydraulic Cylinders", link: "/hydraulic-cylinders" },
-    { name: "FEP and PFA Lined Valves & Fittings", link: "/fep-pfa-valves" },
-  ].map((item, index) => (
-    <li key={index} className="flex items-center space-x-3 font-['Red Hat Display']">
-      <span className="text-black-600">
-        <SlArrowRight />
-      </span>
-      <a href={item.link} className="hover:text-red-900">{item.name}</a>
-    </li>
-  ))}
-</ul>
-
+                    <ul className="text-lg text-gray-800 font-medium space-y-4">
+                      {[
+                        {
+                          name: "Engineering Plastics",
+                          link: "/engineering-plastics",
+                        },
+                        { name: "Hydraulic Seals", link: "/hydraulic-seals" },
+                        {
+                          name: "Compressor Replacement Parts",
+                          link: "/compressor-replacement",
+                        },
+                        {
+                          name: "Hydraulic Cylinders",
+                          link: "/hydraulic-cylinders",
+                        },
+                        {
+                          name: "FEP and PFA Lined Valves & Fittings",
+                          link: "/fep-pfa-valves",
+                        },
+                      ].map((item, index) => (
+                        <li
+                          key={index}
+                          className="flex items-center space-x-3 font-['Red Hat Display']"
+                        >
+                          <span className="text-black-600">
+                            <SlArrowRight />
+                          </span>
+                          <a href={item.link} className="hover:text-red-900">
+                            {item.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               )}
 
               {activeSection === "Industries Served" && (
                 <div className="grid grid-cols-4 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
-                {[
-                  { name: "Hydraulic & Pneumatic Cylinders", link: "/hydraulic-pneumatic" },
-                  { name: "Valve Industry", link: "/valve-industry" },
-                  { name: "Steel Industry", link: "/steel-industry" },
-                  { name: "Food & Pharma Industry", link: "/food-pharma" },
-                  { name: "Press Forming Industry", link: "/press-forming" },
-                  { name: "Pump Motor & Gear Boxes", link: "/pump-motor-gearbox" },
-                  { name: "Oil & Gas Industry", link: "/oil-gas" },
-                  { name: "Earthmoving Industry", link: "/earthmoving" },
-                  { name: "Tyre Industry", link: "/tyre" },
-                  { name: "Engineering & Fabrication Industry", link: "/engineering-fabrication" },
-                  { name: "Automobile Industry", link: "/automobile" },
-                  { name: "Aluminum Industry", link: "/aluminum" },
-                  { name: "Textile Industry", link: "/textile" },
-                  { name: "Wind Mill Industry", link: "/wind-mill" },
-                  { name: "Cement Industry", link: "/cement" },
-                  { name: "Pulp & Paper Industry", link: "/pulp-paper" },
-                  { name: "Sugar Industry", link: "/sugar" },
-                  { name: "Chemical & Fertilizer Industry", link: "/chemical-fertilizer" },
-                  { name: "Gems and Jewellery Industry", link: "/gems-jewellery" },
-                  { name: "Plastic Industry", link: "/plastic" },
-                  { name: "Pharmaceutical Industry", link: "/pharmaceutical" },
-                  { name: "Chemical Industry", link: "/chemical" },
-                  { name: "Marine Industry", link: "/marine" },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center space-x-3 font-['Red Hat Display']">
-                    <span className="text-black-600">
-                      <SlArrowRight />
-                    </span>
-                    <a href={item.link} className="hover:text-red-900">{item.name}</a>
-                  </div>
-                ))}
-              </div>
-              
+                  {[
+                    {
+                      name: "Hydraulic & Pneumatic Cylinders",
+                      link: "/hydraulic-pneumatic",
+                    },
+                    { name: "Valve Industry", link: "/valve-industry" },
+                    { name: "Steel Industry", link: "/steel-industry" },
+                    { name: "Food & Pharma Industry", link: "/food-pharma" },
+                    { name: "Press Forming Industry", link: "/press-forming" },
+                    {
+                      name: "Pump Motor & Gear Boxes",
+                      link: "/pump-motor-gearbox",
+                    },
+                    { name: "Oil & Gas Industry", link: "/oil-gas" },
+                    { name: "Earthmoving Industry", link: "/earthmoving" },
+                    { name: "Tyre Industry", link: "/tyre" },
+                    {
+                      name: "Engineering & Fabrication Industry",
+                      link: "/engineering-fabrication",
+                    },
+                    { name: "Automobile Industry", link: "/automobile" },
+                    { name: "Aluminum Industry", link: "/aluminum" },
+                    { name: "Textile Industry", link: "/textile" },
+                    { name: "Wind Mill Industry", link: "/wind-mill" },
+                    { name: "Cement Industry", link: "/cement" },
+                    { name: "Pulp & Paper Industry", link: "/pulp-paper" },
+                    { name: "Sugar Industry", link: "/sugar" },
+                    {
+                      name: "Chemical & Fertilizer Industry",
+                      link: "/chemical-fertilizer",
+                    },
+                    {
+                      name: "Gems and Jewellery Industry",
+                      link: "/gems-jewellery",
+                    },
+                    { name: "Plastic Industry", link: "/plastic" },
+                    {
+                      name: "Pharmaceutical Industry",
+                      link: "/pharmaceutical",
+                    },
+                    { name: "Chemical Industry", link: "/chemical" },
+                    { name: "Marine Industry", link: "/marine" },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-3 font-['Red Hat Display']"
+                    >
+                      <span className="text-black-600">
+                        <SlArrowRight />
+                      </span>
+                      <a href={item.link} className="hover:text-red-900">
+                        {item.name}
+                      </a>
+                    </div>
+                  ))}
+                </div>
               )}
 
-{activeSection === "Resources" && (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-    <div>
-      <h2 className="text-4xl font-bold text-gray-900 font-['Red Hat Display']">
-        Resources
-      </h2>
-      <p className="text-black-600 mt-2 text-lg font-['Red Hat Display']">
-        Our comprehensive resources include advanced manufacturing technologies,
-        a skilled workforce, and cutting-edge facilities to ensure top-tier
-        production capabilities and customer satisfaction.
-      </p>
-    </div>
+              {activeSection === "Resources" && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                  <div>
+                    <h2 className="text-4xl font-bold text-gray-900 font-['Red Hat Display']">
+                      Resources
+                    </h2>
+                    <p className="text-black-600 mt-2 text-lg font-['Red Hat Display']">
+                      Our comprehensive resources include advanced manufacturing
+                      technologies, a skilled workforce, and cutting-edge
+                      facilities to ensure top-tier production capabilities and
+                      customer satisfaction.
+                    </p>
+                  </div>
 
-    {/* Splitting into Two Columns */}
-    <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
-    <div>
-  {[
-    { name: "Blog", link: "/blogs" },
-    { name: "Case Studies", link: "/case-studies" },
-    { name: "Technical Documents", link: "/technical-documents" },
-    { name: "Downloads", link: "/downloads" },
-  ].map((item, index) => (
-    <div key={index} className="flex items-center space-x-3 py-2">
-      <span className="text-black-600">
-        <SlArrowRight />
-      </span>
-      <a href={item.link} className="hover:text-red-900">
-        {item.name}
-      </a>
-    </div>
-  ))}
-</div>
+                  {/* Splitting into Two Columns */}
+                  <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
+                    <div>
+                      {[
+                        { name: "Blog", link: "/blogs" },
+                        { name: "Case Studies", link: "/case-studies" },
+                        { name: "Technical Documents", link: "/document" },
+                        { name: "Downloads", link: "/downloads" },
+                      ].map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-3 py-2"
+                        >
+                          <span className="text-black-600">
+                            <SlArrowRight />
+                          </span>
+                          <a href={item.link} className="hover:text-red-900">
+                            {item.name}
+                          </a>
+                        </div>
+                      ))}
+                    </div>
 
-
-      <div>
-  {[
-    { name: "Online Tools", link: "/online-tools" },
-    { name: "Certificates", link: "/certificates" },
-    { name: "Gallery", link: "/gallery" },
-  ].map((item, index) => (
-    <div key={index} className="flex items-center space-x-3 py-2">
-      <span className="text-black-600">
-        <SlArrowRight />
-      </span>
-      <a href={item.link} className="hover:text-red-900">
-        {item.name}
-      </a>
-    </div>
-  ))}
-</div>
-
-    </div>
-  </div>
-)}
-
+                    <div>
+                      {[
+                        { name: "Online Tools", link: "/online-tools" },
+                        { name: "Certificates", link: "/certificates" },
+                        { name: "Gallery", link: "/gallery" },
+                      ].map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-3 py-2"
+                        >
+                          <span className="text-black-600">
+                            <SlArrowRight />
+                          </span>
+                          <a href={item.link} className="hover:text-red-900">
+                            {item.name}
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </motion.div>
           </div>
         </div>
@@ -281,13 +322,21 @@ export default function Navbar() {
                 Our Company
               </h3>
               <ul className="mt-3 space-y-4 text-gray-700 font-medium">
-                <li className="flex items-center space-x-2" >
-                  <SlArrowRight className="text-black-600" />
-                  <Link to ="/aboutus"><span className="hover:text-red-900 font-['Red Hat Display']">About Us</span></Link>
-                 </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600" />
-                 <Link to= "/news&events" ><span className="hover:text-red-900 font-['Red Hat Display']">News & Events</span></Link>
+                  <Link to="/aboutus">
+                    <span className="hover:text-red-900 font-['Red Hat Display']">
+                      About Us
+                    </span>
+                  </Link>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <SlArrowRight className="text-black-600" />
+                  <Link to="/news&events">
+                    <span className="hover:text-red-900 font-['Red Hat Display']">
+                      News & Events
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -306,8 +355,11 @@ export default function Navbar() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600 " />
-                  <Link to="/quality-assurance"><span className="hover:text-red-900">Quality Assurance & Certifications</span></Link>
-        
+                  <Link to="/quality-assurance">
+                    <span className="hover:text-red-900">
+                      Quality Assurance & Certifications
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>

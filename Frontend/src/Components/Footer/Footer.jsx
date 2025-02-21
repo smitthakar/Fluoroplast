@@ -51,7 +51,7 @@ export default function Footer() {
           <ul className="space-y-3 text-gray-400 text-sm">
     {[
       { name: "Home", path: "/" },
-      { name: "About Us", path: "/about" },
+      { name: "About Us", path: "/aboutus" },
       { name: "Downloads", path: "/downloads" },
       { name: "Technical Documents", path: "/document" },
       { name: "Gallery", path: "/gallery" },
