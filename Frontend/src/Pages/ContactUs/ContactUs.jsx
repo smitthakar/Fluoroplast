@@ -52,7 +52,7 @@ const ContactPage = () => {
             {/* Phone */}
             <div className="w-[378px] h-[198px] rounded-[8px] p-[32px] gap-[24px] flex items-start space-x-4">
             <img src= {call} alt="Phone Icon" className="w-[74px] h-[74px] rounded-[60px] p-[12px]" />
-              <div className="w-[300px] h-[134px] rounded-[12px] gap-[8px] border-t-[5px] border-l-[5px]" >
+              <div className="w-[300px] h-[134px] rounded-[12px] gap-[8px]" >
                 <h4 className="font-bold">Phone Number</h4>
                 <p className="text-gray-600">+91-79 29752921 </p>
                 <p className="text-gray-600">+91-79 29758345  </p>
@@ -63,7 +63,7 @@ const ContactPage = () => {
             {/* Email */}
             <div className="w-[378px] h-[198px] rounded-[8px] p-[32px] gap-[24px] flex items-start space-x-4">
             <img src= {mail} alt="Mail Icon" className="w-[74px] h-[74px] rounded-[60px] p-[12px]" />
-              <div className="w-[300px] h-[134px] rounded-[12px] gap-[8px] border-t-[5px] border-l-[5px]" >
+              <div className="w-[300px] h-[134px] rounded-[12px] gap-[8px] " >
                 <h4 className="font-bold">Email Address</h4>
                 <p className="text-gray-600">hiflon@hiflon.com / sales@fluoroplastind.com</p>
               </div>

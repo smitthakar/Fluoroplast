@@ -6,6 +6,7 @@ import GroupThree from "../../assets/GroupThree.png";
 import pneumatic from "../../assets/pneumatic.png";
 import combination from "../../assets/combination.png";
 import arr from "../../assets/Arrow rigth.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const services = [
   {
@@ -128,7 +129,7 @@ const ServicesCarousel = () => {
         onMouseLeave={handleMouseUp}
       >
         {/* Slider Container */}
-        <div className="w-[95%] flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}>
+        <div className="w-[95%] flex transition-transform  duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}>
           {services.map((service, index) => (
             <div key={index} className="flex-none w-full sm:w-1/2 lg:w-1/4 px-4 duration-500">
               <div className="bg-white shadow-lg rounded-xl p-6 h-[300px] transition-all hover:bg-red-700 flex flex-col justify-start group">
@@ -139,6 +140,8 @@ const ServicesCarousel = () => {
                     alt={service.title}
                     className="w-10 h-10 transition-all duration-300 group-hover:invert group-hover:brightness-0"
                   />
+                 
+
                   <h3 className="font-bold text-xl w-full mt-4 group-hover:text-white">
                     {service.title}
                   </h3>
@@ -154,11 +157,12 @@ const ServicesCarousel = () => {
                 >
                   Read More
                   <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-2 group-hover:scale-125 text-lg">
-                    <img
+                    {/* <img
                       src={arr}
                       alt="Arrow"
                       className="w-[20px] h-[20px] transform translate-x-[-10px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100 group-hover:invert"
-                    />
+                    /> */}
+                     <FaArrowRight  className="w-[15px] h-[15px] " />
                   </span>
                 </a>
               </div>

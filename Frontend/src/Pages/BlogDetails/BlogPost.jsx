@@ -1,7 +1,6 @@
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
-// import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import blogMain from "../../assets/blogMain.png"; 
 import Ellipse from "../../assets/Ellipse.png";
 import calendar from "../../assets/calendar.png";
