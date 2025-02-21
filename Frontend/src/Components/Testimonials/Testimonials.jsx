@@ -31,6 +31,7 @@ const testimonials = [
     name: "Karan Patel",
     role: "Sr. Engineer",
   },
+  
 ];
 
 const Testimonial = () => {
@@ -126,7 +127,7 @@ const Testimonial = () => {
               alt="Quote Close"
               width={60}
               height={60}
-              className="absolute right-[700px] bottom-[-20px] w-[100px] h-[100px]"
+              className="absolute right-[630px] bottom-[-35px] w-[100px] h-[100px]"
             />
       </div>
 

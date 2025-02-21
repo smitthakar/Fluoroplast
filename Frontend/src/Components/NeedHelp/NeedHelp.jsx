@@ -3,7 +3,7 @@ import backgroundImage from "../../assets/help.png";
 export default function CallToAction() {
   return (
     <div 
-      className="relative bg-[#510002] text-white flex justify-between items-center bg-cover bg-center ml-[80px] mb-[-70px]"
+      className="relative bg-[#510002] text-white flex justify-between items-center bg-cover bg-center ml-[90px] mb-[-70px]"
       style={{ 
         backgroundImage: `linear-gradient(rgba(128, 0, 0, 0.85), rgba(128, 0, 0, 0.85)), url(${backgroundImage})`,
         width: "1332px",

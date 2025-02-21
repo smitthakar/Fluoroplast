@@ -80,7 +80,7 @@ export default function BlogSection() {
               {/* Title with Standing Line */}
               <h3 className="mt-2 font-['Manrope'] font-semibold text-[18px] leading-[25.2px] tracking-[0] text-black group-hover:text-white transition-all duration-300 relative pl-4">
                 {/* Custom Rounded Vertical Border */}
-                <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-red-600 group-hover:bg-white rounded-full font-['Manrope'] "></span>
+                <span className="absolute left-0 top-0 bottom-0 w-[2px] bg-red-600 group-hover:bg-white rounded-full font-['Manrope'] "></span>
                 {blog.title}
               </h3>
 
