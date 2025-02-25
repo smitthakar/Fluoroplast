@@ -1,0 +1,287 @@
+[33mcommit 8990f2616b03b5fe088851d8c728e17b76781cd1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Tue Feb 25 11:39:06 2025 +0530
+
+    Tst
+
+[33mcommit f4a6c782b76c1fb74d1166eef609c39ca2755b45[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Tue Feb 25 11:02:34 2025 +0530
+
+    fix: remove sensitive data
+
+[33mcommit d013e279a579884313f6330b194a3ec4dac5630c[m
+Merge: 0722620 a2f7820
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Fri Feb 21 18:17:01 2025 +0530
+
+    resolve merge conflic
+
+[33mcommit a2f7820b877611c572070bca14dd97d2cb9278ef[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: f638d01 c0e1709
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Fri Feb 21 18:15:10 2025 +0530
+
+    Merge branch 'main' of https://github.com/VaidikLimbachiya/Fluoroplast
+
+[33mcommit f638d0167bb4563092ede9ed1dc93bd6f4c53129[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Fri Feb 21 18:14:31 2025 +0530
+
+    services swiping autometically rotate 360
+
+[33mcommit 0722620f9cfbcbba221d726e699f50c06504b933[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Fri Feb 21 18:12:44 2025 +0530
+
+    Resolve Error
+
+[33mcommit 048215ac3e613071327ab54e9561c390b88a1804[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Fri Feb 21 18:07:14 2025 +0530
+
+    ChatBox done Animate page on navigation
+
+[33mcommit c0e17094dfb48825398b05168ec796d431ddab3a[m
+Merge: bed5796 dcd1e88
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Fri Feb 21 10:53:27 2025 +0530
+
+    Resolve Merge Conflict
+
+[33mcommit dcd1e88f3e0ceef5a976d070d04678f26ef11e4e[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Fri Feb 21 10:49:53 2025 +0530
+
+    adding link in footer and navbar
+
+[33mcommit bed5796186484bb4a2d15d242d67b3f2a93eeecd[m
+Merge: 4434692 4e2dac6
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Thu Feb 20 17:56:13 2025 +0530
+
+    Solve Merge Conflict
+
+[33mcommit 4e2dac64a40956a932cbe5494725c8ac3dcb17fb[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Thu Feb 20 16:09:45 2025 +0530
+
+    Blog Details done in this commit
+
+[33mcommit 4434692284d53ab6ee97017034d5c7aad4f4205d[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Thu Feb 20 16:08:52 2025 +0530
+
+    Blog Page Added
+
+[33mcommit 75ccb39251e8177a3af3103c785596f1725e876d[m
+Merge: 389f864 e5f9068
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 18:23:18 2025 +0530
+
+    Resolve Merge
+
+[33mcommit e5f9068e4fad6fff7fd0428c35aad029eb553d55[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Wed Feb 19 18:21:11 2025 +0530
+
+    News And Event Done in this commit
+
+[33mcommit 389f864b2ebbf2066d9d561ec781614fe04c2c93[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 18:19:10 2025 +0530
+
+    QualityAssurance Component added
+
+[33mcommit 168f05420a45247d09380ec549f027d4bfee56a9[m
+Merge: 09e3277 7344fb4
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 16:17:15 2025 +0530
+
+    Resolve Merge Conflict
+
+[33mcommit 09e32779b2ab85a9f50246441101ce4d352516a4[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 16:16:20 2025 +0530
+
+    Commiting for pull
+
+[33mcommit 7344fb45d3c6d819e77c944aab23e4efe7f968da[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Wed Feb 19 16:15:32 2025 +0530
+
+    Add link on navbar AboutUs
+
+[33mcommit 396a06e630a221555a270a89f7e635cb26afe09f[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 16:09:00 2025 +0530
+
+    Add Links to all in footer and Navar
+
+[33mcommit b5038034e8535cab854a63cadfd47c8050c727d1[m
+Merge: 9e74dda 7b897e5
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 16:03:18 2025 +0530
+
+    Resolve merge conflict
+
+[33mcommit 9e74ddaa8c6e167d631020595054262576b53fea[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 15:54:53 2025 +0530
+
+    Navbar Changes
+
+[33mcommit 7b897e54f1cb59ce69dbfc48ab445f29598a0d71[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Wed Feb 19 15:54:08 2025 +0530
+
+    Adding Links
+
+[33mcommit 14180f64e88917a9112f685abd1ec997c21ac073[m
+Merge: 3771a50 a3f0894
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Wed Feb 19 15:34:55 2025 +0530
+
+    Gallery,Documents,Contact Us,Certificates and routing done in this commit After MErging
+
+[33mcommit 3771a509a3a4219c6f212d3bbce4813e2c7e307e[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Wed Feb 19 15:34:15 2025 +0530
+
+    Gallery,Documents,Contact Us,Certificates and routing done in this commit
+
+[33mcommit a3f089400f2a4242f75b409f41488f07567b3e04[m
+Merge: 2efcc21 2068598
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 15:13:43 2025 +0530
+
+    Resolve Merge Conflict
+
+[33mcommit 2efcc219ae047df1fd74280d80d420c449c73c99[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Wed Feb 19 15:02:06 2025 +0530
+
+    Industries Served page done
+
+[33mcommit 2068598387b14d1535f74d76f1077839fe3c8b1b[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Wed Feb 19 11:46:00 2025 +0530
+
+    Contact us page done
+
+[33mcommit 17702e8738eded1d86e835437e87839ba685331e[m
+Merge: 029a0b8 6d8735f
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Wed Feb 19 10:18:49 2025 +0530
+
+    contact page
+
+[33mcommit 029a0b8b842b51c0dadd8cad4a7c68d0827ac870[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 18:26:24 2025 +0530
+
+    Add ContactForm
+
+[33mcommit 6d8735f20658a7e058c00910fed762f4e2436fef[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Tue Feb 18 18:25:19 2025 +0530
+
+    About us Done in this commit
+
+[33mcommit 45362366c9f87dde49372997a3f29b9e5539eace[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 17:19:10 2025 +0530
+
+    Add Images
+
+[33mcommit 60db3ca3f402e220f6032a89ac559965ad8ebcb3[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 17:13:22 2025 +0530
+
+    Home.jsx Modified
+
+[33mcommit 03a5b708157180d7d863aafb032c537f7fc7d90b[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 17:09:02 2025 +0530
+
+    App.jsx Modified
+
+[33mcommit 0193e9ba85ff208a4ea7ba1b0d2e33dfe8c46e10[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 17:07:35 2025 +0530
+
+    Home page added
+
+[33mcommit 08f2b251242b767bf213533f43ad692221f51aa1[m
+Merge: a48142b cd2a5a3
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 16:49:05 2025 +0530
+
+    Merge branch 'main' of https://github.com/VaidikLimbachiya/Fluoroplast
+
+[33mcommit a48142bb4727964c49a6a94f024e2e51dde38763[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 16:48:56 2025 +0530
+
+    Testimonials done
+
+[33mcommit cd2a5a3013b759ac7fa53e5f60d0fc34769568e8[m
+Merge: 556fdfe c6ad14c
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Tue Feb 18 16:47:37 2025 +0530
+
+    after change
+
+[33mcommit 556fdfee7837a415a5d55f1b29f8586a38b429d2[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Tue Feb 18 16:46:16 2025 +0530
+
+    navbar footer font change
+
+[33mcommit c6ad14cbda6151f39992e9c9cee936fa8a21adcf[m
+Merge: fb962ed 814e7e5
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 11:04:03 2025 +0530
+
+    after merging
+
+[33mcommit fb962ed6402c3c195001b6591ed9b2279c9aeae5[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Tue Feb 18 10:41:06 2025 +0530
+
+    testimonials in this commit
+
+[33mcommit 814e7e58877022cbbf2aa3082579ad99e1e98d70[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Tue Feb 18 10:40:06 2025 +0530
+
+    Footer added
+
+[33mcommit 55b2494d0dc943b045f1f681e6a93161dcdd55d5[m
+Merge: c595793 28140f4
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Mon Feb 17 14:00:46 2025 +0530
+
+    merging in this commit
+
+[33mcommit c5957932905cc9969df53faf98f4a109b5f1640e[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Mon Feb 17 13:55:57 2025 +0530
+
+    BlogSection and Servive component almost done in this commit
+
+[33mcommit 28140f47b8ba4454174692bf9c563f0dbcc0fe86[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Mon Feb 17 12:58:44 2025 +0530
+
+    Three Component added for home page
+
+[33mcommit c61478786a97a955d9d21552ebfa1b733c3682fc[m
+Author: smitthakar <smitthakar199@gmail.com>
+Date:   Fri Feb 14 18:06:33 2025 +0530
+
+    service components changes
+
+[33mcommit 5a85be59eb961f8ed42bede544eac2bafffc17f6[m
+Author: Vaidik <vaidik07@gmail.com>
+Date:   Fri Feb
