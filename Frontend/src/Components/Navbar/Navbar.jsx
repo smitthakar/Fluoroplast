@@ -88,7 +88,7 @@ export default function Navbar() {
               className="h-12"
             />
           </Link>
-          <p className="text-xs  text-black-600 mt-1 mb-6 text-center font-['Manrope']">
+          <p className="text-xs text-black-600 mt-1 mb-6 text-center font-['Manrope']">
             Welcome to the world of possibilities
           </p>
         </div>

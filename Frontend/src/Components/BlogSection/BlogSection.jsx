@@ -75,7 +75,11 @@ export default function BlogSection() {
               <p className="text-gray-500 text-sm group-hover:text-white transition-all duration-300 flex justify-between font-['Manrope']">
                 {blog.date}{" "}
                 <span className="text-red-500 font-medium group-hover:text-white font-['Manrope']">
+<<<<<<< HEAD
                   {blog.category}
+=======
+                  • {blog.category}
+>>>>>>> 19cacedc0b15d3ccacd256e00808c62963a92b1a
                 </span>
               </p>
 
@@ -108,6 +112,7 @@ export default function BlogSection() {
       </div>
 
       {/* View All Button */}
+<<<<<<< HEAD
       <div className="flex justify-center mt-10">
       <button className="w-[200px] h-[50px] rounded-full border-transparent bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white font-semibold
   transition-all duration-300 ease-in-out transform flex items-center justify-center relative group 
@@ -124,6 +129,16 @@ export default function BlogSection() {
 </button>
 
 </div>
+=======
+      <div className="flex justify-center ">
+        <button className="group bg-gradient-to-r  font-['Manrope'] from-[#9D0A0E] to-[#F15922] text-white w-[250px] h-[60px] px-[24px] py-[16px] rounded-[48px] font-semibold flex items-center justify-center gap-[8px] hover:opacity-90 transition-all duration-300">
+          View All
+          <span className="opacity-0 translate-x-[-5px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+            <FaArrowRight />
+          </span>
+        </button>
+      </div>
+>>>>>>> 19cacedc0b15d3ccacd256e00808c62963a92b1a
     </div>
   );
 }

@@ -3,7 +3,10 @@ import slider1 from "../../assets/HeroOne.png";
 import slider2 from "../../assets/HeroTwo.png";
 import slider3 from "../../assets/HeroThree.png";
 import slider4 from "../../assets/HeroFour.png";
+<<<<<<< HEAD
 import { FaArrowRight } from "react-icons/fa6";
+=======
+>>>>>>> 19cacedc0b15d3ccacd256e00808c62963a92b1a
 
 const images = [slider1, slider2, slider3, slider4];
 
@@ -47,12 +50,14 @@ const HeroSlider = () => {
         {/* Hero Text Overlay */}
         <div className="absolute  w[1632px] h-[667px] gap-[40px] inset-0 flex flex-col items-center justify-center text-white px-6 z-10">
           <h1 className="text-[65px] w-[1232px] font-medium justify-center text-center text-6xl  font-redhat leading-[75px] ">
-            Global Leaders in Engineering Plastics, <br /> Hydraulic Seals, & <br />
+            Global Leaders in Engineering Plastics, <br /> Hydraulic Seals, &{" "}
+            <br />
             Advanced Industrial Solutions.
           </h1>
           <p className="text-2xl font-redhat">
             Innovating for Over 30 Years | Expanding for the Future.
           </p>
+<<<<<<< HEAD
           <button className="w-[230px] h-[55px] rounded-full border-transparent bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white font-semibold
    transform flex items-center justify-center gap-2 group 
    hover:bg-white hover:bg-none hover:text-[#9D0A0E] hover:border-2 hover:border-[#9D0A0E]">
@@ -66,6 +71,14 @@ const HeroSlider = () => {
 </span>
 
 </button>
+=======
+          <button className=" bg-red-500 text-white px-6 py-2 rounded-full text-lg transition duration-300 ease-in-out border border-red-500 flex items-center space-x-2 group shadow-md hover:bg-white hover:text-red-500">
+            <span className="transition-all duration-300 ease-in-out font-redhat">
+              Explore Our Products
+            </span>
+            <span className="transition-all duration-300 ease-in-out">→</span>
+          </button>
+>>>>>>> 19cacedc0b15d3ccacd256e00808c62963a92b1a
         </div>
 
         {/* Image Slider */}
@@ -97,7 +110,9 @@ const HeroSlider = () => {
             <span
               key={index}
               className={`w-[15px] h-[15px] rounded-full border-2 border-white cursor-pointer transition-all duration-500 ease-in-out ${
-                index === (currentIndex - 1 + images.length) % images.length ? "bg-white" : "bg-transparent"
+                index === (currentIndex - 1 + images.length) % images.length
+                  ? "bg-white"
+                  : "bg-transparent"
               }`}
               onClick={() => handleDotClick(index)}
             />
@@ -106,31 +121,37 @@ const HeroSlider = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="w-full bg-white  mt-0 mb-20 flex justify-center border-b border-gray-300">
+      <div className="w-full bg-white  -mt-[65px] mb-20 flex justify-center border-b border-gray-300">
         <div className="grid grid-cols-5   text-center pl-[144px] pr-[144px] text-red-700 font-bold text-3xl w-full border-b border-gray-300">
-          <div className="border-r rounded-[8px] border-gray-300 py-4 flex flex-col items-center  pt-[56px] pr-[48px] pb-[56px] pl-[48px] ">
+          <div className="border-r rounded-[2px] border-gray-300 py-4 flex flex-col items-center  pt-[56px] pr-[48px] pb-[56px] pl-[48px] ">
             <p className="text-4xl font-redhat">25,000</p>
-            <span className="text-gray-600 text-sm  ">
+            <span className="text-[#0A0A0A] text-[24px] leading-[28.6px] font-normal mt-4 w-[165px] h-[48px] flex items-center justify-center font-redhat">
               Sq Feet Area of Manufacturing
             </span>
           </div>
-          <div className="border-r rounded-[8px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
+          <div className="border-r rounded-[2px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
             <p className="text-4xl font-redhat ">25,000</p>
-            <span className="text-gray-600 text-sm">SKU Products</span>
+            <span className="text-[#0A0A0A] text-[24px] leading-[28.6px] font-normal mt-4 w-[125px] h-[48px] flex items-center justify-center font-redhat">
+              SKU Products
+            </span>
           </div>
-          <div className="border-r rounded-[8px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
+          <div className="border-r rounded-[2px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
             <p className="text-4xl font-redhat ">500+</p>
-            <span className="text-gray-600 text-sm ">
+            <span className="text-[#0A0A0A] text-[24px] leading-[28.6px] font-normal mt-4 w-[125px] h-[48px] flex items-center justify-center font-redhat">
               Products in Portfolio
             </span>
           </div>
-          <div className="border-r rounded-[8px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
+          <div className="border-r rounded-[2px] border-gray-300 py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
             <p className="text-4xl font-redhat">500+</p>
-            <span className="text-gray-600 text-sm">Customers Network</span>
+            <span className="text-[#0A0A0A] text-[24px] leading-[28.6px] font-normal mt-4 w-[125px] h-[48px] flex items-center justify-center font-redhat">
+              Customers Network
+            </span>
           </div>
-          <div className="py-4 flex flex-col rounded-[8px] items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
+          <div className="py-4 flex flex-col items-center pt-[56px] pr-[48px] pb-[56px] pl-[48px]">
             <p className="text-4xl font-redhat">7+</p>
-            <span className="text-gray-600 text-sm">Countries Served</span>
+            <span className="text-[#0A0A0A] text-[24px] leading-[28.6px] font-normal mt-4 w-[125px] h-[48px] flex items-center justify-center font-redhat">
+              Countries Served
+            </span>
           </div>
         </div>
       </div>

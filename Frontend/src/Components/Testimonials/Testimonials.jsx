@@ -5,7 +5,10 @@ import personOne from "../../assets/personOne.png";
 import personTwo from "../../assets/personTwo.png";
 import personThree from "../../assets/personThree.png";
 import personFour from "../../assets/personFour.png";
+<<<<<<< HEAD
 import { FaArrowRight } from "react-icons/fa";
+=======
+>>>>>>> 19cacedc0b15d3ccacd256e00808c62963a92b1a
 
 const testimonials = [
   {
@@ -55,13 +58,13 @@ const Testimonial = () => {
     <div className="flex flex-col items-center justify-center bg-white text-black w-full h-[704px] gap-[20px] px-[144px] py-[112px] ">
       {/* Header */}
       <div className="h-[202px] w-full flex flex-col items-center justify-center text-center">
-        <h3 className="text-red-600 font-semibold text-[24px] leading-[33.6px] uppercase w-[197px] h-[34px] font-['Red Hat Display']">
+        <h3 className="text-[#9D0A0E] font-semibold text-[24px] leading-[33.6px] uppercase w-[197px] h-[34px] font-['Red Hat Display']">
           Testimonials
         </h3>
         <h2 className="font-['Red_Hat_Display'] font-extrabold text-[60px] leading-[84px]">
           What Happy People Are Saying About
         </h2>
-        <h2 className="font-['Red_Hat_Display'] font-extrabold text-[60px] leading-[84px] text-red-600">
+        <h2 className="font-['Red_Hat_Display'] font-extrabold text-[60px] leading-[84px] text-[#9D0A0E]">
           Fluoroplast Engineers
         </h2>
       </div>
@@ -112,7 +115,7 @@ const Testimonial = () => {
 
         {/* Testimonial Text */}
         <div
-          className={`ml-10 text-left flex flex-col items-start transition-opacity duration-500 text-justify ${
+          className={`ml-10  flex flex-col items-start transition-opacity duration-500 text-justify ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -133,6 +136,7 @@ const Testimonial = () => {
       </div>
 
       {/* View All Button */}
+<<<<<<< HEAD
       
 
 <div className="flex justify-center mt-10">
@@ -150,6 +154,11 @@ const Testimonial = () => {
 
 </button>
 </div>
+=======
+      <button className="mt-8 bg-red-600 text-white py-2 px-6 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-500/50">
+        View All
+      </button>
+>>>>>>> 19cacedc0b15d3ccacd256e00808c62963a92b1a
     </div>
   );
 };
