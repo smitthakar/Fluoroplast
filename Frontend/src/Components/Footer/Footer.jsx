@@ -9,6 +9,7 @@ import email from "../../assets/mail.png";
 import location from "../../assets/location.png";
 import frame from "../../assets/frame.png";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { useState } from "react";
 import chatLogo from "../../assets/chatLogo.png";
 import close from "../../assets/close.png";
@@ -44,6 +45,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#0A0A0A] text-white px-20 pt-[90px] pb-[-40px]">
+=======
+
+export default function Footer() {
+  return (
+    <footer className="bg-black text-white px-20 pt-[90px] pb-[-40px]">
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
       <div className=" flex flex-wrap justify-between gap-y-10">
         {/* Left Section - Logo & About */}
         <div className="w-[25%]">
@@ -80,6 +87,7 @@ export default function Footer() {
         <div className="w-[15%]">
           <h3 className="text-lg font-semibold mb-4">Our Company</h3>
           <ul className="space-y-3 text-gray-400 text-sm">
+<<<<<<< HEAD
             {[
               { name: "Home", path: "/" },
               { name: "About Us", path: "/aboutus" },
@@ -97,12 +105,29 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+=======
+    {[
+      { name: "Home", path: "/" },
+      { name: "About Us", path: "/aboutus" },
+      { name: "Downloads", path: "/downloads" },
+      { name: "Technical Documents", path: "/document" },
+      { name: "Gallery", path: "/gallery" },
+      { name: "Case Studies", path: "/case-studies" },
+      { name: "Contact Us", path: "/contactus" },
+    ].map((item, index) => (
+      <li key={index} className="flex items-center gap-2">
+        › <Link to={item.path} className="hover:text-white transition">{item.name}</Link>
+      </li>
+    ))}
+  </ul>
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
         </div>
 
         {/* Products */}
         <div className="w-[20%]">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
           <ul className="space-y-3 text-gray-400 text-sm">
+<<<<<<< HEAD
             {[
               { name: "Engineering Plastics", link: "/engineering-plastics" },
               { name: "Hydraulic Seals", link: "/hydraulic-seals" },
@@ -127,6 +152,21 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+=======
+  {[
+    { name: "Engineering Plastics", link: "/engineering-plastics" },
+    { name: "Hydraulic Seals", link: "/hydraulic-seals" },
+    { name: "Compressor Replacement Parts", link: "/compressor-replacement" },
+    { name: "Hydraulic Cylinders", link: "/hydraulic-cylinders" },
+    { name: "FEP and PFA Lined Valves & Fittings", link: "/fep-pfa-valves" },
+  ].map((item, index) => (
+    <li key={index} className="flex items-center gap-2">
+      › <a href={item.link} className="hover:text-white transition duration-300">{item.name}</a>
+    </li>
+  ))}
+</ul>
+
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
         </div>
 
         {/* Newsletter */}
@@ -142,6 +182,7 @@ export default function Footer() {
               placeholder="Enter your email address"
               className="w-[320px] px-4 py-3 rounded-md bg-white text-black text-sm focus:outline-none"
             />
+<<<<<<< HEAD
             <div className="flex mt-3">
             <button className="w-[200px] h-[50px] rounded-full border-transparent bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white font-semibold
                  transform flex items-center justify-center gap-2 group 
@@ -157,6 +198,11 @@ export default function Footer() {
             
             </button>
             </div>
+=======
+            <button className="mt-4 w-[200px] bg-gradient-to-r from-red-600 to-orange-500 text-white py-3 rounded-full font-bold">
+              Subscribe
+            </button>
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
           </div>
         </div>
       </div>
@@ -182,11 +228,15 @@ export default function Footer() {
         {/* Phone Section */}
         <div className="flex items-center text-gray-400 w-[522px] h-[36px] gap-16px">
           <div className=" p-1 rounded-full flex items-center justify-center">
+<<<<<<< HEAD
             <img
               src={call}
               alt=""
               className=" w-[46px] h-[46px] object-contain"
             />
+=======
+            <img src={call} alt="" className=" w-[46px] h-[46px] object-contain" />
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
           </div>
           <p className="text-sm w-[450px] h-[28px]">
             +91-79 29752921, +91-79 29758345, +91-79 29757182
@@ -196,11 +246,15 @@ export default function Footer() {
         {/* Address Section */}
         <div className="flex items-center text-gray-400 w-[522px] h-[36px] gap-[16px]">
           <div className=" p-1 rounded-full flex items-center justify-center">
+<<<<<<< HEAD
             <img
               src={location}
               alt=""
               className=" w-[56px] h-[56px] object-contain"
             />
+=======
+            <img src={location} alt="" className=" w-[56px] h-[56px] object-contain" />
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
           </div>
           <p className="text-sm">
             11/14 Subhash Estate, Ramol Road, CTM, Amraiwadi, Ahmedabad-380026
@@ -209,6 +263,7 @@ export default function Footer() {
         </div>
 
         {/* Chat Icon - Corrected Alignment */}
+<<<<<<< HEAD
         {/* Chat Icon */}
         <div>
         {isChatOpen && <div className="w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-red-700 -mt-2 ml-7"></div>}
@@ -293,10 +348,19 @@ export default function Footer() {
           </div>
         </div>
       )}
+=======
+        <div>
+          <div className="flex items-center justify-center cursor-pointer rounded-full ">
+            {/* Uncomment & Use an SVG or Image for Chat Icon */}
+            <img src={frame} alt="Chat" className="w-[88px] h-[75px]  gap-[10px]" />
+          </div>
+        </div>
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
       </div>
 
       {/* Copyright Section */}
       <div className=" mt-4 text-gray-400 text-sm text-center border-t border-gray-700 pt-4 flex justify-between">
+<<<<<<< HEAD
         <p className="w-[811px] h-[45px]">
           Copyright © 2024 Fluoroplast Engineers | All Rights Reserved
         </p>
@@ -311,6 +375,21 @@ export default function Footer() {
             </a>
           </p>
         </div>
+=======
+        <p className="w-[811px] h-[45px]">Copyright © 2024 Fluoroplast Engineers | All Rights Reserved</p>
+        <div className="w-[578px]">
+        <p className="space-x-2 ">
+          <a href="#" className="hover:underline">
+            Terms and Conditions
+          </a>
+          <span>|</span>
+          <a href="#" className="hover:underline">
+            Privacy Policy
+          </a>
+        </p>
+        </div>
+        
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
       </div>
     </footer>
   );

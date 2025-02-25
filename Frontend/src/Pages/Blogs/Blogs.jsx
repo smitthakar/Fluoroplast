@@ -32,13 +32,21 @@ const Blogs = () => {
   return (
     <>
     <Navbar />
+<<<<<<< HEAD
     <div className="p-9  w-[1432px] top-[114px] h-[2500px] left-[100px]  relative">
+=======
+    <div className="p-9  w-full top-[114px] h-[2500px] left-[100px]  relative">
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
       {/* Title */}
        {/* Title */}
        <h2 className="text-3xl font-bold mb-6 font-redhat">Blogs</h2>
 
 {/* Featured Blog */}
+<<<<<<< HEAD
 <div className=" w-[1350px] flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden mb-10">
+=======
+<div className=" w-full flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden mb-10">
+>>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
   {/* Image Section */}
   <div className="w-full md:w-[604px]">
     <img src={blog} alt="Gears" className="w-full h-[272px] object-cover" />
