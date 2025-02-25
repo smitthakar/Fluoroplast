@@ -7,7 +7,6 @@ import NeedHelp from "../../Components/NeedHelp/NeedHelp";
 import Navbar from "../../Components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 
-// Generate an array of 12 blog posts
 const blogPosts = new Array(12).fill({
         image: BG,
         date: "Jan 21, 2024",

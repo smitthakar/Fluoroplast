@@ -45,12 +45,14 @@ export default function BlogSection() {
     <div className="w-full h-[1139px] pt-[112px] px-[144px] gap-[40px]">
       {/* Section Title */}
       <div className="text-center mb-6">
-        <p className="text-red-600 font-['Red Hat Display'] font-bold text-[24px] leading-[33.6px] tracking-[6%] text-center uppercase">
-          Blogs
-        </p>
-        <h2 className="font-['Red Hat Display'] font-bold text-[60px] leading-[84px] tracking-[0] text-center text-[#0A0A0A] w-full h-[168px]">
-          Insight, Industry Trends, Top <br /> News Headlines
-        </h2>
+      <p className="text-[#9D0A0E] font-['Red Hat Display'] font-extrabold text-[24px] leading-[33.6px] tracking-[6%] text-center uppercase">
+  Blogs
+</p>
+
+<h2 className="font-['Red Hat Display'] font-semibold text-[60px] leading-[84px] tracking-[0] text-center text-[#0A0A0A] w-full h-[168px]">
+  Insight, Industry Trends, Top <br /> News Headlines
+</h2>
+
       </div>
 
       {/* Blog Grid */}

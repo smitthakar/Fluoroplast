@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import map from "../../assets/map.png"
-import arr from "../../assets/Arrow rigth.png"
+import { FaArrowRight } from "react-icons/fa";
+import arr from "../../assets/Arrow rigth.png";
 
 const GlobalPresence = () => {
   return (
@@ -25,18 +26,22 @@ const GlobalPresence = () => {
       </motion.h1>
 
       {/* CTA Button */}
+
       <button
-        className="mt-4 pt-[16px] pb-[16px] pr-[16px] pl-[24px] gap-[8px] bg-white text-red-700 rounded-full font-semibold shadow-md border-[2px] border-red-700 transition-all duration-500 w-[200px] h-[50px] rounded-[48px]
-  hover:bg-gradient-to-r hover:from-[#9D0A0E] hover:to-[#F15922] hover:text-white hover:shadow-lg flex items-center justify-center space-x-2 overflow-hidden group"
+        className="w-[250px] h-[60px] px-[24px] py-[16px] rounded-[48px] border-[2px] mt-[20px] border-[#9D0A0E] bg-white text-[#9D0A0E] font-semibold font-['Manrope'] shadow-md 
+        ease-in-out relative flex items-center justify-center gap-2 group 
+        hover:bg-gradient-to-r hover:from-[#9D0A0E] hover:to-[#F15922] hover:text-white"
       >
-        <span className="whitespace-nowrap">Find A Distributor</span>
-        {/* Sliding Custom Arrow (Appears on Hover) */}
-        <img
-          src={arr}
-          alt="Arrow"
-          className="w-[20px] h-[20px] transform translate-x-[-10px] opacity-0 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100 group-hover:invert"
-        />
+        Find A Distributor
+        {/* Right Arrow - Initially Hidden, Appears & Moves on Hover */}
+        <span
+          className="opacity-0 transform translate-x-0 transition-all duration-300 ease-in-out text-white 
+            group-hover:opacity-100 group-hover:translate-x-2"
+        >
+          <FaArrowRight />
+        </span>
       </button>
+      
 
       {/* Map Section with Background */}
       <div className="relative w-[100%] h-[60%] ">
