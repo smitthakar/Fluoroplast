@@ -32,8 +32,8 @@ const Certificates = () => {
 
         <div className="h-[534px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-[24px]">
           {images.map((image, index) => (
-            <div key={index} className="bg-white rounded-lg p-1">
-              <img src={image} alt={`Certificate ${index + 1}`} className="w-[252px] h-[255px] rounded-md" />
+            <div key={index} className="bg-white w-[202px] p-1">
+              <img src={image} alt={`Certificate ${index + 1}`} className="w-[252px] h-[305px]  rounded-[8px]" />
             </div>
           ))}
         </div>
