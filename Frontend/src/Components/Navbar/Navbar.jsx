@@ -104,7 +104,7 @@ export default function Navbar() {
           >
             <span className="absolute inset-0 bg-black opacity-0 transition-all duration-300 group-hover:opacity-100 rounded-full"></span>
             <span className="relative flex items-center z-10 text-white transition-all duration-300">
-              <FaPhoneAlt className="mr-2 ml-2 justify-center" />
+              <FaPhoneAlt className="mr-2 ml-4 justify-center" />
               Contact us
               <span className="ml-2 relative w-5 h-5 flex items-center justify-center overflow-hidden">
                 <FaArrowRight className="absolute left-[-10px] opacity-0 transition-all duration-300 group-hover:left-0 group-hover:opacity-100" />

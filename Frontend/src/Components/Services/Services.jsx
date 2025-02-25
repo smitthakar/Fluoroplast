@@ -7,6 +7,7 @@ import GroupThree from "../../assets/GroupThree.png";
 import pneumatic from "../../assets/pneumatic.png";
 import combination from "../../assets/combination.png";
 import arr from "../../assets/Arrow rigth.png";
+import arrLeft from "../../assets/Arrow left.png";
 import { FaArrowRight } from "react-icons/fa";
 
 const services = [
@@ -108,17 +109,17 @@ const ServicesCarousel = () => {
 
       {/* Navigation Buttons */}
         <div className="flex justify-end items-center gap-4 mb-6 mt-[-50px] pr-40">
-          <button
+        <button
             onClick={prevSlide}
-            className="w-10 h-10 flex items-center justify-center bg-red-100 text-red-600 rounded-full shadow-lg hover:bg-red-200 transition"
+            className="w-10 h-10 flex items-center justify-center bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition"
           >
-            ←
+            <img src={arrLeft} alt="" />
           </button>
           <button
             onClick={nextSlide}
-            className="w-10 h-10 flex items-center justify-center bg-red-700 text-white rounded-full shadow-lg hover:bg-red-800 transition"
+            className="w-10 h-10 flex items-center justify-center bg-red-700 text-white rounded-full  hover:bg-red-800 transition"
           >
-            →
+            <img src={arr} alt="" />
           </button>
         </div>
 

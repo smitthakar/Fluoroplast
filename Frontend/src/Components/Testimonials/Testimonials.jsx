@@ -5,10 +5,7 @@ import personOne from "../../assets/personOne.png";
 import personTwo from "../../assets/personTwo.png";
 import personThree from "../../assets/personThree.png";
 import personFour from "../../assets/personFour.png";
-<<<<<<< HEAD
 import { FaArrowRight } from "react-icons/fa";
-=======
->>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
 
 const testimonials = [
   {
@@ -136,7 +133,6 @@ const Testimonial = () => {
       </div>
 
       {/* View All Button */}
-<<<<<<< HEAD
       
 
 <div className="flex justify-center mt-10">
@@ -154,11 +150,6 @@ const Testimonial = () => {
 
 </button>
 </div>
-=======
-      <button className="mt-8 bg-red-600 text-white py-2 px-6 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-500/50">
-        View All
-      </button>
->>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
     </div>
   );
 };

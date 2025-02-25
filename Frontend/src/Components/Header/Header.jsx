@@ -3,10 +3,7 @@ import slider1 from "../../assets/HeroOne.png";
 import slider2 from "../../assets/HeroTwo.png";
 import slider3 from "../../assets/HeroThree.png";
 import slider4 from "../../assets/HeroFour.png";
-<<<<<<< HEAD
 import { FaArrowRight } from "react-icons/fa6";
-=======
->>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
 
 const images = [slider1, slider2, slider3, slider4];
 
@@ -56,7 +53,6 @@ const HeroSlider = () => {
           <p className="text-2xl font-redhat">
             Innovating for Over 30 Years | Expanding for the Future.
           </p>
-<<<<<<< HEAD
           <button className="w-[230px] h-[55px] rounded-full border-transparent bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white font-semibold
    transform flex items-center justify-center gap-2 group 
    hover:bg-white hover:bg-none hover:text-[#9D0A0E] hover:border-2 hover:border-[#9D0A0E]">
@@ -70,12 +66,6 @@ const HeroSlider = () => {
 </span>
 
 </button>
-=======
-          <button className=" bg-red-500 text-white px-6 py-2 rounded-full text-lg transition duration-300 ease-in-out border border-red-500 flex items-center space-x-2 group shadow-md hover:bg-white hover:text-red-500">
-            <span className="transition-all duration-300 ease-in-out font-redhat">Explore Our Products</span>
-            <span className="transition-all duration-300 ease-in-out">→</span>
-          </button>
->>>>>>> e869f09d44afb114421c3b9f5e34260bb0d29725
         </div>
 
         {/* Image Slider */}
