@@ -90,7 +90,7 @@ export default function Footer() {
               { name: "Technical Documents", path: "/document" },
               { name: "Gallery", path: "/gallery" },
               { name: "Case Studies", path: "/case-studies" },
-              { name: "Contact Us", path: "/contactus" },
+              { name: "Contact Us", path: "/contact-us" },
             ].map((item, index) => (
               <li key={index} className="flex items-center gap-2">
                 ›{" "}
