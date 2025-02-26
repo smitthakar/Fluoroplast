@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import aerospaceImg from "../../assets/Aerospace.png";
 import industrialImg from "../../assets/Industrial.png";
 import oilGasImg from "../../assets/Oil.png";

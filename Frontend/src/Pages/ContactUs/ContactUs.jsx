@@ -5,6 +5,7 @@ import Footer from "../../Components/Footer/Footer";
 import mail from "../../assets/mail.png";
 import call from "../../assets/call.png";
 import location from "../../assets/location.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -98,9 +99,19 @@ const ContactPage = () => {
             <input type="text" name="subject" placeholder="Subject *" value={formData.subject} onChange={handleChange} className="p-[16px] pr-[24px] pl-[24px] rounded-lg w-[1024px] h-[60px] border-[1px]" required />
             <textarea name="message" placeholder="Leave Your Message (Optional)" value={formData.message} onChange={handleChange} className="p-[16px] pr-[24px] pl-[24px] rounded-lg w-[1024px] h-[276px] border-[1px]"></textarea>
 
-            <button type="submit" className="w-[250px] h-[60px] bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white p-[16px] pr-[16px] pl-[24px] rounded-[48px] hover:opacity-90 transition shadow-lg shadow-red-500/50">
-            Send a Message
-          </button>
+            <button className="w-[250px] h-[55px] rounded-full border-transparent bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white font-semibold
+   ease-in-out transform flex items-center justify-center relative group 
+  hover:bg-white hover:bg-none hover:text-[#9D0A0E] hover:border-2 hover:border-[#9D0A0E] hover:scale-105  transition-all duration-300">
+  
+  <span className="absolute left-1/2 -translate-x-1/2 ">Send A Message</span>
+
+  {/* Right Arrow - Appears and Moves Right on Hover */}
+  <span className="opacity-0 transform translate-x-0 transition-all duration-300 ease-in-out text-[#9D0A0E] 
+      group-hover:opacity-100 group-hover:translate-x-2">
+    <FaArrowRight className="ml-[140px]" />
+  </span>
+
+</button>
           </form>
         </div>
         </div>

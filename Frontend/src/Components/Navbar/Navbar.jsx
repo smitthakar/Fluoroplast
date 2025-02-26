@@ -75,7 +75,7 @@ export default function Navbar() {
               onClick={() => handleSectionClick(section)}
             >
               <span>{section}</span>
-              <IoCaretDownOutline className="w-[22px] h-[29px] py-[9px] px-[7px] gap-[10px]"  />
+              <IoCaretDownOutline className="w-[22px] h-[29px] py-[9px] px-[7px] gap-[10px]" />
             </button>
           ))}
         </div>
@@ -178,7 +178,7 @@ export default function Navbar() {
                           className="flex items-center space-x-3 font-['Red Hat Display']"
                         >
                           <span className="">
-                            <SlArrowRight  className="text-black-600 w-3 h-3"/>
+                            <SlArrowRight className="text-black-600 w-3 h-3" />
                           </span>
                           <a href={item.link} className="hover:text-red-900">
                             {item.name}
@@ -240,7 +240,7 @@ export default function Navbar() {
                       className="flex items-center space-x-3 font-['Red Hat Display']"
                     >
                       <span className="text-black-600">
-                        <SlArrowRight className="w-3 h-3"/>
+                        <SlArrowRight className="w-3 h-3" />
                       </span>
                       <a href={item.link} className="hover:text-red-900">
                         {item.name}
@@ -278,7 +278,7 @@ export default function Navbar() {
                           className="flex items-center space-x-3 py-2"
                         >
                           <span className="text-black-600">
-                            <SlArrowRight className="w-3 h-3"/>
+                            <SlArrowRight className="w-3 h-3" />
                           </span>
                           <a href={item.link} className="hover:text-red-900">
                             {item.name}
@@ -298,7 +298,7 @@ export default function Navbar() {
                           className="flex items-center space-x-3 py-2"
                         >
                           <span className="text-black-600">
-                            <SlArrowRight className="w-3 h-3"/>
+                            <SlArrowRight className="w-3 h-3" />
                           </span>
                           <a href={item.link} className="hover:text-red-900">
                             {item.name}
@@ -314,7 +314,13 @@ export default function Navbar() {
         </div>
       )}
       {menuOpen && !activeSection && (
-        <div className="absolute w-full bg-white transition-all duration-300 py-10 px-6 z-50">
+        <div
+          className="absolute w-full bg-white transition-all duration-300 py-10 px-6 z-50"
+          onMouseLeave={() => {
+            setMenuOpen(false); // Close menu on mouse leave
+            setActiveSection(null);
+          }}
+        >
           <div className="max-w-screen-xl mx-auto grid grid-cols-2 gap-10">
             {/* Left Column */}
             <div>
@@ -346,7 +352,7 @@ export default function Navbar() {
               <h3 className="text-xl font-semibold py-2 font-['Red Hat Display'] text-gray-900">
                 Innovation & Quality
               </h3>
-              <ul className="mt-3 space-y-4  text-gray-700 font-medium font-['Red Hat Display']">
+              <ul className="mt-3 space-y-4 text-gray-700 font-medium font-['Red Hat Display']">
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600 w-3 h-3" />
                   <span className="hover:text-red-900">
@@ -355,7 +361,11 @@ export default function Navbar() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <SlArrowRight className="text-black-600 w-3 h-3 " />
-                  <Link to="/quality-assurance"  ><span className="hover:text-red-900">Quality Assurance & Certifications</span></Link>
+                  <Link to="/quality-assurance">
+                    <span className="hover:text-red-900">
+                      Quality Assurance & Certifications
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>
