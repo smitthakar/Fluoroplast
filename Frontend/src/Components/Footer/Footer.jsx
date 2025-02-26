@@ -197,10 +197,10 @@ export default function Footer() {
             <img
               src={call}
               alt=""
-              className=" w-[46px] h-[46px] object-contain"
+              className="w-[46px] h-[46px] object-contain"
             />
           </div>
-          <p className="text-sm w-[450px] h-[28px]">
+          <p className="text-sm w-[450px]  ml-2 h-[28px]">
             +91-79 29752921, +91-79 29758345, +91-79 29757182
           </p>
         </div>
@@ -211,7 +211,7 @@ export default function Footer() {
             <img
               src={location}
               alt=""
-              className=" w-[56px] h-[56px] object-contain"
+              className=" w-[66px] h-[66px] object-contain"
             />
           </div>
           <p className="text-sm">

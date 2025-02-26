@@ -178,7 +178,7 @@ const ServicesCarousel = () => {
                     className="text-[#0A0A0A] font-bold mt-auto pt-2 transition-all group-hover:text-white flex justify-between items-center"
                   >
                     Read More
-                    <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-1 group-hover:scale-125 text-lg">
+                    <span className="opacity-0 group-hover:opacity-100  group-hover:translate-x-1 group-hover:scale-125 text-lg">
                       <FaArrowRight className="w-[15px] h-[15px]" />
                     </span>
                   </a>

@@ -26,7 +26,7 @@ const Certificates = () => {
     <>
       <Navbar />
       <div className="w-full h-[884px] gap-[24px] pt-[112px] pr-[144px] pb-[112px] pl-[144px]">
-        <h2 className="w-full h-[84px] font-['Red Hat Display'] font-bold text-[60px] leading-[54px] tracking-normal">
+        <h2 className="w-full h-[84px] font-redhat font-bold text-[60px] leading-[54px] tracking-normal">
           Gallery
         </h2>
 

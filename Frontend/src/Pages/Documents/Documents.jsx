@@ -29,7 +29,7 @@ const Document = () => {
               <div className="flex flex-col flex-grow px-[32px] w-[265px]  ">
                 <h3 className="text-lg font-semibold pb-1  h-[50px] flex items-center mt-[80px]">{doc.title}</h3>
               </div>
-              <div className="flex items-center gap-2 h-[40px] border-t pt-2 mb-[15px] px-[32px] w-full ">
+              <div className="flex items-center gap-2 h-[40px] border-t pt-2 mb-[15px] px-[32px] w-full group-hover:inverty ">
                <img src={Download} alt="Download-PDf-Icon" className="w-[35px] h-[35px] group-hover:brightness-0 cursor-pointer" />
                 <span>Download Now</span>
               </div>

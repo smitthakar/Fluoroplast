@@ -16,10 +16,10 @@ const BlogPost = () => {
   return (
     <>
       <Navbar />
-      <div className=" px-[144px] py-[112px] w-full h-[2089px] gap-[24px]">
+      <div className=" px-[144px] py-[112px] w-full h-[2089px] gap-[24px] ">
         {/* Breadcrumb */}
-        <div className="w-[944px] h-[2097px] gap-[32px] ">
-          <div className=" w-[944px] h-[66px] py-[16px] gap-[8px] text-sm">
+        <div className="w-[994px] h-[2097px] gap-[32px] ">
+          <div className=" w-[994px] h-[66px] py-[16px] gap-[8px] text-sm">
             <Link
               to="/"
               className="text-red-600 text-[18px] font-bold leading-[33.6px] tracking-[0%] text-center font-['Red_Hat_Display']"
@@ -31,7 +31,7 @@ const BlogPost = () => {
             </span>
 
             <Link
-              to="/blog"
+              to="/blogs"
               className="text-red-600 text-[18px] font-bold leading-[33.6px] tracking-[0%] text-center font-['Red_Hat_Display'] "
             >
               Blog
@@ -39,15 +39,23 @@ const BlogPost = () => {
             <span className="text-red-600 text-[18px] font-bold leading-[33.6px] tracking-[0%] text-center font-['Red_Hat_Display'] mx-2">
               /
             </span>
-            <span className="text-[#0A0A0A] text-[18px] font-bold leading-[33.6px] tracking-[0%] text-center font-['Red_Hat_Display']">
+            <span className="text-[#0A0A0A] text-[18px] font-bold leading-[33.6px] tracking-[0%] text-center font-['Red_Hat_Display'] ]">
               Importers achieve cost savings through the First Sale rule!
             </span>
           </div>
-          <div className="w-[944px] h-[1999px] gap-[32px] ml-[405px] ">
-            <div className="w-[554px] h-[1999px] gap-[24px]">
+          <div className="w-[994px] h-[1999px] gap-[32px] ml-[320px] ">
+            <div className="w-[614px] h-[1999px] gap-[24px]">
               {/* Blog Title */}
-              <h1 className="text-[40px] font-bold leading-[54px] tracking-[0%] font-['Red_Hat_Display']">
-                Importers Achieve Cost Savings Through The First Sale Rule!
+              <h1 className="text-[40px] font-bold leading-[54px] tracking-[0%] font-redhat">
+                Importers Achieve Cost
+                <>
+                  <br />
+                </>{" "}
+                Savings Through The First
+                <>
+                  <br />
+                </>{" "}
+                Sale Rule!
               </h1>
 
               {/* Blog Image */}
@@ -55,12 +63,12 @@ const BlogPost = () => {
                 <img
                   src={blogMain}
                   alt="Blog Cover"
-                  className="w-[554px] object-contain h-37  my-2 "
+                  className="w-[614px] object-contain h-37  my-2 "
                 />
               </div>
 
               {/* Author Info */}
-              <div className="flex w-full h-[48px] gap-[16px] justify-between items-center text-gray-900">
+              <div className="flex w-[614px] h-[48px] gap-[16px] justify-between items-center text-gray-900">
                 {/* Profile Image & Author */}
                 <div className="flex items-center space-x-1">
                   <img
@@ -91,7 +99,7 @@ const BlogPost = () => {
               </div>
 
               {/* Blog Content */}
-              <div className="mt-6 text-gray-800 w-full text-justify ">
+              <div className="mt-6 text-gray-800 w-[614px] text-justify ">
                 <p className="mt-4 text-[16px] font-normal leading-[28px] tracking-[0%] font-['Manrope']">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -206,7 +214,7 @@ const BlogPost = () => {
                     className="rounded-full flex items-center justify-center"
                   >
                     <img
-                      src={LinkedIn}
+                      src={Instagram}
                       alt="LinkedIn"
                       className=" h-[46px] w-[46px]"
                     />
@@ -226,7 +234,7 @@ const BlogPost = () => {
                     className="rounded-fullflex items-center justify-center  "
                   >
                     <img
-                      src={Instagram}
+                      src={Twitter}
                       alt="Instagram"
                       className=" h-[46px] w-[46px]"
                     />
@@ -246,7 +254,7 @@ const BlogPost = () => {
                     className="rounded-full  flex items-center justify-center "
                   >
                     <img
-                      src={Twitter}
+                      src={LinkedIn}
                       alt="Twitter"
                       className="h-[46px] w-[46px]"
                     />
@@ -255,20 +263,20 @@ const BlogPost = () => {
               </div>
 
               {/* Pagination */}
-              <div className="flex justify-between mt-12 text-black-700 w-full h-[98px] gap-[24px]">
+              <div className="flex justify-between mt-12 text-black-700  w-full h-[98px] gap-[24px]">
                 <Link to="/previous-post" className="flex flex-col">
-                  <span className="font-[18px] w-[76px] h-[26px]  text-black-700  font-['Manrope'] leading-[10px] tracking-[0%] ">
+                  <span className="font-[18px] w-[76px] h-[26px]  text-black-700  font-['Manrope'] leading-[10px] tracking-[0%]  ">
                     Previous
                   </span>
-                  <span className="font-[20px] text-balck-600 font-['Manrope'] leading-[28pxpx]">
+                  <span className="font-bold text-balck-600 font-['Manrope'] leading-[28pxpx] w-[300px] ">
                     Importers achieve cost savings through...
                   </span>
                 </Link>
-                <Link to="/next-post" className="flex flex-col text-right">
-                  <span className="font-[18px] text-black-700 font-['Manrope'] leading-[10px] tracking-[0%] mb-4">
+                <Link to="/next-post" className="flex flex-col text-right ">
+                  <span className="font-[18px] text-black-700  font-['Manrope'] leading-[10px] tracking-[0%] mb-4">
                     Next
                   </span>
-                  <span className=" font-[20px] text-balck-600 font-['Manrope'] leading-[28pxpx] ">
+                  <span className=" text-balck-600  font-bold font-['Manrope'] leading-[28pxpx] w-[300px]">
                     Importers achieve cost savings through...
                   </span>
                 </Link>

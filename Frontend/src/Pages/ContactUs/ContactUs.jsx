@@ -96,7 +96,7 @@ const ContactPage = () => {
             </div>
 
             <input type="text" name="subject" placeholder="Subject *" value={formData.subject} onChange={handleChange} className="p-[16px] pr-[24px] pl-[24px] rounded-lg w-[1024px] h-[60px] border-[1px]" required />
-            <textarea name="message" placeholder="Leave Your Message (Optional)" value={formData.message} onChange={handleChange} className="p-[16px] pr-[24px] pl-[24px] rounded-lg w-[1024px] h-[276px] border-[1px]"></textarea>
+            <textarea name="message" placeholder="Leave Your Message (Optional)" value={formData.message} onChange={handleChange} className="p-[16px] pr-[24px] pl-[24px] rounded-lg w-[1024px] h-[200px] border-[1px]"></textarea>
 
             <button type="submit" className="w-[250px] h-[60px] bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white p-[16px] pr-[16px] pl-[24px] rounded-[48px] hover:opacity-90 transition shadow-lg shadow-red-500/50">
             Send a Message
