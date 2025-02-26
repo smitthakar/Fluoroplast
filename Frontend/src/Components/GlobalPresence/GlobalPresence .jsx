@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import map from "../../assets/map.png"
 import { FaArrowRight } from "react-icons/fa";
-import arr from "../../assets/Arrow rigth.png";
 
 const GlobalPresence = () => {
   return (

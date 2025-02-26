@@ -1,142 +1,100 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import test1 from "../../assets/test1.png";
+import test2 from "../../assets/test7.png";
+import test3 from "../../assets/test3.png";
+import test4 from "../../assets/test4.png";
+import test5 from "../../assets/test5.png";
+import test6 from "../../assets/test6.png";
+import test7 from "../../assets/test2.png";
 import quoteOpen from "../../assets/quoteOpen.png";
-import quoteClose from "../../assets/quoteClose.png";
-import personOne from "../../assets/personOne.png";
-import personTwo from "../../assets/personTwo.png";
-import personThree from "../../assets/personThree.png";
-import personFour from "../../assets/personFour.png";
+import arr from "../../assets/Arrow rigth.png";
+import arrLeft from "../../assets/Arrow left.png";
+import { FaArrowRight } from "react-icons/fa";
 
 const testimonials = [
-  {
-    image: personOne,
-    text: "We have been partnering with Fluoroplast Engineers Pvt. Ltd. for over a decade, and their commitment to precision and quality never ceases to amaze us. In our industry, even the smallest margin of error can result in costly setbacks. Fluoroplast Engineers Pvt. Ltd. consistently delivers components that exceed our stringent requirements, with no compromise on precision, durability, or safety.",
-    name: "Heema Sheth",
-    role: "Co-owner",
-  },
-  {
-    image: personTwo,
-    text: "As a rapidly growing startup in the tech space, we needed a manufacturing partner that could not only keep up with our fast pace but also bring innovative solutions to the table. Fluoroplast Engineers Pvt. Ltd. has been that partner for us.",
-    name: "Janki Verma",
-    role: "CEO",
-  },
-  {
-    image: personThree,
-    text: "We’ve worked with Fluoroplast Engineers Pvt. Ltd. for over 15 years and they have always been a reliable and consistent partner. On several occasions, they’ve gone above and beyond, accommodating last-minute changes and ramping up production to help us meet our project goals.",
-    name: "Rohan Dave",
-    role: "Engineer",
-  },
-  {
-    image: personFour,
-    text: "As sustainability consultants, we are always on the lookout for manufacturing partners that share our vision of reducing environmental impact without sacrificing product quality. Fluoroplast Engineers Pvt. Ltd. has proven to be a leader in this area.",
-    name: "Karan Patel",
-    role: "Sr. Engineer",
-  },
-  
+  { text: 'Fluoroplast Engineers consistently delivers high-quality fluoropolymer products. Their precision and durability have significantly improved our manufacturing process.', name: 'Heema Sheth', role: 'Co-owner', image: test1 },
+  { text: 'The team at Fluoroplast Engineers is highly responsive and knowledgeable.', name: 'Rohan Dave', role: 'CEO', image: test2 },
+  { text: "Fluoroplast Engineers' expertise in fluoropolymer technology helped us develop a superior product. Their engineering support was invaluable.", name: 'Karan Patel', role: 'Engineer', image: test3 },
+  { text: 'We needed a custom PTFE solution, and Fluoroplast Engineers exceeded our expectations with their precision and attention to detail.', name: 'Janki Verma', role: 'Sr. Engineer', image: test4 },
+  { text: 'Fluoroplast Engineers has been a reliable partner for over a decade. Their products meet stringent industry standards, ensuring safety and efficiency.', name: 'Rina Sheth', role: 'Sr. Engineer', image: test5 },
+  { text: "The components we sourced from Fluoroplast Engineers have lasted much longer than competitors' products, reducing our maintenance costs.", name: 'Neel Verma', role: 'Engineer', image: test6 },
+  { text: 'Fluoroplast Engineers delivers top-tier quality with unmatched expertise. Their commitment to innovation sets them apart in the industry.', name: 'Nita Singh', role: 'Sr. Engineer', image: test7 }
 ];
 
-const Testimonial = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+const TestimonialCard = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % (testimonials.length - 3));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + (testimonials.length - 3)) % (testimonials.length - 3));
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsVisible(false);
-      setTimeout(() => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-        setIsVisible(true);
-      }, 500);
-    }, 5000);
-
+      nextSlide();
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white text-black w-full h-[704px] gap-[20px] px-[144px] py-[112px] ">
-      {/* Header */}
-      <div className="h-[202px] w-full flex flex-col items-center justify-center text-center">
+    <div className="justify-center overflow-hidden ml-[100px] mr-[100px]">
+      <div className="h-[202px] flex flex-col items-center justify-center text-center">
         <h3 className="text-[#9D0A0E] font-semibold text-[24px] leading-[33.6px] uppercase w-[197px] h-[34px] font-['Red Hat Display']">
           Testimonials
         </h3>
         <h2 className="font-['Red_Hat_Display'] font-extrabold text-[60px] leading-[84px]">
-          What Happy People Are Saying About
+          What Our <span className="text-[#9D0A0E]">Clients</span> Say
         </h2>
-        <h2 className="font-['Red_Hat_Display'] font-extrabold text-[60px] leading-[84px] text-[#9D0A0E]">
-          Fluoroplast Engineers
-        </h2>
+        <div className="flex justify-end items-center gap-4 mb-2 mt-[-90px] pr-8 ml-[1000px]">
+          <button onClick={prevSlide} className="w-[56px] h-[56px] flex items-center justify-center bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition">
+            <img src={arrLeft} alt="" />
+          </button>
+          <button onClick={nextSlide} className="w-[56px] h-[56px] flex items-center justify-center bg-red-700 text-white rounded-full hover:bg-red-800 transition">
+            <img src={arr} alt="" />
+          </button>
+        </div>
       </div>
-
-      {/* Testimonial Content */}
-      <div className="flex flex-col md:flex-row items-center mt-8 w-full h-[356px] relative">
-        {/* Quote & Image Section */}
-        <div className="relative flex items-center">
-          <div className="flex flex-col items-start mr-10 mt-10 w-[23px] h-[340px] gap-[40px] space-y-4">
-            {testimonials.map((_, index) => (
-              <div
-                key={index}
-                className={`flex items-center space-x-4 cursor-pointer transition-all w-[70px] ${
-                  activeIndex === index ? "text-red-500" : "text-gray-600"
-                }`}
-                onClick={() => setActiveIndex(index)}
-              >
-                <div
-                  className={`w-1 h-[40px] transition-all ${
-                    activeIndex === index ? "bg-red-500" : "bg-gray-500"
-                  }`}
-                ></div>
-                <span className="font-semibold h-[23px] text-lg">
-                  {`0${index + 1}`}
-                </span>
+      <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${currentIndex * 25}%)` }}>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="bg-white shadow-lg p-6 min-w-[25%] box-border flex flex-col justify-between" style={{ width: 326, height: 439, borderRadius: 8, borderWidth: 1, marginRight: 56, fontFamily: 'Red Hat Display', fontWeight: 600, fontSize: 20, lineHeight: '33.6px', letterSpacing: '0%' }}>
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full" />
               </div>
-            ))}
+              <img src={quoteOpen} alt="Quote" className="w-8 h-8 mb-4 ml-3" />
+              <p className="mb-6 line-clamp-6 ml-4">{testimonial.text}</p>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-1 h-full bg-[#4F4F4F]"></div>
+              <div>
+                <h4 className="text-black mb-1" style={{ fontFamily: 'Manrope', fontWeight: 800, fontSize: 20, lineHeight: '28px', letterSpacing: '0%' }}>{testimonial.name}</h4>
+                <p className="text-gray-500 text-sm" style={{ fontFamily: 'Manrope', fontWeight: 400, fontSize: 16, lineHeight: '22.4px', letterSpacing: '0%' }}>{testimonial.role}</p>
+              </div>
+            </div>
           </div>
-          <img
-            src={quoteOpen}
-            alt="Quote Open"
-            className="absolute left-12 top-0 w-[100px] h-[100px]"
-          />
-
-          {/* Image Container */}
-          <div className="relative w-[300px] h-[400px] ml-[100px]">
-            {/* Background Shape */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100%] h-[300px] bg-[#FFCFCF] rounded-lg"></div>
-
-            {/* Image */}
-            <img
-              src={testimonials[activeIndex].image}
-              alt="Person"
-              className="w-[300px] h-[400px] object-cover relative z-10"
-            />
-          </div>
-        </div>
-
-        {/* Testimonial Text */}
-        <div
-          className={`ml-10  flex flex-col items-start transition-opacity duration-500 text-justify ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <p className="text-gray-600 mt-[-70px]" style={{ fontFamily: 'Manrope', fontWeight: 400, fontSize: '18px', lineHeight: '25.2px', letterSpacing: '0%' }}>{testimonials[activeIndex].text}</p>
-          <h4 className="font-semibold mt-[90px] text-black"style={{ fontFamily: 'Manrope', fontWeight: 600, fontSize: '18px', lineHeight: '25.2px', letterSpacing: '0%' }}>
-            {testimonials[activeIndex].name}
-          </h4>
-          <p className="text-gray-500" style={{ fontFamily: 'Manrope', fontWeight: 400, fontSize: '18px', lineHeight: '28px', letterSpacing: '0%' }}>{testimonials[activeIndex].role}</p>
-
-        </div>
-        <img
-              src={quoteClose}
-              alt="Quote Close"
-              width={60}
-              height={60}
-              className="absolute right-[630px] bottom-[-35px] w-[100px] h-[100px]"
-            />
+        ))}
       </div>
+      <div className="flex justify-center mt-10">
+      <button className="w-[200px] h-[50px] rounded-full border-transparent bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white font-semibold
+   ease-in-out transform flex items-center justify-center relative group 
+  hover:bg-white hover:bg-none hover:text-[#9D0A0E] hover:border-2 hover:border-[#9D0A0E]">
+  
+  <span className="absolute left-1/2 -translate-x-1/2">View All</span>
 
-      {/* View All Button */}
-      <button className="mt-8 bg-red-600 text-white py-2 px-6 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-500/50">
-        View All
-      </button>
+  {/* Right Arrow - Appears and Moves Right on Hover */}
+  <span className="opacity-0 transform translate-x-0 transition-all duration-300 ease-in-out text-[#9D0A0E] 
+      group-hover:opacity-100 group-hover:translate-x-2">
+    <FaArrowRight className="ml-20" />
+  </span>
+
+</button>
+
+</div>
     </div>
   );
 };
 
-export default Testimonial;
+export default TestimonialCard;

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
 import { Link } from "react-router-dom";
@@ -5,7 +6,9 @@ import automotive from "../../assets/automotiveOne.png";
 import help from "../../assets/help.png";
 import parts from "../../assets/partsOne.png";
 import BG from "../../assets/BG.png";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import arr from "../../assets/Arrow rigth.png";
+import arrLeft from "../../assets/Arrow left.png";
+import { FaArrowRight } from "react-icons/fa";
 // import arrow from "../../assets/arrow.png";
 
 const categories = [
@@ -14,7 +17,88 @@ const categories = [
   { name: "Media Coverage", path: "/media" },
 ];
 
-const events = [
+const allEvents = [
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
+  { title: "Virtual Events, Webinars & Trade Shows", image: help },
+  { title: "Virtual Events, Webinars & Trade Shows", image: parts },
+  { title: "Virtual Events, Webinars & Trade Shows", image: BG },
+  { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
   { title: "Virtual Events, Webinars & Trade Shows", image: automotive },
   { title: "Virtual Events, Webinars & Trade Shows", image: help },
   { title: "Virtual Events, Webinars & Trade Shows", image: parts },
@@ -39,6 +123,73 @@ const hoverImages = [
 
 
 const Event = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 9;
+
+  // Pagination Logic
+  const totalPages = Math.ceil(allEvents.length / postsPerPage);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentEvents = allEvents.slice(indexOfFirstPost, indexOfLastPost);
+
+  const handlePageChange = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
+  const renderPagination = () => {
+    const pages = [];
+
+    pages.push(
+      <li key="prev">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="w-[54px] h-[54px] flex items-center justify-center bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition"
+        >
+          <img src={arrLeft} alt="Previous" />
+        </button>
+      </li>
+    );
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+        pages.push(
+          <li key={i}>
+            <button
+              onClick={() => handlePageChange(i)}
+              className={`px-4 py-2 rounded-full transition-all w-[54px] h-[54px] ${
+                currentPage === i ? "bg-red-500 text-white" : "bg-red-100"
+              }`}
+            >
+              {i}
+            </button>
+          </li>
+        );
+      } else if ((i === currentPage - 2 || i === currentPage + 2) && totalPages > 5) {
+        pages.push(
+          <li key={`ellipsis-${i}`} className="px-4 w-[54px] h-[54px] rounded-full text-red-500 bg-red-100">
+            <span className="text-3xl">...</span>
+          </li>
+        );
+      }
+    }
+
+    pages.push(
+      <li key="next">
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="w-[54px] h-[54px] flex items-center justify-center bg-red-700 text-white rounded-full hover:bg-red-800 transition"
+        >
+          <img src={arr} alt="Next" />
+        </button>
+      </li>
+    );
+
+    return pages;
+  };
   return (
     <>
       <Navbar />
@@ -65,7 +216,7 @@ const Event = () => {
 
           {/* Events Grid */}
           <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 h-auto w-[920px]">
-            {events.map((event, index) => (
+            {currentEvents.map((event, index) => (
               <div
                 key={index}
                 className="bg-white shadow-lg rounded-lg overflow-hidden h-[390px] transition-all duration-300 group"
@@ -93,9 +244,9 @@ const Event = () => {
                   <span className="border mt-3 w-full mx-0"></span>
 
                   {/* Explore Button with Arrow on Hover */}
-                  <button className="mt-3 ml-3 flex items-center justify-between w-[100px] transition-all duration-300">
+                  <button className="mt-3 ml-3 flex items-center justify-between w-[100px]">
                     Explore
-                    <span className="ml-[190px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="ml-[190px] opacity-0 group-hover:opacity-100 ">
                     <FaArrowRight />
                     </span>
                   </button>
@@ -103,26 +254,9 @@ const Event = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Pagination */}
-        <div className="flex justify-center mt-[180px] ml-[550px] ">
-          <nav className="inline-flex space-x-2">
-            <button className="p-[17px] w-[54px] h-[54px] rounded-[600px] gap-[10px]  bg-red-700 text-white ">
-            <FaArrowLeft />
-            </button>
-            {[...Array(10).keys()].map((num) => (
-              <button
-                key={num}
-                className=" h-[50px] w-[50px] top-[52px] font-[\'manrope\'] rounded-full font-bold bg-gray-200 hover:bg-red-700 hover:text-white"
-              >
-                {num + 1}
-              </button>
-            ))}
-            <button className=" p-[17px]  w-[54px] h-[54px] rounded-[600px] gap-[10px] bg-red-700 text-white ">
-              <FaArrowRight />
-            </button>
-          </nav>
+          <div className="flex justify-center items-center  ml-[650px]">
+          <ul className="flex space-x-2">{renderPagination()}</ul>
+          </div>
         </div>
       </div>
       <Footer />

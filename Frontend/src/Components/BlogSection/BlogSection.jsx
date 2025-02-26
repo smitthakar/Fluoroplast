@@ -75,7 +75,7 @@ export default function BlogSection() {
               <p className="text-gray-500 text-sm group-hover:text-white transition-all duration-300 flex justify-between font-['Manrope']">
                 {blog.date}{" "}
                 <span className="text-red-500 font-medium group-hover:text-white font-['Manrope']">
-                  • {blog.category}
+                  {blog.category}
                 </span>
               </p>
 
@@ -108,14 +108,22 @@ export default function BlogSection() {
       </div>
 
       {/* View All Button */}
-      <div className="flex justify-center ">
-        <button className="group bg-gradient-to-r  font-['Manrope'] from-[#9D0A0E] to-[#F15922] text-white w-[250px] h-[60px] px-[24px] py-[16px] rounded-[48px] font-semibold flex items-center justify-center gap-[8px] hover:opacity-90 transition-all duration-300">
-          View All
-          <span className="opacity-0 translate-x-[-5px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-            <FaArrowRight />
-          </span>
-        </button>
-      </div>
+      <div className="flex justify-center mt-10">
+      <button className="w-[200px] h-[50px] rounded-full border-transparent bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white font-semibold
+  transition-all duration-300 ease-in-out transform flex items-center justify-center relative group 
+  hover:bg-white hover:bg-none hover:text-[#9D0A0E] hover:border-2 hover:border-[#9D0A0E]">
+  
+  <span className="absolute left-1/2 -translate-x-1/2">View All</span>
+
+  {/* Right Arrow - Appears and Moves Right on Hover */}
+  <span className="opacity-0 transform translate-x-0 transition-all duration-300 ease-in-out text-[#9D0A0E] 
+      group-hover:opacity-100 group-hover:translate-x-2">
+    <FaArrowRight className="ml-20" />
+  </span>
+
+</button>
+
+</div>
     </div>
   );
 }
