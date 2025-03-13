@@ -8,7 +8,7 @@ import valves2 from "../../assets/Valves & Fittings.png";
 import parts from "../../assets/parts.png";
 import Navbar from "../../Components/Navbar/Navbar";
 import IndustrialMachinery from "../../assets/IndustrialMachinery.png";
-import Seals from "../../assets/seals.png";
+import Seals from "../../assets/Seals.png";
 import plastic from "../../assets/EngineeringPlastic.png";
 import valves from "../../assets/Valves&Fittings.png";
 import machinery from "../../assets/IndustrialMachinery.png";
