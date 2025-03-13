@@ -1,0 +1,135 @@
+/* About Us Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    min-height: 900px;
+    padding: 112px 144px;
+    gap: 80px;
+  }
+  
+  @media (min-width: 1024px) {
+    .about-section {
+      flex-direction: row;
+    }
+  }
+  
+  /* Right Content Wrapper */
+  .about-text-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Matches gap-6 */
+  }
+  
+  @media (min-width: 1024px) {
+    .about-text-content {
+      width: 50%;
+    }
+  }
+  
+  /* Section Subtitle */
+  .about-subtitle {
+    color: #9D0A0E;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33.6px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-bottom: -32px;
+  }
+  
+  /* Section Title */
+  .about-title {
+    color: black;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 84px;
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  /* Highlighted Text */
+  .highlighted-text {
+    font-weight: bold;
+    color: #9D0A0E;
+  }
+  
+  /* Description Text */
+  .about-description {
+    color: #070912;
+    font-size: 16px;
+    line-height: 22.4px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+  }
+  
+  /* Primary Paragraph */
+  .about-primary-text {
+    font-size: 26px;
+    color: #070912;
+    line-height: 39px;
+    font-weight: 600;
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  /* CTA Button */
+  .learn-more-btn {
+    width: 180px;
+    height: 55px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, #9D0A0E, #F15922);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 32px;
+    border: 2px solid transparent;
+  }
+  
+  .learn-more-btn:hover {
+    background: none;
+    color: #9D0A0E;
+    border-color: #9D0A0E;
+  }
+  
+  /* Learn More Arrow */
+  .learn-more-btn span {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .learn-more-btn:hover span {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+  
+  /* Image Container */
+  .about-image-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+  }
+  
+  @media (min-width: 1024px) {
+    .about-image-container {
+      width: 50%;
+    }
+  }
+  
+  /* About Image */
+  .about-image {
+    width: 190%;
+    height: 690px;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+  
