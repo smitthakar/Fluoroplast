@@ -10,6 +10,32 @@
     padding: 112px 144px;
     gap: 80px;
   }
+   
+.learn-more-btn {
+  display: flex;
+  width: 180px;
+  height: 60px;
+  align-items: center;
+  background-color: #d63b2f;
+  color: #fff;
+  /* padding: 12px 20px; */
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  justify-content: center;
+  cursor: pointer;
+  /* transition: 0.3s ease-in-out; */
+}
+
+.learn-more-btn:hover {
+  background-color: #a92d23;
+}
+
+.learn-more-btn span {
+  margin-left: 10px;
+}
+
   
   @media (min-width: 1024px) {
     .about-section {
@@ -77,39 +103,10 @@
   }
   
   /* CTA Button */
-  .learn-more-btn {
-    width: 180px;
-    height: 55px;
-    border-radius: 9999px;
-    background: linear-gradient(to right, #9D0A0E, #F15922);
-    color: white;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 32px;
-    border: 2px solid transparent;
-  }
-  
-  .learn-more-btn:hover {
-    background: none;
-    color: #9D0A0E;
-    border-color: #9D0A0E;
-  }
-  
+ 
   /* Learn More Arrow */
-  .learn-more-btn span {
-    opacity: 0;
-    transform: translateX(0);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
   
-  .learn-more-btn:hover span {
-    opacity: 1;
-    transform: translateX(8px);
-  }
-  
+ 
   /* Image Container */
   .about-image-container {
     position: relative;

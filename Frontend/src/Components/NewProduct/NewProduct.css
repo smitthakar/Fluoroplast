@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    width: 235px;
     height: 300px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -91,7 +91,7 @@
   /* Product Description */
   .product-description {
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
     font-weight: 600;
     font-family: 'Manrope', sans-serif;
@@ -99,7 +99,8 @@
   
   .product-details {
     color: white;
-    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
     margin-top: 8px;
   }
   

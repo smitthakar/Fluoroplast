@@ -121,11 +121,11 @@ const HeroSlider = () => {
       <div className="custom-stats-container">
   <div className="custom-stats-grid">
     <div className="custom-stat-item">
-      <p className="custom-stat-number">25,000</p>
+      <p className="custom-stat-number">25,000+</p>
       <span className="custom-stat-text">Sq Feet Area of  Manufacturing</span>
     </div>
     <div className="custom-stat-item">
-      <p className="custom-stat-number">25,000</p>
+      <p className="custom-stat-number">25,000+</p>
       <span className="custom-stat-text">SKU Products</span>
     </div>
     <div className="custom-stat-item">

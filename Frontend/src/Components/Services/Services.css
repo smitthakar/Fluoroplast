@@ -31,6 +31,28 @@
     font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
   }
   
+  .service-card {
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 334px;
+    text-align: left;
+    height: 370px;
+    padding: 32px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  
   /* Navigation Buttons Container */
   .nav-buttons {
     display: flex;
@@ -118,27 +140,10 @@
     transition: transform 0.5s ease-in-out;
   }
   
-  @media (min-width: 1024px) {
+ 
     .carousel-slide {
       width: 25%; /* Matches lg:w-1/4 */
     }
-  }
-  
-  /* Service Card */
-  .service-card {
-    background-color: white;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    width: 300px;
-    text-align: left;
-    height: 370px;
-    padding: 32px;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    transition: background-color 0.3s ease-in-out;
-  }
   
   /* Hover Effect */
   .service-card:hover {
@@ -147,13 +152,17 @@
   
   /* Service Icon */
   .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     transition: filter 0.3s ease-in-out;
+
   }
+
+
   
   .service-card:hover .service-icon {
-    filter: invert(1) brightness(0);
+    filter: invert(1) brightness(9);
+    
   }
   
   /* Service Title */

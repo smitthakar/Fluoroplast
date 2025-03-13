@@ -85,50 +85,29 @@
     font-family: 'Manrope', sans-serif;
   }
   
-  .feature-divider {
-    width: 40px;
-    height: 2px;
-    background-color: white;
-    margin-top: 4px;
-  }
-  
   /* CTA Button */
   .explore-btn {
-    width: 250px;
-    height: 55px;
-    padding: 16px 24px;
-    border-radius: 48px;
-    border: 2px solid #9D0A0E;
-    background-color: white;
-    color: #9D0A0E;
-    font-weight: 600;
-    font-family: 'Manrope', sans-serif;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    margin-top: 20px;
+    background-color: #d63b2f;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
   }
   
-  .explore-btn:hover {
-    background: linear-gradient(to right, #9D0A0E, #F15922);
-    color: white;
+   .explore-btn:hover {
+    background-color: #a92d23;
   }
   
-  /* Explore Button Arrow */
-  .explore-btn span {
-    opacity: 0;
-    transform: translateX(0);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  .learn-more-btn span, .explore-btn span {
+    margin-left: 10px;
   }
   
-  .explore-btn:hover span {
-    opacity: 1;
-    transform: translateX(8px);
-  }
   
   /* Right Section */
   .why-choose-right {

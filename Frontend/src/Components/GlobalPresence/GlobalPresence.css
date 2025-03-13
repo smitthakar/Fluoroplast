@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    /* gap: 8px; */
     position: relative;
     transition: all 0.3s ease-in-out;
     z-index: 10;
@@ -87,9 +87,10 @@
   
   /* Map Image */
   .map-image {
-    width: 1220px;
-    height: 899.7px;
+    width: 1420px;
+    height: 950px;
     object-fit: contain;
-    margin-left: 10%;
+    margin-left: 10px;
+    margin-top: 10%;
   }
   
