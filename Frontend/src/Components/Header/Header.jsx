@@ -7,6 +7,15 @@ import { FaArrowRight } from "react-icons/fa";
 
 const images = [slider1, slider2, slider3, slider4];
 
+const stats = [
+  { value: "25,000", label: "Sq Feet Area of Manufacturing" },
+  { value: "25,000", label: "SKU Products" },
+  { value: "500+", label: "Products in Portfolio" },
+  { value: "500+", label: "Customers Network" },
+  { value: "7+", label: "Countries Served" }
+];
+
+
 // Clone first and last images for a seamless loop
 const extendedImages = [images[images.length - 1], ...images, images[0]];
 
@@ -14,6 +23,14 @@ const HeroSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(1); // Start at first real image
   const [isTransitioning, setIsTransitioning] = useState(true);
   const sliderRef = useRef(null);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
