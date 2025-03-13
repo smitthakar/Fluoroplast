@@ -10,6 +10,7 @@ import plastic1 from "../../assets/EngineeringPlastic.png";
 import seals1 from "../../assets/Valves&Fittings.png";
 import plastic2 from "../../assets/EngineeringPlastic.png";
 import valves2 from "../../assets/Valves & Fittings.png";
+import "./NewProduct.css";
 
 export default function GridLayout() {
   const items = [
@@ -28,57 +29,44 @@ export default function GridLayout() {
   ];
 
   return (
-    <div className="p-20 pt-[80px] px-[144px] py-[112px] w-full h-auto">
-      <div className="text-center mb-8">
-        <p className="text-[#9D0A0E] text-[24px] leading-[33.6px] font-semibold font-redhat">
-          NEW PRODUCTS/EXPANSIONS
-        </p>
-        <h2 className="text-[#0A0A0A] text-[60px] leading-[84px] text-center font-redhat font-semibold">
-          Feature The Latest Expansions
-        </h2>
-      </div>
-      
-      {/* Grid Container with Fixed Width for Exactly 6 Images Per Row */}
-      <div className="w-full">
-        <div className="grid grid-cols-6 gap-[24px] justify-center">
-          {items.map((item) => (
-            <div
-              key={item.id}
-              className="relative bg-white shadow-lg rounded-[8px] flex flex-col items-center w-[200px] h-[300px] overflow-hidden group transition-all duration-300"
-            >
-              {/* Image Container - Centered Image */}
-              <div className="flex-grow flex justify-center items-center w-full h-[250px]">
-                <img
-                  src={item.image}
-                  alt={item.label}
-                  className="max-h-full max-w-full object-contain transition-all duration-300 group-hover:opacity-0"
-                />
-              </div>
-              <div className="absolute inset-0 bg-[#9D0A0E] flex flex-col items-start justify-between p-4 opacity-0 transition-all duration-300 group-hover:opacity-100">
-                <div>
-                  <p className="text-white font-manrope font-semibold text-[16px] leading-[24px]">
-                    {item.label}
-                  </p>
-                  <p className="text-white text-sm mt-2">{item.description}</p>
-                </div>
+    <div className="new-products-section">
+  <div className="text-center mb-8">
+    <p className="new-products-subtitle">NEW PRODUCTS/EXPANSIONS</p>
+    <h2 className="new-products-title">Feature The Latest Expansions</h2>
+  </div>
 
-                {/* Bottom Section - Read More */}
-                <div className="w-full">
-                  <div className="w-full h-[1px] bg-white my-2"></div>
-                  <button className="flex items-center justify-between text-white font-manrope font-semibold text-[16px] leading-[24px] w-full">
-                    <span>Read More</span> <FaArrowRight />
-                  </button>
-                </div>
-              </div>
-
-              {/* Bottom Product Title - Always at the Bottom */}
-              <p className="text-center text-gray-700 font-manrope font-semibold text-[16px] leading-[24px] w-full pb-4">
-                {item.label}
-              </p>
-            </div>
-          ))}
+  {/* Grid Container */}
+  <div className="new-products-grid">
+    {items.map((item) => (
+      <div key={item.id} className="product-card">
+        
+        {/* Image Container */}
+        <div className="product-image-container">
+          <img src={item.image} alt={item.label} className="product-image" />
         </div>
+
+        {/* Overlay on Hover */}
+        <div className="product-overlay">
+          <div>
+            <p className="product-description">{item.label}</p>
+            <p className="product-details">{item.description}</p>
+          </div>
+
+          {/* Read More Section */}
+          <div className="product-readmore">
+            <div className="product-divider"></div>
+            <button className="read-more-btn">
+              <span>Read More</span> <FaArrowRight />
+            </button>
+          </div>
+        </div>
+
+        {/* Bottom Product Title */}
+        <p className="product-title">{item.label}</p>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
   );
 }

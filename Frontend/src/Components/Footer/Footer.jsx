@@ -17,6 +17,7 @@ import emoji from "../../assets/emoji.png";
 import imgIcon from "../../assets/imgIcon.png";
 import Arrowrigth from "../../assets/Arrow rigth.png";
 import { FaArrowRight } from "react-icons/fa";
+import "./Footer.css";
 
 export default function Footer() {
   const [isChatOpen, setIsChatOpen] = useState(false);
