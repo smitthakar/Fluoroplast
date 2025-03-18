@@ -1,0 +1,175 @@
+.custom-container {
+    width: 100%; /* Full width */
+    margin: 65px auto; /* Vertical margin */
+    position: relative; /* Relative positioning */
+    height: 700px; /* Fixed height */
+    overflow: hidden; /* Prevent overflow */
+  }
+  .custom-absolute-container {
+    position: absolute; /* Matches Tailwind's absolute */
+    width: 1632px; /* Corrects Tailwind's incorrect w[1632px] */
+    height: 667px; /* Matches h-[667px] */
+    gap: 40px; /* Matches gap-[40px] */
+    inset: 0; /* Positions at all edges */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    color: white; /* Matches text-white */
+    padding-left: 24px; /* Equivalent to px-6 */
+    padding-right: 24px; /* Equivalent to px-6 */
+    z-index: 10; /* Matches z-10 */
+  }
+  .custom-heading {
+    font-size: 65px; /* Matches text-[65px] */
+    width: 1232px; /* Matches w-[1232px] */
+    font-weight: 500; /* Matches font-medium */
+    text-align: center; /* Matches text-center */
+    justify-content: center; /* Matches justify-center */
+    line-height: 75px; /* Matches leading-[75px] */
+    font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
+  }
+  .custom-paragraph {
+    font-size: 1.5rem; /* Matches text-2xl (24px) */
+    font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
+  }
+  .custom-button {
+    width: 250px;
+    height: 55px;
+    border-radius: 999px; /* Makes it fully rounded */
+    border: transparent;
+    background: linear-gradient(to right, #9D0A0E, #F15922);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .custom-button:hover {
+    background: white;
+    color: #9D0A0E;
+    border: 2px solid #9D0A0E;
+  }
+  
+  .custom-button span {
+    position: absolute;
+  }
+  
+  .custom-button .arrow {
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+    color: #9D0A0E;
+    margin-left: 80px;
+  }
+  
+  .custom-button:hover .arrow {
+    opacity: 1;
+    transform: translateX(12px);
+  }
+  .custom-slider-container {
+    position: absolute;
+    inset: 0; /* Covers full width & height */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .custom-slider-container.no-transition {
+    transition: none; /* Disables transition temporarily */
+  }
+  .custom-slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .custom-pagination-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px; /* Matches space-x-2 */
+  }
+  
+  .custom-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    background-color: transparent;
+  }
+  
+  .custom-dot.active {
+    background-color: white;
+  }
+  .custom-stats-container {
+    width: 100%;
+    background-color: white;
+    margin-top: -65px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #d1d5db; /* Matches border-gray-300 */
+  }
+  
+  .custom-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+    text-align: center;
+    width: 100%;
+    padding-left: 144px;
+    padding-right: 144px;
+    color: #b91c1c; /* Matches text-red-700 */
+    font-weight: bold;
+    font-size: 1.875rem; /* Matches text-3xl */
+    border-bottom: 1px solid #d1d5db; /* Matches border-gray-300 */
+  }
+  
+  .custom-stat-item {
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #d1d5db; /* Matches border-gray-300 */
+  }
+  
+  .custom-stat-item:last-child {
+    border-right: none; /* Removes right border from last item */
+  }
+  
+  .custom-stat-number {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 84px;
+    height: 84px;
+    width: 208px;
+    font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
+  }
+  
+  .custom-stat-text {
+    color: #0A0A0A;
+    font-size: 24px;
+    line-height: 33.6px;
+    font-weight: 600;
+    margin-top: 16px;
+    width: 167px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  
+  
+  

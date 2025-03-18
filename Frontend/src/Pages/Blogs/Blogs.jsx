@@ -8,6 +8,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import arr from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
 import { Link } from "react-router-dom";
+import "./Blog.css"
 
 const blogPosts = new Array(90).fill({
   image: BG,
@@ -91,49 +92,40 @@ const Blogs = () => {
   return (
     <>
       <Navbar />
-      <div className="p-9 w-[1432px] top-[114px] h-[2500px] left-[100px] relative">
+      <div className="article-section-container">
         {/* Title */}
-        <h2 className="text-3xl font-bold mb-6 font-redhat">Blogs</h2>
+        <h2 className="article-section-title">Blogs</h2>
 
         {/* Featured Blog */}
-        <div className="w-[1350px] flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden mb-10">
-          <div className="w-full md:w-[604px]">
-            <img
-              src={blog}
-              alt="Gears"
-              className="w-full h-[272px] object-cover"
-            />
+        <div className="article-container">
+          <div className="article-image-section">
+            <img src={blog} alt="Gears" className="article-thumbnail" />
           </div>
 
-          <div className="w-full md:w-2/3 p-6 flex flex-col justify-center">
-            <p className="text-gray-500 text-sm">
-              Jan 21, 2024
-              <span className="text-red-500 font-semibold ml-[10px]">
-                Oil & Gas Insights
-              </span>
-            </p>
+          <div className="article-content-section">
+            <div className="article-meta-info">
+              <div className="article-date">Jan 21, 2024</div>
+              <div className="article-category-tag">Oil & Gas Insights</div>
+            </div>
 
-            <h3 className="text-3xl font-bold mt-2 border-l-4 border-red-800 pl-4 font-redhat">
-              Importers achieve cost savings through <br /> the First Sale rule!
+            <h3 className="article-heading">
+              Importers achieve cost savings through the First Sale rule!
             </h3>
 
-            <p className="text-gray-600 text-m mt-2 pb-2 border-b border-gray-500">
+            <p className="article-summary">
               Engineering plastics are high-performance materials with
               mechanical and thermal properties, used in automotive, aerospace,
               and electronics.
             </p>
 
-            <Link
-              to="/blog-details"
-              className="text-red-500 font-semibold mt-4 inline-block"
-            >
+            <Link to="/blog-details" className="article-read-more">
               Read More
             </Link>
           </div>
         </div>
 
         {/* Blog Grid - 9 Cards per Page */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] mt-10 w-full h-[667px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] mt-10 w-[1439px] h-[667px]">
           {blogs.map((blog, index) => (
             <div
               key={index}
@@ -148,13 +140,13 @@ const Blogs = () => {
               <div className="p-5 bg-white group-hover:bg-[#9D0A0E] transition-all duration-300 h-[343px] gap-[16px]">
                 <p className="text-gray-500 text-sm group-hover:text-white transition-all duration-300 flex justify-between">
                   {blog.date}
-                  <span className="text-red-500 font-medium group-hover:text-white">
+                  <span className="text-[#9D0A0E] font-medium group-hover:text-white">
                     {blog.category}
                   </span>
                 </p>
 
                 <h3 className="mt-2 font-semibold text-[18px] leading-[25.2px] tracking-[0] text-black group-hover:text-white relative pl-4">
-                  <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-red-600 group-hover:bg-white rounded-full"></span>
+                  <span className="absolute left-0 top-0 bottom-0 w-[2px] bg-red-600 group-hover:bg-white "></span>
                   {blog.title}
                 </h3>
 

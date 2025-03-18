@@ -10,7 +10,7 @@ import arr from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
 import { FaArrowRight } from "react-icons/fa";
 // import arrow from "../../assets/arrow.png";
-
+import "./New&Event.css";
 const categories = [
   { name: "Latest News", path: "/news" },
   { name: "Upcoming Events", path: "/events" },
@@ -193,20 +193,17 @@ const Event = () => {
   return (
     <>
       <Navbar />
-      <div className="container  px-[144px] py-[112px] w-full h-[1500px]">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-[24px] w-[1232px] h-[1100px]">
+      <div className="event-container">
+        <div className="event-grid">
           {/* Sidebar */}
-          <div className="md:col-span-1 h-[228px] w-[290px] gap-[24px]">
-            <ul className="space-y-1">
+          <div className="sidebar-category">
+            <ul className="sidebar-list">
               {categories.map((category, index) => (
                 <li key={index}>
-                  <Link
-                    to={category.path}
-                    className=" p-3 bg-white-700 text-black rounded-lg border-[2px] hover:bg-red-800 hover:text-white transition flex justify-between items-center"
-                  >
+                  <Link to={category.path} className="sidebar-link">
                     {category.name}
-                    <div className="flex justify-end">
-                     <FaArrowRight />
+                    <div className="sidebar-arrow">
+                      <FaArrowRight />
                     </div>
                   </Link>
                 </li>
@@ -215,47 +212,37 @@ const Event = () => {
           </div>
 
           {/* Events Grid */}
-          <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6 h-auto w-[920px]">
+          <div className="events-grid">
             {currentEvents.map((event, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-lg overflow-hidden h-[390px] transition-all duration-300 group"
-              >
-                <div className="relative">
-                  {/* Default Image */}
+              <div key={index} className="event-card group">
+                <div className="event-image-wrapper relative">
                   <img
                     src={event.image}
                     alt={event.title}
-                    className="w-[390px] h-[250px] object-cover transition-opacity duration-300 group-hover:opacity-0"
+                    className="event-image-default group-hover:opacity-1"
                   />
-                  {/* Hover Image */}
                   <img
                     src={hoverImages[index % hoverImages.length]}
                     alt={event.title}
-                    className="w-[390px] h-[250px] object-cover absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                    className="event-image-hover"
                   />
                 </div>
-                <div className="flex flex-col items-left text-left w-[390px] h-[160px] hover:bg-red-700 hover:text-white transition relative">
-                  <h3 className="text-lg font-semibold w-[240px] mt-5 ml-3 font-[\'Red Hat Display\'] ">
-                    {event.title}
-                  </h3>
-
-                  {/* Centered Line */}
-                  <span className="border mt-3 w-full mx-0"></span>
-
-                  {/* Explore Button with Arrow on Hover */}
-                  <button className="mt-3 ml-3 flex items-center justify-between w-[100px]">
+                <div className="event-content group-hover:bg-red-700 group-hover:text-white">
+                  <h3 className="event-title">{event.title}</h3>
+                  <span className="event-divider"></span>
+                  <button className="event-explore-btn">
                     Explore
-                    <span className="ml-[190px] opacity-0 group-hover:opacity-100 ">
-                    <FaArrowRight />
+                    <span className="event-arrow group-hover:opacity-100">
+                      <FaArrowRight />
                     </span>
                   </button>
                 </div>
               </div>
             ))}
           </div>
-          <div className="flex justify-center items-center  ml-[650px]">
-          <ul className="flex space-x-2">{renderPagination()}</ul>
+
+          <div className="pagination-container">
+            <ul className="pagination-list">{renderPagination()}</ul>
           </div>
         </div>
       </div>

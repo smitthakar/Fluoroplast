@@ -1,0 +1,108 @@
+/* Industries Section */
+.industries-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0; /* Matches py-10 */
+    background-color: white;
+  }
+  
+  /* Section Subtitle */
+  .industries-subtitle {
+    color: #9D0A0E; /* Matches text-[#9D0A0E] */
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33.6px;
+    letter-spacing: 0.06em; /* Matches tracking-[6%] */
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  /* Section Title */
+  .industries-title {
+    color: black;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 84px;
+    letter-spacing: 0; /* Matches tracking-[0%] */
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  /* Industries Carousel Container */
+  .industries-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 24px; /* Matches mt-6 */
+    width: 80%; /* Matches w-4/5 */
+    overflow: hidden;
+  }
+  
+  /* Slide Track */
+  .slide-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Single Slide */
+  .industry-slide {
+    width: calc(100% / 6);
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  /* Industry Image */
+  .industry-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  /* Industry Name */
+  .industry-name {
+    color: black;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Navigation Buttons */
+  .nav-button {
+    position: absolute;
+    top: 64px; /* Matches top-16 */
+    width: 56px; /* Matches w-14 */
+    height: 56px; /* Matches h-14 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 16px; /* Matches p-4 */
+    z-index: 10;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Left Button */
+  .nav-button-left {
+    left: 0;
+    background-color: #fee2e2; /* Matches bg-red-100 */
+    color: #dc2626; /* Matches text-red-600 */
+  }
+  
+  .nav-button-left:hover {
+    background-color: #fecaca; /* Matches hover:bg-red-200 */
+  }
+  
+  /* Right Button */
+  .nav-button-right {
+    right: 0;
+    background-color: #b91c1c; /* Matches bg-red-700 */
+    color: white;
+  }
+  
+  .nav-button-right:hover {
+    background-color: #991b1b; /* Matches hover:bg-red-800 */
+  }
+  

@@ -1,0 +1,226 @@
+/* Section Wrapper */
+.section-wrapper {
+    text-align: center;
+    justify-content: center;
+    padding-top: 64px; /* Matches py-16 */
+    padding-bottom: 64px;
+    padding-left: 50px; /* Matches pl-[50px] */
+    position: relative;
+    z-index: 20;
+  }
+  
+  /* Subheading */
+  .section-subheading {
+    color: #b91c1c; /* Matches text-red-700 */
+    font-weight: 800; /* Matches font-extrabold */
+    text-transform: uppercase; /* Matches uppercase */
+    font-size: 24px; /* Matches text-[24px] */
+    line-height: 33.6px; /* Matches leading-[33.6px] */
+    text-align: center;
+    letter-spacing: 0.06em; /* Matches tracking-[0.06em] */
+    font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
+  }
+  
+  /* Main Heading */
+  .section-heading {
+    font-size: 60px; /* Matches text-[60px] */
+    line-height: 74px; /* Matches leading-[74px] */
+    font-weight: 800; /* Matches font-extrabold */
+    text-align: center;
+    margin-top: 8px; /* Matches mt-2 */
+    font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
+  }
+  
+  .service-card {
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 334px;
+    text-align: left;
+    height: 370px;
+    padding: 32px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  
+  /* Navigation Buttons Container */
+  .nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px; /* Matches gap-4 */
+    margin-bottom: 8px; /* Matches mb-2 */
+    margin-top: -90px; /* Matches mt-[-90px] */
+    padding-right: 32px; /* Matches pr-8 */
+  }
+  
+  /* Previous Button */
+  .nav-button-prev {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fee2e2; /* Matches bg-red-100 */
+    color: #dc2626; /* Matches text-red-600 */
+    border-radius: 50%; /* Makes it fully round */
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button-prev:hover {
+    background-color: #fecaca; /* Matches hover:bg-red-200 */
+  }
+  
+  /* Next Button */
+  .nav-button-next {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b91c1c; /* Matches bg-red-700 */
+    color: white; /* Matches text-white */
+    border-radius: 50%; /* Makes it fully round */
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button-next:hover {
+    background-color: #991b1b; /* Matches hover:bg-red-800 */
+  }
+  /* Section Wrapper */
+.carousel-section {
+    text-align: center;
+    justify-content: center;
+    padding-top: 0;
+    padding-left: 50px;
+    margin-top: -20px;
+    margin-left: 150px;
+    position: relative;
+    z-index: 20;
+  }
+  
+  /* Carousel Wrapper */
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 40px; /* Matches mt-10 */
+    overflow: hidden;
+    padding-left: 5%;
+    cursor: grab;
+  }
+  
+  .carousel-wrapper:active {
+    cursor: grabbing;
+  }
+  
+  /* Animated Slider Container */
+  .slider-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Individual Slide */
+  .carousel-slide {
+    flex: none;
+    width: 50%; /* Matches sm:w-1/2 */
+    padding: 0 16px; /* Matches px-4 */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+ 
+    .carousel-slide {
+      width: 25%; /* Matches lg:w-1/4 */
+    }
+  
+  /* Hover Effect */
+  .service-card:hover {
+    background-color: #b91c1c; /* Matches hover:bg-red-700 */
+  }
+  
+  /* Service Icon */
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    transition: filter 0.3s ease-in-out;
+
+  }
+
+
+  
+  .service-card:hover .service-icon {
+    filter: invert(1) brightness(9);
+    
+  }
+  
+  /* Service Title */
+  .service-title {
+    font-size: 24px;
+    line-height: 33.6px;
+    font-weight: 800;
+    width: 240px;
+    margin-top: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .service-card:hover .service-title {
+    color: white;
+  }
+  
+  /* Service Description */
+  .service-description {
+    color: #4b5563; /* Matches text-gray-600 */
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: normal;
+    margin-top: 8px;
+    font-family: 'Manrope', sans-serif;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .service-card:hover .service-description {
+    color: white;
+  }
+  
+  /* Read More Button */
+  .read-more {
+    color: #0A0A0A;
+    font-weight: bold;
+    margin-top: auto;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .service-card:hover .read-more {
+    color: white;
+  }
+  
+  /* Read More Arrow */
+  .read-more-arrow {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, scale 0.3s ease-in-out;
+    font-size: 1rem;
+  }
+  
+  .service-card:hover .read-more-arrow {
+    opacity: 1;
+    transform: translateX(4px) scale(1.25);
+  }
+  

@@ -60,7 +60,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full font-manropen fixed top-0 left-0 bg-white shadow-md z-50 border-b border-gray-200">
+    <div className="lg:w-full md:w-full sm:w-full font-manropen fixed top-0 left-0 bg-white shadow-md z-50 border-b border-gray-200">
       {/* <nav className="bg-white w-full h-22 pt-3 relative"> */}
       <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between relative">
         <div className="hidden md:flex w-[168px] h-[28px] space-x-10  text-[#0A0A0A] flex-grow size-[20px] justify-right font-['Manrope']">

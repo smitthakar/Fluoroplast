@@ -1,0 +1,135 @@
+/* Why Choose Us Section */
+.why-choose-us {
+    display: flex;
+    width: 100%;
+    height: 500px;
+  }
+  
+  /* Left Section */
+  .why-choose-left {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: #510002;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 100px 80px 144px;
+    gap: 10px;
+  }
+  
+  /* Background Image */
+  .why-choose-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05;
+  }
+  
+  /* Section Subtitle */
+  .why-choose-subtitle {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33.6px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Section Title */
+  .why-choose-title {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 84px;
+    font-family: 'Red Hat Display', sans-serif;
+    width: 700px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Feature Icons & Text */
+  .feature-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .feature-item {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .feature-title {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  /* CTA Button */
+  .custom-explor-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .explor-btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, #9d0a0e, #f15922);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .explor-btn:hover {
+    background: white;
+    color: #9d0a0e;
+    border-color: #9d0a0e;
+  }
+  
+  .explor-btn span:first-child {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .explor-btn span:last-child {
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+    color: #9d0a0e;
+    margin-left: 80px;
+  }
+  
+  .explor-btn:hover span:last-child {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+  
