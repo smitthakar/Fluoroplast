@@ -7,10 +7,10 @@ import calendar from "../../assets/calendar.png";
 import category from "../../assets/category.png";
 import correct from "../../assets/correct.png";
 // import Facebook from "../../assets/Facebook.png";
-import Instagram from "../../assets/instagram.png";
-import LinkedIn from "../../assets/linkedin.png";
-import Twitter from "../../assets/twitter.png";
-import Youtube from "../../assets/youtube.png";
+import Instagram from "../../assets/Instagram.png";
+import LinkedIn from "../../assets/LinkedIn.png";
+import Twitter from "../../assets/Twitter.png";
+import Youtube from "../../assets/YouTube.png";
 import "./BlogPost.css";
 
 const BlogPost = () => {
