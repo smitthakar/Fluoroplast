@@ -10,7 +10,7 @@ const images = [slider1, slider2, slider3, slider4];
 
 const stats = [
   { value: "25,000", label: "Sq Feet Area of Manufacturing" },
-  { value: "25,000", label: "SKU Products" },
+  { value: "25,000", label: "SKU Products " },
   { value: "500+", label: "Products in Portfolio" },
   { value: "500+", label: "Customers Network" },
   { value: "7+", label: "Countries Served" }
@@ -73,73 +73,61 @@ const HeroSlider = () => {
             Innovating for Over 30 Years | Expanding for the Future.
           </p>
           <button className="custom-button">
-  <span>Explore Our Products</span>
+            <span>Explore Our Products</span>
 
-  {/* Right Arrow - Moves Right on Hover */}
-  <span className="arrow">
-    <FaArrowRight className="ml-20" />
-  </span>
-</button>
-
+            {/* Right Arrow - Moves Right on Hover */}
+            <span className="arrow">
+              <FaArrowRight className="ml-20" />
+            </span>
+          </button>
         </div>
 
         {/* Image Slider */}
         <div
-  ref={sliderRef}
-  className={`custom-slider-container ${isTransitioning ? "" : "no-transition"}`}
-  style={{
-    transform: `translateX(-${currentIndex * 100}%)`,
-  }}
->
+          ref={sliderRef}
+          className={`custom-slider-container ${
+            isTransitioning ? "" : "no-transition"
+          }`}
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
           {extendedImages.map((img, index) => (
             <div
-            key={index}
-            className="custom-slide"
-            style={{ backgroundImage: `url(${img})` }}
-          ></div>
+              key={index}
+              className="custom-slide"
+              style={{ backgroundImage: `url(${img})` }}
+            ></div>
           ))}
         </div>
 
         {/* Dot Indicators */}
         <div className="custom-pagination-container">
-  {images.map((_, index) => (
-    <span
-      key={index}
-      className={`custom-dot ${
-        index === (currentIndex - 1 + images.length) % images.length
-          ? "active"
-          : ""
-      }`}
-      onClick={() => handleDotClick(index)}
-    />
-  ))}
-</div>
-
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`custom-dot ${
+                index === (currentIndex - 1 + images.length) % images.length
+                  ? "active"
+                  : ""
+              }`}
+              onClick={() => handleDotClick(index)}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Stats Section */}
       <div className="custom-stats-container">
   <div className="custom-stats-grid">
-    <div className="custom-stat-item">
-      <p className="custom-stat-number">25,000+</p>
-      <span className="custom-stat-text">Sq Feet Area of  Manufacturing</span>
-    </div>
-    <div className="custom-stat-item">
-      <p className="custom-stat-number">25,000+</p>
-      <span className="custom-stat-text">SKU Products</span>
-    </div>
-    <div className="custom-stat-item">
-      <p className="custom-stat-number">500+</p>
-      <span className="custom-stat-text">Products in Portfolio</span>
-    </div>
-    <div className="custom-stat-item">
-      <p className="custom-stat-number">500+</p>
-      <span className="custom-stat-text">Customers Network</span>
-    </div>
-    <div className="custom-stat-item last">
-      <p className="custom-stat-number">7+</p>
-      <span className="custom-stat-text">Countries Served</span>
-    </div>
+    {stats.map((stat, index) => (
+      <div
+        key={index}
+        className={`custom-stat-item ${index === stats.length - 1 ? "last" : ""}`}
+      >
+        <p className="custom-stat-number">{stat.value}</p>
+        <span className="custom-stat-text">{stat.label}</span>
+      </div>
+    ))}
   </div>
 </div>
 

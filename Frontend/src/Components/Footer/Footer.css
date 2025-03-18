@@ -1,0 +1,320 @@
+.footer {
+        height: 700px;
+        border-top: 1px;
+        background-color: #0A0A0A;
+        color: white;
+        padding-top: 100px;
+        /* padding-bottom:-40px; */
+        padding-left: 144px;
+        padding-right: 144px;
+        gap: 32px;
+    }
+
+    .footer-grid {
+        height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 72px 0;
+    }
+
+    .footer-left {
+        width: 381px;
+        height: 259px;
+        gap: 24px
+    }
+
+    .footer-left img {
+        width: 380px;
+        height: 87px;
+        margin-bottom: 24px;
+        margin-left: -15px;
+    }
+
+    .footer-left p,
+    .footer-newsletter p {
+        width: 381px;
+        height: 68px;
+        font-family: 'Manrope', sans-serif;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .footer-social {
+        width: 381px;
+        height: 56px;
+        display: flex;
+        gap: 16px;
+        margin-top: 25px;
+        margin-left: 15px;
+    }
+
+    .footer-social img {
+        border-radius: 48px;
+        width: 56px;
+        height: 45px;
+    }
+
+    .footer-company {
+        width: 300px;
+        height: 398px;
+        /* margin-left: 45px; */
+        gap: 24px;
+    }
+
+    .footer-heading {
+        font-size: 24px;
+        width: 159px;
+        height: 34px;
+        line-height: 33.6px;
+        margin-bottom: 16px;
+        font-weight: 800;
+        font-family: 'Red Hat Display', sans-serif;
+        color: #ffffff;
+    }
+  
+    .footer-links li {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-links a {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+        font-family: 'Manrope', sans-serif;
+        color: #ffffff;
+        transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #9D0A0E;
+    }
+
+    .footer-newsletter input {
+        width: 320px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        background: white;
+        color: black;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .subscribe-btn {
+        width: 200px;
+        height: 50px;
+        border-radius: 9999px;
+        background: linear-gradient(to right, #9D0A0E, #F15922);
+        color: white;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .subscribe-btn:hover {
+        background: white;
+        border: 2px solid #9D0A0E;
+        color: #9D0A0E;
+    }
+
+    .subscribe-btn span {
+        transition: all 0.3s ease;
+    }
+
+    .subscribe-btn:hover span:last-child {
+        opacity: 1;
+        transform: translateX(8px);
+    }
+
+
+    .footer-contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        height: 84px;
+        gap: 36px;
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+
+    .contact-item {
+        display: flex;
+        height: 56px;
+        align-items: center;
+        gap: 16px;
+        color: #ffffff;
+        width: 43%;
+    }
+    .footer-icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-icon1{
+        /* padding-left: -190px; */
+        width: 60px;
+        height: 40px;
+    }
+
+    .chat-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .chat-bubble {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #b91c1c;
+        margin-top: -8px;
+        margin-left: 28px;
+    }
+
+    .chatbox {
+        position: fixed;
+        bottom: 80px;
+        right: 80px;
+        width: 320px;
+        top: 90px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        overflow: hidden;
+        z-index: 50;
+    }
+
+    .chat-header {
+        background: linear-gradient(to right, #9D0A0E, #F15922);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        height: 140px;
+    }
+
+    .chat-header img {
+        width: 60px;
+        height: 80px;
+    }
+
+    .chat-header h2 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 8px;
+    }
+
+    .chat-close-btn img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .chat-messages {
+        padding: 12px;
+        height: 320px;
+        overflow-y: auto;
+        background: #f3f4f6;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .chat-message {
+        display: flex;
+    }
+
+    .chat-assistant {
+        display: flex;
+        gap: 8px;
+        align-items: start;
+    }
+
+    .chat-user {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .chat-user-msg {
+        background: #dc2626;
+        color: white;
+        padding: 8px;
+        border-radius: 8px;
+        max-width: 240px;
+        border-bottom-right-radius: 0;
+    }
+
+    .chat-assistant-msg {
+        background: #fecaca;
+        color: black;
+        padding: 8px;
+        border-radius: 8px;
+        max-width: 240px;
+        border-bottom-left-radius: 0;
+    }
+
+    .chat-footer {
+        background: #9D0A0E;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    .chat-footer input {
+        background: transparent;
+        color: white;
+        padding: 0 8px;
+        outline: none;
+        flex-grow: 1;
+    }
+
+    .footer-bottom {
+        /* margin-top: 19px; */
+        /* padding-bottom: 20px; */
+        color: #ffffff;
+        font-size: 14px;
+        border-top: 1px solid #374151;
+        /* padding-top: 16px; */
+        display: flex;
+        font-family: 'Monrope', sans;
+        height: 74px;
+        justify-content: space-between;
+    }
+
+    .footer-bottom-left {
+        height: 74px;
+        width: 811px;
+        text-align: left;
+        padding-top: 24px;
+        font-size: 16px; font-family: 'Manrope', sans-serif;
+        justify-content: space-between;
+        padding-bottom: 24px;
+    }
+
+    .footer-bottom-right {
+        height: 74px;
+        width: auto;
+        text-align: left;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        font-size: 16px;
+         font-family: 'Manrope', sans-serif;
+        justify-content: space-between;
+    }
+
+    .footer-link:hover {
+        text-decoration: underline;
+    }

@@ -51,12 +51,14 @@ const WhyChooseUsSection = () => {
         </div>
 
         {/* CTA Button */}
-        <button className="explore-btn">
-          <span className="ml-2">Explore Industry</span>
+        <div className="custom-explor-btn">
+        <button className="explor-btn">
+          <span>View All</span>
           <span>
             <FaArrowRight />
           </span>
         </button>
+      </div>
       </div>
 
       {/* Right Section */}

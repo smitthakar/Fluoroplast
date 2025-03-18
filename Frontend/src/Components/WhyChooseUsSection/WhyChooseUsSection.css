@@ -86,38 +86,50 @@
   }
   
   /* CTA Button */
-  .explore-btn {
+  .custom-explor-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .explor-btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, #9d0a0e, #f15922);
+    color: white;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    background-color: #d63b2f;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
   }
   
-   .explore-btn:hover {
-    background-color: #a92d23;
+  .explor-btn:hover {
+    background: white;
+    color: #9d0a0e;
+    border-color: #9d0a0e;
   }
   
-  .learn-more-btn span, .explore-btn span {
-    margin-left: 10px;
+  .explor-btn span:first-child {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  
-  /* Right Section */
-  .why-choose-right {
-    width: 50%;
-    height: 100%;
+  .explor-btn span:last-child {
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+    color: #9d0a0e;
+    margin-left: 80px;
   }
   
-  .why-choose-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .explor-btn:hover span:last-child {
+    opacity: 1;
+    transform: translateX(8px);
   }
   

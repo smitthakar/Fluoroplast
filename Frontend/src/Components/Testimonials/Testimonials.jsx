@@ -10,7 +10,7 @@ import quoteOpen from "../../assets/quoteOpen.png";
 import arr from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
 import { FaArrowRight } from "react-icons/fa";
-
+import "./Testimonials.css";
 
 const testimonials = [
   {
@@ -80,107 +80,58 @@ const TestimonialCard = () => {
 
   return (
     <div className="justify-center overflow-hidden ml-[100px] mr-[100px]">
-      <div className="h-[202px] flex flex-col items-center justify-center text-center">
-        <h3 className="text-[#9D0A0E] font-semibold text-[24px] leading-[33.6px] uppercase w-[197px] h-[34px] font-['Red Hat Display']">
-          Testimonials
-        </h3>
-        <h2 className="font-['Red_Hat_Display'] font-extrabold text-[60px] leading-[84px]">
-          What Our <span className="text-[#9D0A0E]">Clients</span> Say
-        </h2>
-        <div className="flex justify-end items-center gap-4 mb-2 mt-[-90px] pr-8 ml-[1000px]">
-          <button
-            onClick={prevSlide}
-            className="w-[56px] h-[56px] flex items-center justify-center bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition"
-          >
-            <img src={arrLeft} alt="" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="w-[56px] h-[56px] flex items-center justify-center bg-red-700 text-white rounded-full hover:bg-red-800 transition"
-          >
-            <img src={arr} alt="" />
-          </button>
+      <div className="testimonial-header">
+  <h3 className="testimonial-subtitle">Testimonials</h3>
+  <h2 className="testimonial-title">
+    What Our <span>Clients</span> Say
+  </h2>
+  <div className="testimonial-controls">
+    <button onClick={prevSlide}>
+      <img src={arrLeft} alt="Previous" />
+    </button>
+    <button onClick={nextSlide}>
+      <img src={arr} alt="Next" />
+    </button>
+  </div>
+</div>
+
+<div
+  className="testimonial-slider-track"
+  style={{ transform: `translateX(-${currentIndex * 25}%)` }}
+>
+  {testimonials.map((testimonial, index) => (
+    <div key={index} className="testimonial-card">
+      <div>
+        <div className="testimonial-user">
+          <img
+            src={testimonial.image}
+            alt={testimonial.name}
+            className="testimonial-avatar"
+          />
+        </div>
+        <img src={quoteOpen} alt="Quote" className="testimonial-quote" />
+        <p className="testimonial-text">{testimonial.text}</p>
+      </div>
+      <div className="testimonial-footer">
+        <div className="testimonial-line"></div>
+        <div>
+          <h4 className="testimonial-name">{testimonial.name}</h4>
+          <p className="testimonial-role">{testimonial.role}</p>
         </div>
       </div>
-      <div
-        className="flex transition-transform duration-700"
-        style={{ transform: `translateX(-${currentIndex * 25}%)` }}
-      >
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-lg p-6 min-w-[25%] box-border flex flex-col justify-between"
-            style={{
-              width: 326,
-              height: 439,
-              borderRadius: 8,
-              borderWidth: 1,
-              marginRight: 56,
-              fontFamily: "Red Hat Display",
-              fontWeight: 600,
-              fontSize: 20,
-              lineHeight: "33.6px",
-              letterSpacing: "0%",
-            }}
-          >
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full"
-                />
-              </div>
-              <img src={quoteOpen} alt="Quote" className="w-8 h-8 mb-4 ml-3" />
-              <p className="mb-6 line-clamp-6 ml-4">{testimonial.text}</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-1 h-full bg-[#4F4F4F]"></div>
-              <div>
-                <h4
-                  className="text-black mb-1"
-                  style={{
-                    fontFamily: "Manrope",
-                    fontWeight: 800,
-                    fontSize: 20,
-                    lineHeight: "28px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {testimonial.name}
-                </h4>
-                <p
-                  className="text-gray-500 text-sm"
-                  style={{
-                    fontFamily: "Manrope",
-                    fontWeight: 400,
-                    fontSize: 16,
-                    lineHeight: "22.4px",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  {testimonial.role}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center mt-10">
-        <button
-          className="w-[200px] h-[50px] rounded-full border-transparent bg-gradient-to-r from-[#9D0A0E] to-[#F15922] text-white font-semibold
-   ease-in-out transform flex items-center justify-center relative group 
-  hover:bg-white hover:bg-none hover:text-[#9D0A0E] hover:border-2 hover:border-[#9D0A0E]"
-        >
-          <span className="absolute left-1/2 -translate-x-1/2">View All</span>
-          <span
-            className="opacity-0 transform translate-x-0 transition-all duration-300 ease-in-out text-[#9D0A0E] 
-      group-hover:opacity-100 group-hover:translate-x-2"
-          >
-            <FaArrowRight className="ml-20" />
-          </span>
-        </button>
-      </div>
+    </div>
+  ))}
+</div>
+
+<div className="testimonial-viewall">
+  <button>
+    <span>View All</span>
+    <span>
+      <FaArrowRight />
+    </span>
+  </button>
+</div>
+
     </div>
   );
 };

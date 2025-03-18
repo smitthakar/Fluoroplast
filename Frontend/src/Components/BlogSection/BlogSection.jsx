@@ -43,55 +43,55 @@ export default function BlogSection() {
   ];
 
   return (
-    <div className="blogs-container">
-  {/* Section Title */}
-  <div className="blogs-title-container">
-    <p className="blogs-subtitle">Blogs</p>
-    <h2 className="blogs-title">
-      Insight, Industry Trends, Top <br /> News Headlines
-    </h2>
-  </div>
+    <div className="custom-blog-section">
+      <div className="custom-inner-blog-section">
+        {/* Section Title */}
+        <div className="custom-blog-header">
+          <p className="custom-blog-subtitle">Blogs</p>
+          <h2 className="custom-blog-title">
+            Insight, Industry Trends, Top <br /> News Headlines
+          </h2>
+        </div>
 
-  {/* Blog Grid */}
-  <div className="blogs-grid">
-    {blogs.map((blog) => (
-      <div key={blog.id} className="blog-card">
-        {/* Blog Image */}
-        <img src={blog.image} alt={blog.title} className="blog-image" />
+        {/* Blog Grid */}
+        <div className="custom-blog-grid">
+          {blogs.map((blog) => (
+            <div key={blog.id} className="custom-blog-card">
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="custom-blog-img"
+              />
+              <div className="custom-blog-content">
+                <div className="custom-blog-meta-wrapper">
+                  <div className="custom-blog-meta">{blog.date}</div>
+                  <div className="custom-blog-category">{blog.category}</div>
+                </div>
+                <div className="custom-blog-title-wrapper">
+                  <span className="borderleft"></span>
+                  <h3 className="custom-blog-card-title">{blog.title}</h3>
+                </div>
 
-        {/* Bottom Section */}
-        <div className="blog-details">
-          {/* Date & Category */}
-          <p className="blog-meta">
-            {blog.date} <span className="blog-category">{blog.category}</span>
-          </p>
+                <p className="custom-blog-description">{blog.description}</p>
 
-          {/* Title */}
-          <h3 className="blog-title">{blog.title}</h3>
-
-          {/* Description */}
-          <p className="blog-description">{blog.description}</p>
-
-          {/* Author Info */}
-          <div className="blog-author">
-            <img src={blog.authorImage} alt={blog.author} />
-            <p>{blog.author}</p>
-          </div>
+                <div className="custom-blog-author">
+                  <img src={blog.authorImage} alt={blog.author}  className="author-image"/>
+                  <p className="author-name">{blog.author}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
-
-  {/* View All Button */}
-  <div className="blogs-button-container">
-    <button className="view-all-btn">
-      <span>View All</span>
-      <span>
-        <FaArrowRight />
-      </span>
-    </button>
-  </div>
-</div>
-
+      {/* View All Button */}
+      <div className="custom-blog-btn-container">
+        <button className="custom-blog-btn">
+          <span>View All</span>
+          <span>
+            <FaArrowRight />
+          </span>
+        </button>
+      </div>
+    </div>
   );
 }

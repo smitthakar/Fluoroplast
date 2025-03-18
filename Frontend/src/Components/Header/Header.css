@@ -148,17 +148,21 @@
   }
   
   .custom-stat-number {
-    font-size: 2.25rem; /* Matches text-4xl */
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 84px;
+    height: 84px;
+    width: 208px;
     font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
   }
   
   .custom-stat-text {
-    color: #0a0a0a;
+    color: #0A0A0A;
     font-size: 24px;
-    line-height: 28.6px;
-    font-weight: normal;
+    line-height: 33.6px;
+    font-weight: 600;
     margin-top: 16px;
-    width: 125px;
+    width: 167px;
     height: 48px;
     display: flex;
     align-items: center;
