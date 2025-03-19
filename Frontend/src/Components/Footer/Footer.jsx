@@ -1,13 +1,4 @@
-import Facebook from "../../assets/Facebook.png";
-import Instagram from "../../assets/Instagram.png";
-import LinkedIn from "../../assets/LinkedIn.png";
-import Twitter from "../../assets/Twitter.png";
-import Youtube from "../../assets/YouTube.png";
-import Logo from "../../assets/logo_all 1.png";
-import call from "../../assets/call.png";
-import email from "../../assets/mail.png";
-import location from "../../assets/location.png";
-import frame from "../../assets/frame.png";
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import chatLogo from "../../assets/chatLogo.png";
@@ -17,6 +8,16 @@ import emoji from "../../assets/emoji.png";
 import imgIcon from "../../assets/imgIcon.png";
 import Arrowrigth from "../../assets/Arrow rigth.png";
 import { FaArrowRight } from "react-icons/fa";
+import Facebook from "../../assets/Facebook.png";
+import Instagram from "../../assets/Instagram.png";
+import LinkedIn from "../../assets/LinkedIn.png";
+import Twitter from "../../assets/Twitter.png";
+import Youtube from "../../assets/YouTube.png";
+import Logo from "../../assets/logo_all 1.png";
+import call from "../../assets/call.png";
+import email from "../../assets/mail.png";
+import location from "../../assets/location.png";
+import frame from "../../assets/Frame.png";
 import "./Footer.css";
 
 export default function Footer() {
