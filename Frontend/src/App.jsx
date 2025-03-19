@@ -16,16 +16,16 @@ import Event from "./Pages/New&Event/Event";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogDetails from "./Pages/BlogDetails/BlogPost";
 import AnimatedPage from "./Components/AnimatedPage/AnimatedPage";
-import ScrollToTop from "./Components/ScrollToTop/ScrollToTop"; // Import ScrollToTop
+// import ScrollToTop from "./Components/ScrollToTop/ScrollToTop"; // Import ScrollToTop
 
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
     <>
-      <ScrollToTop /> 
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
+      {/* <ScrollToTop />  */}
+      {/* <AnimatePresence mode="wait"> */}
+        <Routes >
           <Route path="/" element={<AnimatedPage><Home /></AnimatedPage>} />
           <Route path="/aboutus" element={<AnimatedPage><AboutUs /></AnimatedPage>} />
           <Route path="/contact-us" element={<AnimatedPage><ContactUs /></AnimatedPage>} />
@@ -35,10 +35,10 @@ function AnimatedRoutes() {
           <Route path="/industryserved" element={<AnimatedPage><AutomotivePage /></AnimatedPage>} />
           <Route path="/quality-assurance" element={<AnimatedPage><QualityAssurance /></AnimatedPage>} />
           <Route path="/news&events" element={<AnimatedPage><Event /></AnimatedPage>} />
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs" element={<Blogs/>} />
           <Route path="/blog-details" element={<AnimatedPage><BlogDetails /></AnimatedPage>} />
         </Routes>
-      </AnimatePresence>
+      {/* </AnimatePresence> */}
     </>
   );
 }
