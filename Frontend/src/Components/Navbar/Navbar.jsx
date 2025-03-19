@@ -76,7 +76,10 @@ export default function Navbar() {
     {
       name: "FEP and PFA Lined Valves & Fittings",
       link: "/fep-pfa-valves",
-    },
+    }, { name: "Blog", link: "/blogs" },
+    { name: "Case Studies", link: "/case-studies" },
+    { name: "Technical Documents", link: "/document" },
+    { name: "Downloads", link: "/downloads" }
   ];
 
   return (
@@ -268,26 +271,18 @@ export default function Navbar() {
 
                   {/* Splitting into Two Columns */}
                   <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
-                    <div>
-                      {[
-                        { name: "Blog", Link: "/blogs" },
-                        { name: "Case Studies", link: "/case-studies" },
-                        { name: "Technical Documents", link: "/document" },
-                        { name: "Downloads", link: "/downloads" },
-                      ].map((item, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-3 py-2"
-                        >
-                          <span className="text-black-600">
-                            <SlArrowRight className="w-3 h-3" />
-                          </span>
-                          <a href={item.link} className="hover:text-red-900">
-                            {item.name}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
+                  <div>
+      {navItems.map((item, index) => (
+        <div key={index} className="flex items-center space-x-3 py-2">
+          <span className="text-black-600">
+            <SlArrowRight className="w-3 h-3" />
+          </span>
+          <Link to={item.link} className="hover:text-red-900">
+            {item.name}
+          </Link>
+        </div>
+      ))}
+    </div>
 
                     <div>
                       {[
