@@ -1,23 +1,16 @@
 /* Section Wrapper */
-.services-container{
+.services-container {
   width: 100%;
-  height: 541px;
-  margin-bottom: 140px;
-  padding-top: 130px;
-  gap: 32px;
+  max-width: 100%;
+  margin-top: 100px;
 }
+
 .section-wrapper {
-  width: 1456px;
-  height: 118px;
-    text-align: center;
-    justify-content: center;
-    /* padding-top: 64px; Matches py-16 */
-    /* padding-bottom: 64px; */
-    padding-left: 150px; 
-    /* position: relative; */
-    z-index: 20;
-  }
-  
+  width: 90%;
+  max-width: 1200px;
+  padding-left: 0;
+  margin: 0 auto;
+}
   /* Subheading */
   .section-subheading {
     width: 100%;
@@ -49,7 +42,8 @@
     background-color: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    width: 360px;
+    width: 100%;
+  max-width: 360px;
     text-align: left;
     height: 343.18px;
     padding: 32px;
@@ -76,7 +70,9 @@
     gap: 16px; /* Matches gap-4 */
     margin-bottom: 8px; /* Matches mb-2 */
     margin-top: -80px; /* Matches mt-[-90px] */
-    margin-right: -40px; 
+    margin-right: -90px;
+    /* margin-right: 0; */
+    /* padding-right: 1rem;  */
   }
   
   /* Previous Button */
@@ -114,13 +110,15 @@
   }
 
   .service-content{
-    width: 320px;
+    width: 100%;
+  max-width: 320px;
     height: 166px;
     gap: 8px;
   }
   /* Section Wrapper */
 .carousel-section {
   width: 100%;
+  /* max-width: 1200px; */
   height: 391px;
   padding: 24px;
   gap: 24px;
@@ -160,7 +158,8 @@
   /* Individual Slide */
   .carousel-slide {
     flex: none;
-    width: 50%; /* Matches sm:w-1/2 */
+    width: 100%;
+    max-width: 360px;/* Matches sm:w-1/2 */
     padding: 0 16px; /* Matches px-4 */
     transition: transform 0.5s ease-in-out;
   }
@@ -195,7 +194,8 @@
     font-size: 24px;
     line-height: 33.6px;
     font-weight: 800;
-    width: 340px;
+    width: 100%;
+  max-width: 340px;
     height: 68px;
     margin-top: 16px;
     font-family: 'Red Hat Display', sans-serif;
@@ -208,7 +208,8 @@
   
   /* Service Description */
   .service-description {
-    width: 326px;
+    width: 100%;
+  max-width: 326px;
     height: 90px;
     color: #0A0A0A; /* Matches text-gray-600 */
     font-size: 16px;

@@ -1,0 +1,115 @@
+.history-section {
+    display: flex;
+    flex-direction: row;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 112px 72px;
+    gap: 24px;
+}
+
+.history-content {
+    height: 537px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+}
+
+.history-header{
+    width: 548px;
+    height: 118px;
+}
+
+.history-subtitle {
+    width: 548px;
+    height: 34px;
+    color: #9d0a0e;
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Red Hat Display', sans-serif;
+    /* letter-spacing: 0.08em; */
+    line-height: 33.4px;
+    case: uppercase;
+    margin-bottom: 8px;
+}
+
+.history-title {
+    width: 590px;
+    height: 84px;
+    color: #070912;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.2;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-bottom: 16px;
+}
+.his-para{
+    width: 600px;
+    height: 292px;
+    gap: 32px;
+}
+.history-paragraph {
+    width: 630px;
+    color: #070912;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height:22.4px;
+    
+    margin-bottom: 12px;
+    text-align: justify;
+    /* gap: 32px; */
+}
+
+.history-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history-image {
+    width: 700px;
+    height: 610px;
+    max-width: 800px;
+    height: auto;
+    padding-left: 20px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+.history-btn button {
+  width: 250px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 64px;
+  border-radius: 40px;
+  background: linear-gradient(to right, #9d0a0e, #f15922);
+  color: white;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-btn button:hover {
+  background: white;
+  color: #9d0a0e;
+  border: 2px solid #9d0a0e;
+}
+
+.history-btn button span:last-child {
+  transition: transform 0.3s ease;
+}
+
+.history-btn button:hover span:last-child {
+  transform: translateX(6px);
+}
