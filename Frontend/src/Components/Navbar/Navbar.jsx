@@ -59,6 +59,26 @@ export default function Navbar() {
     },
   };
 
+  const navItems = [
+    {
+      name: "Engineering Plastics",
+      link: "/engineering-plastics",
+    },
+    { name: "Hydraulic Seals", link: "/hydraulic-seals" },
+    {
+      name: "Compressor Replacement Parts",
+      link: "/compressor-replacement",
+    },
+    {
+      name: "Hydraulic Cylinders",
+      link: "/hydraulic-cylinders",
+    },
+    {
+      name: "FEP and PFA Lined Valves & Fittings",
+      link: "/fep-pfa-valves",
+    },
+  ];
+
   return (
     <div className="lg:w-full md:w-full sm:w-full font-manropen fixed top-0 left-0 bg-white shadow-md z-50 border-b border-gray-200">
       {/* <nav className="bg-white w-full h-22 pt-3 relative"> */}
@@ -153,39 +173,21 @@ export default function Navbar() {
                     </p>
                   </div>
                   <div>
-                    <ul className="text-lg text-gray-800 font-medium space-y-4">
-                      {[
-                        {
-                          name: "Engineering Plastics",
-                          link: "/engineering-plastics",
-                        },
-                        { name: "Hydraulic Seals", link: "/hydraulic-seals" },
-                        {
-                          name: "Compressor Replacement Parts",
-                          link: "/compressor-replacement",
-                        },
-                        {
-                          name: "Hydraulic Cylinders",
-                          link: "/hydraulic-cylinders",
-                        },
-                        {
-                          name: "FEP and PFA Lined Valves & Fittings",
-                          link: "/fep-pfa-valves",
-                        },
-                      ].map((item, index) => (
-                        <li
-                          key={index}
-                          className="flex items-center space-x-3 font-['Red Hat Display']"
-                        >
-                          <span className="">
-                            <SlArrowRight className="text-black-600 w-3 h-3" />
-                          </span>
-                          <a href={item.link} className="hover:text-red-900">
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+                  <ul className="text-lg text-gray-800 font-medium space-y-4">
+      {navItems.map((item, index) => (
+        <li
+          key={index}
+          className="flex items-center space-x-3 font-['Red Hat Display']"
+        >
+          <span>
+            <SlArrowRight className="text-black-600 w-3 h-3" />
+          </span>
+          <Link to={item.link} className="hover:text-red-900">
+            {item.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
                   </div>
                 </div>
               )}
@@ -268,7 +270,7 @@ export default function Navbar() {
                   <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
                     <div>
                       {[
-                        { name: "Blog", link: "/blogs" },
+                        { name: "Blog", Link: "/blogs" },
                         { name: "Case Studies", link: "/case-studies" },
                         { name: "Technical Documents", link: "/document" },
                         { name: "Downloads", link: "/downloads" },
