@@ -1,6 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 import cylinder from "../../assets/cylinder.png"; 
-import Seals from "../../assets/seals.png";
+import Seals from "../../assets/Seals.png";
 import plastic from "../../assets/EngineeringPlastic.png";
 import valves from "../../assets/Valves&Fittings.png";
 import machinery from "../../assets/IndustrialMachinery.png";
