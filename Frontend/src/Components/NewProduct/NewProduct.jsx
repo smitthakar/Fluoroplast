@@ -30,43 +30,45 @@ export default function GridLayout() {
 
   return (
     <div className="new-products-section">
-  <div className="text-center mb-8">
-    <p className="new-products-subtitle">NEW PRODUCTS/EXPANSIONS</p>
-    <h2 className="new-products-title">Feature The Latest Expansions</h2>
-  </div>
-
-  {/* Grid Container */}
-  <div className="new-products-grid">
-    {items.map((item) => (
-      <div key={item.id} className="product-card">
-        
-        {/* Image Container */}
-        <div className="product-image-container">
-          <img src={item.image} alt={item.label} className="product-image" />
-        </div>
-
-        {/* Overlay on Hover */}
-        <div className="product-overlay">
-          <div>
-            <p className="product-description">{item.label}</p>
-            <p className="product-details">{item.description}</p>
-          </div>
-
-          {/* Read More Section */}
-          <div className="product-readmore">
-            <div className="product-divider"></div>
-            <button className="read-more-btn">
-              <span>Read More</span> <FaArrowRight />
-            </button>
-          </div>
-        </div>
-
-        {/* Bottom Product Title */}
-        <p className="product-title">{item.label}</p>
+      <div className="new-products-header">
+        <p className="new-products-subtitle">NEW PRODUCTS/EXPANSIONS</p>
+        <h2 className="new-products-title">Feature The Latest Expansions</h2>
       </div>
-    ))}
-  </div>
-</div>
 
+      {/* Grid Container */}
+      <div className="new-products-grid">
+        {items.map((item) => (
+          <div key={item.id} className="product-card">
+            {/* Image Container */}
+            <div className="product-image-container">
+              <img
+                src={item.image}
+                alt={item.label}
+                className="product-image"
+              />
+            </div>
+
+            {/* Overlay on Hover */}
+            <div className="product-overlay">
+              <div>
+                <p className="product-description">{item.label}</p>
+                <p className="product-details">{item.description}</p>
+              </div>
+
+              {/* Read More Section */}
+              <div className="product-readmore">
+                <div className="product-divider"></div>
+                <button className="read-more-btn">
+                  <span>Read More</span> <FaArrowRight />
+                </button>
+              </div>
+            </div>
+
+            {/* Bottom Product Title */}
+            <p className="product-title">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

@@ -75,23 +75,26 @@ const ServicesCarousel = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
 
   // Move to next slide
-  const nextSlide = () => {
-    if (currentIndex < services.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
+ const nextSlide = () => {
+    if (currentIndex >= services.length) {  
+      setCurrentIndex(0);
+      carouselRef.current.scrollLeft = 0;
+    } else {
+      setCurrentIndex(currentIndex + 1);
     }
   };
 
-  // Move to previous slide
   const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
+    if (currentIndex <= 0) {
+      setCurrentIndex(services.length());
+      carouselRef.current.scrollLeft = carouselRef.current.scrollWidth;
+    } else {
+      setCurrentIndex(currentIndex - 1);
     }
   };
 
   // Swipeable gesture handling
   const handlers = useSwipeable({
-    onSwipedLeft: () => nextSlide(),
-    onSwipedRight: () => prevSlide(),
     trackTouch: true,
     trackMouse: true,
     preventScrollOnSwipe: true,
@@ -118,7 +121,7 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <div>
+    <div className="services-container">
       <div className="section-wrapper">
         <p className="section-subheading">
           The Best Industry and Company Services
@@ -164,7 +167,7 @@ const ServicesCarousel = () => {
               <div key={index} className="carousel-slide">
                 <div className="service-card">
                   {/* Icon & Title */}
-                  <div>
+                  <div className="service-content">
                     <img
                       src={service.icon}
                       alt={service.title}

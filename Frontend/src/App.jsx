@@ -30,12 +30,12 @@ function AnimatedRoutes() {
           <Route path="/aboutus" element={<AnimatedPage><AboutUs /></AnimatedPage>} />
           <Route path="/contact-us" element={<AnimatedPage><ContactUs /></AnimatedPage>} />
           <Route path="/document" element={<AnimatedPage><Document /></AnimatedPage>} />
-          <Route path="/gallery" element={<AnimatedPage><Gallery /></AnimatedPage>} />
-          <Route path="/certificates" element={<AnimatedPage><Certificates /></AnimatedPage>} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/certificates" element={<Certificates />} />
           <Route path="/industryserved" element={<AnimatedPage><AutomotivePage /></AnimatedPage>} />
           <Route path="/quality-assurance" element={<AnimatedPage><QualityAssurance /></AnimatedPage>} />
           <Route path="/news&events" element={<AnimatedPage><Event /></AnimatedPage>} />
-          <Route path="/blogs" element={<AnimatedPage><Blogs /></AnimatedPage>} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog-details" element={<AnimatedPage><BlogDetails /></AnimatedPage>} />
         </Routes>
       </AnimatePresence>

@@ -1,17 +1,28 @@
 /* Section Wrapper */
+.services-container{
+  width: 100%;
+  height: 541px;
+  margin-bottom: 140px;
+  padding-top: 130px;
+  gap: 32px;
+}
 .section-wrapper {
+  width: 1456px;
+  height: 118px;
     text-align: center;
     justify-content: center;
-    padding-top: 64px; /* Matches py-16 */
-    padding-bottom: 64px;
-    padding-left: 50px; /* Matches pl-[50px] */
-    position: relative;
+    /* padding-top: 64px; Matches py-16 */
+    /* padding-bottom: 64px; */
+    padding-left: 150px; 
+    /* position: relative; */
     z-index: 20;
   }
   
   /* Subheading */
   .section-subheading {
-    color: #b91c1c; /* Matches text-red-700 */
+    width: 100%;
+    height: 34px;
+    color: #9D0A0E; /* Matches text-red-700 */
     font-weight: 800; /* Matches font-extrabold */
     text-transform: uppercase; /* Matches uppercase */
     font-size: 24px; /* Matches text-[24px] */
@@ -23,32 +34,36 @@
   
   /* Main Heading */
   .section-heading {
+    width: 100%;
+    height: 84px;
+    color: #0A0A0A;
     font-size: 60px; /* Matches text-[60px] */
-    line-height: 74px; /* Matches leading-[74px] */
+    line-height: 84px; /* Matches leading-[74px] */
     font-weight: 800; /* Matches font-extrabold */
     text-align: center;
-    margin-top: 8px; /* Matches mt-2 */
+    /* margin-top: 8px; Matches mt-2 */
     font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
   }
   
   .service-card {
-    background-color: white;
+    background-color: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    width: 334px;
+    border-radius: 8px;
+    width: 360px;
     text-align: left;
-    height: 370px;
+    height: 343.18px;
     padding: 32px;
     gap: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     transition: background-color 0.3s ease-in-out;
   }
 
   .service-icon {
-    width: 50px;
+    width: 37px;
     height: 50px;
+    gap: 8px;
     transition: filter 0.3s ease-in-out;
   }
   
@@ -60,8 +75,8 @@
     align-items: center;
     gap: 16px; /* Matches gap-4 */
     margin-bottom: 8px; /* Matches mb-2 */
-    margin-top: -90px; /* Matches mt-[-90px] */
-    padding-right: 32px; /* Matches pr-8 */
+    margin-top: -80px; /* Matches mt-[-90px] */
+    margin-right: -40px; 
   }
   
   /* Previous Button */
@@ -97,13 +112,23 @@
   .nav-button-next:hover {
     background-color: #991b1b; /* Matches hover:bg-red-800 */
   }
+
+  .service-content{
+    width: 320px;
+    height: 166px;
+    gap: 8px;
+  }
   /* Section Wrapper */
 .carousel-section {
+  width: 100%;
+  height: 391px;
+  padding: 24px;
+  gap: 24px;
     text-align: center;
     justify-content: center;
-    padding-top: 0;
-    padding-left: 50px;
-    margin-top: -20px;
+    /* padding-top: 0; */
+    /* padding-left: 50px; */
+    /* margin-top: -5px; */
     margin-left: 150px;
     position: relative;
     z-index: 20;
@@ -147,7 +172,7 @@
   
   /* Hover Effect */
   .service-card:hover {
-    background-color: #b91c1c; /* Matches hover:bg-red-700 */
+    background-color: #9D0A0E; /* Matches hover:bg-red-700 */
   }
   
   /* Service Icon */
@@ -170,7 +195,8 @@
     font-size: 24px;
     line-height: 33.6px;
     font-weight: 800;
-    width: 240px;
+    width: 340px;
+    height: 68px;
     margin-top: 16px;
     font-family: 'Red Hat Display', sans-serif;
     transition: color 0.3s ease-in-out;
@@ -182,7 +208,9 @@
   
   /* Service Description */
   .service-description {
-    color: #4b5563; /* Matches text-gray-600 */
+    width: 326px;
+    height: 90px;
+    color: #0A0A0A; /* Matches text-gray-600 */
     font-size: 16px;
     line-height: 22.4px;
     font-weight: normal;
@@ -199,7 +227,7 @@
   .read-more {
     color: #0A0A0A;
     font-weight: bold;
-    margin-top: auto;
+    margin-top: 80px;
     padding-top: 8px;
     display: flex;
     justify-content: space-between;
@@ -211,7 +239,7 @@
     color: white;
   }
   
-  /* Read More Arrow */
+ 
   .read-more-arrow {
     opacity: 0;
     transform: translateX(0);
