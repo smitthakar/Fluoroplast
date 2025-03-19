@@ -1,8 +1,8 @@
-import Facebook from "../../assets/facebook.png";
-import Instagram from "../../assets/instagram.png";
-import LinkedIn from "../../assets/linkedin.png";
-import Twitter from "../../assets/twitter.png";
-import Youtube from "../../assets/youtube.png";
+import Facebook from "../../assets/Facebook.png";
+import Instagram from "../../assets/Instagram.png";
+import LinkedIn from "../../assets/LinkedIn.png";
+import Twitter from "../../assets/Twitter.png";
+import Youtube from "../../assets/YouTube.png";
 import Logo from "../../assets/logo_all 1.png";
 import call from "../../assets/call.png";
 import email from "../../assets/mail.png";

@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 import "./App.css";
 import "./index.css";
 import "@fontsource/red-hat-display";
@@ -19,7 +19,7 @@ import AnimatedPage from "./Components/AnimatedPage/AnimatedPage";
 // import ScrollToTop from "./Components/ScrollToTop/ScrollToTop"; // Import ScrollToTop
 
 function AnimatedRoutes() {
-  const location = useLocation();
+  // const location = useLocation();
 
   return (
     <>
