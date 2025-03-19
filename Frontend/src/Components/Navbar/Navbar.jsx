@@ -59,7 +59,13 @@ export default function Navbar() {
     },
   };
 
-  const navItems = [
+  const resourceItems = [
+    { name: "Blog", link: "/blogs" },
+    { name: "Case Studies", link: "/case-studies" },
+    { name: "Technical Documents", link: "/document" },
+    { name: "Downloads", link: "/downloads" }
+  ]
+  const productItems = [
     {
       name: "Engineering Plastics",
       link: "/engineering-plastics",
@@ -76,10 +82,7 @@ export default function Navbar() {
     {
       name: "FEP and PFA Lined Valves & Fittings",
       link: "/fep-pfa-valves",
-    }, { name: "Blog", link: "/blogs" },
-    { name: "Case Studies", link: "/case-studies" },
-    { name: "Technical Documents", link: "/document" },
-    { name: "Downloads", link: "/downloads" }
+    }
   ];
 
   return (
@@ -176,21 +179,21 @@ export default function Navbar() {
                     </p>
                   </div>
                   <div>
-                  <ul className="text-lg text-gray-800 font-medium space-y-4">
-      {navItems.map((item, index) => (
-        <li
-          key={index}
-          className="flex items-center space-x-3 font-['Red Hat Display']"
-        >
-          <span>
-            <SlArrowRight className="text-black-600 w-3 h-3" />
-          </span>
-          <Link to={item.link} className="hover:text-red-900">
-            {item.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
+                    <ul className="text-lg text-gray-800 font-medium space-y-4">
+                      {productItems.map((item, index) => (
+                        <li
+                          key={index}
+                          className="flex items-center space-x-3 font-['Red Hat Display']"
+                        >
+                          <span>
+                            <SlArrowRight className="text-black-600 w-3 h-3" />
+                          </span>
+                          <Link to={item.link} className="hover:text-red-900">
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               )}
@@ -271,18 +274,21 @@ export default function Navbar() {
 
                   {/* Splitting into Two Columns */}
                   <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
-                  <div>
-      {navItems.map((item, index) => (
-        <div key={index} className="flex items-center space-x-3 py-2">
-          <span className="text-black-600">
-            <SlArrowRight className="w-3 h-3" />
-          </span>
-          <Link to={item.link} className="hover:text-red-900">
-            {item.name}
-          </Link>
-        </div>
-      ))}
-    </div>
+                    <div>
+                      {resourceItems.map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-3 py-2"
+                        >
+                          <span className="text-black-600">
+                            <SlArrowRight className="w-3 h-3" />
+                          </span>
+                          <Link to={item.link} className="hover:text-red-900">
+                            {item.name}
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
 
                     <div>
                       {[
