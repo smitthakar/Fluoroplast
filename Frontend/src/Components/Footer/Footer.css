@@ -1,19 +1,21 @@
 .footer {
+    max-width: 100%;
         height: 700px;
         border-top: 1px;
         background-color: #0A0A0A;
         color: white;
         padding-top: 100px;
         /* padding-bottom:-40px; */
-        padding-left: 144px;
-        padding-right: 144px;
+        padding-left: 74px;
+        padding-right: 184px;
         gap: 32px;
     }
 
     .footer-grid {
+        width: 112%;
         height: 400px;
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: space-between;
         gap: 72px 0;
     }
@@ -57,7 +59,7 @@
     }
 
     .footer-company {
-        width: 300px;
+        width: 200px;
         height: 398px;
         /* margin-left: 45px; */
         gap: 24px;
@@ -135,12 +137,13 @@
 
 
     .footer-contact {
+        width: 110%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 40px;
         height: 84px;
-        gap: 36px;
+        gap: 16px;
         padding-top: 24px;
         padding-bottom: 40px;
     }
@@ -151,7 +154,7 @@
         align-items: center;
         gap: 16px;
         color: #ffffff;
-        width: 43%;
+        width: 35%;
     }
     .footer-icon{
         width: 40px;
@@ -160,7 +163,7 @@
 
     .footer-icon1{
         /* padding-left: -190px; */
-        width: 60px;
+        width: 70px;
         height: 40px;
     }
 
