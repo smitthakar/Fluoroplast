@@ -9,12 +9,13 @@ import Download from "../../assets/pdfIcon.png";
 import NeedHelp from "../../Components/NeedHelp/NeedHelp";  
 import "./Documents.css";
 const documents = [
-  { image: HydraulicSeal, title: "Hydraulic Seal Catalogue" },
-  { image: RotarySeal, title: "Rotary Seal Catalogue" },
-  { image: ORings, title: "O-Rings Catalogue" },
-  { image: Corporate, title: "Corporate Catalogue" },
-  { image: Chemical, title: "Chemical" },
+  { image: HydraulicSeal, title: "Hydraulic Seal Catalogue", pdf: "/pdfs/hydraulic-seal.pdf" },
+  { image: RotarySeal, title: "Rotary Seal Catalogue", pdf: "/pdfs/rotary-seal.pdf" },
+  { image: ORings, title: "O-Rings Catalogue", pdf: "/pdfs/o-rings.pdf" },
+  { image: Corporate, title: "Corporate Catalogue", pdf: "/pdfs/corporate.pdf" },
+  { image: Chemical, title: "Chemical", pdf: "/pdfs/chemical.pdf" },
 ];
+
 
 const Document = () => {
   return (
@@ -35,14 +36,14 @@ const Document = () => {
                   <h3 className="tech-docs-card-title">{doc.title}</h3>
                 </div>
                 <span className="divider-line"></span>
-                <div className="tech-docs-footer">
+                <a href={doc.pdf} download className="tech-docs-footer">
                   <img
                     src={Download}
                     alt="Download-PDf-Icon"
                     className="tech-docs-download-icon"
                   />
                   <span>Download Now</span>
-                </div>
+                </a>
               </div>
             ))}
           </div>
