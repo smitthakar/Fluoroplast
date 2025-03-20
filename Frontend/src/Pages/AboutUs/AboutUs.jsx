@@ -13,6 +13,7 @@ import five from "../../assets/Five.png";
 import Footer from "../../Components/Footer/Footer";
 import { FaArrowRight } from "react-icons/fa";
 import "./AboutUs.css";
+import GlobalPresence from "../../Components/GlobalPresence/GlobalPresence ";
 
 const teamMembers = [
   { name: "Ananya Joshi", role: "Founder", image: one },
@@ -85,7 +86,7 @@ const AboutUs = () => {
       </div>
 
       {/* Vision, Mission, Values Section */}
-      <div className="w-full max-w-[1250px] mx-auto px-4 md:px-8 lg:px-[144px] py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="about-container">
         {[
           {
             title: "Vision",
@@ -103,77 +104,44 @@ const AboutUs = () => {
             img: values,
           },
         ].map((item, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg shadow-lg p-6 text-center"
-          >
-            <img src={item.img} alt={item.title} className="mx-auto w-16" />
-            <h3 className="text-xl font-semibold mt-4">{item.title}</h3>
-            <p className="text-gray-600 mt-2">{item.desc}</p>
+          <div key={index} className="about-card">
+            <img src={item.img} alt={item.title} className="about-card-img" />
+            <h3 className="about-card-title">{item.title}</h3>
+            <p className="about-card-desc">{item.desc}</p>
           </div>
         ))}
       </div>
 
-      {/* Global Presence Section */}
-      <div className="w-full bg-[#400000] text-white py-16 text-center">
-        <motion.h2
-          className="text-lg md:text-xl font-bold uppercase tracking-wider"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          GLOBAL PRESENCE
-        </motion.h2>
-
-        <motion.h1
-          className="text-3xl md:text-5xl font-bold mt-2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
-          We Export & Cater To Following Countries
-        </motion.h1>
-
-        {/* CTA Button */}
-        <button className="mt-6 px-6 py-3 bg-white text-red-700 font-semibold rounded-full flex items-center gap-2 hover:bg-red-700 hover:text-white transition">
-          Find A Distributor <FaArrowRight />
-        </button>
-
-        {/* Map Section */}
-        <div className="mt-10">
-          <img
-            src={map}
-            alt="Global Map"
-            className="w-full max-w-[800px] mx-auto"
-          />
-        </div>
+      <div className="map-global">
+        <GlobalPresence />
       </div>
 
       {/* Meet Our Team Section */}
-      <div className="py-16 px-4 md:px-8 text-center">
-        <motion.h3
-          className="text-red-600 font-semibold uppercase tracking-widest"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Awesome Members
-        </motion.h3>
+      <div className="team-wrapper">
+        <div className="team-heading">
+          <motion.h3
+            className="team-subtitle"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Awesome Members
+          </motion.h3>
 
-        <motion.h2
-          className="text-2xl md:text-3xl font-bold mt-2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
-          Meet Our Awesome And Expert Team Members
-        </motion.h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
+          <motion.h2
+            className="team-title"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            Meet Our Awesome And Expert Team Members
+          </motion.h2>
+        </div>
+        <div className="team-section">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              className="bg-white p-2 rounded-lg shadow-lg"
+              className="team-card"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1, duration: 0.3 }}
@@ -181,10 +149,12 @@ const AboutUs = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="rounded-md w-full h-[200px] object-cover"
+                className="team-card-image"
               />
-              <h3 className="mt-4 text-lg font-semibold">{member.name}</h3>
-              <p className="text-gray-600">{member.role}</p>
+              <div className="team-card-content">
+                <h3 className="team-card-name">{member.name}</h3>
+                <p className="team-card-role">{member.role}</p>
+              </div>
             </motion.div>
           ))}
         </div>
