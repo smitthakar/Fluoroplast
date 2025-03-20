@@ -4,6 +4,7 @@ import AvatarTwo from "../../assets/AvatarTwo.png";
 import AvatarThree from "../../assets/AvatarThree.png";
 import { FaArrowRight } from "react-icons/fa";
 import "./BlogSection.css";
+import MainBlog from "../MainBlog/MainBlog";
 
 export default function BlogSection() {
   const blogs = [
@@ -53,36 +54,14 @@ export default function BlogSection() {
           </h2>
         </div>
 
-        {/* Blog Grid */}
+        {/* Blog Grid with MainBlog */}
         <div className="custom-blog-grid">
           {blogs.map((blog) => (
-            <div key={blog.id} className="custom-blog-card">
-              <img
-                src={blog.image}
-                alt={blog.title}
-                className="custom-blog-img"
-              />
-              <div className="custom-blog-content">
-                <div className="custom-blog-meta-wrapper">
-                  <div className="custom-blog-meta">{blog.date}</div>
-                  <div className="custom-blog-category">{blog.category}</div>
-                </div>
-                <div className="custom-blog-title-wrapper">
-                  <span className="borderleft"></span>
-                  <h3 className="custom-blog-card-title">{blog.title}</h3>
-                </div>
-
-                <p className="custom-blog-description">{blog.description}</p>
-
-                <div className="custom-blog-author">
-                  <img src={blog.authorImage} alt={blog.author}  className="author-image"/>
-                  <p className="author-name">{blog.author}</p>
-                </div>
-              </div>
-            </div>
+            <MainBlog key={blog.id} blog={blog} />
           ))}
         </div>
       </div>
+
       {/* View All Button */}
       <div className="custom-blog-btn-container">
         <button className="custom-blog-btn">
