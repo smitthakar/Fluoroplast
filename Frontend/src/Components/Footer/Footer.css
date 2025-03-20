@@ -289,6 +289,8 @@
         /* padding-bottom: 20px; */
         color: #ffffff;
         font-size: 14px;
+        /* width: 1420%; */
+        max-width: 1440px;
         border-top: 1px solid #374151;
         /* padding-top: 16px; */
         display: flex;
