@@ -16,15 +16,16 @@ import Event from "./Pages/New&Event/Event";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogDetails from "./Pages/BlogDetails/BlogPost";
 import AnimatedPage from "./Components/AnimatedPage/AnimatedPage";
-// import ScrollToTop from "./Components/ScrollToTop/ScrollToTop"; // Import ScrollToTop
+import { AnimatePresence } from "framer-motion";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop"; // Import ScrollToTop
 
 function AnimatedRoutes() {
-  // const location = useLocation();
+  const location = useLocation();
 
   return (
     <>
-      {/* <ScrollToTop />  */}
-      {/* <AnimatePresence mode="wait"> */}
+      <ScrollToTop /> 
+      <AnimatePresence mode="wait">
         <Routes >
           <Route path="/" element={<AnimatedPage><Home /></AnimatedPage>} />
           <Route path="/aboutus" element={<AnimatedPage><AboutUs /></AnimatedPage>} />
@@ -38,7 +39,7 @@ function AnimatedRoutes() {
           <Route path="/blogs" element={<Blogs/>} />
           <Route path="/blog-details" element={<AnimatedPage><BlogDetails /></AnimatedPage>} />
         </Routes>
-      {/* </AnimatePresence> */}
+      </AnimatePresence>
     </>
   );
 }

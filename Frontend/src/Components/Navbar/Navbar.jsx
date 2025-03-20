@@ -64,7 +64,14 @@ export default function Navbar() {
     { name: "Case Studies", link: "/case-studies" },
     { name: "Technical Documents", link: "/document" },
     { name: "Downloads", link: "/downloads" }
-  ]
+  ];
+
+  const footerLinks = [
+    { name: "Online Tools", link: "/online-tools" },
+    { name: "Certificates", link: "/certificates" },
+    { name: "Gallery", link: "/gallery" },
+  ];
+  
   const productItems = [
     {
       name: "Engineering Plastics",
@@ -274,24 +281,18 @@ export default function Navbar() {
                     </div>
 
                     <div>
-                      {[
-                        { name: "Online Tools", link: "/online-tools" },
-                        { name: "Certificates", link: "/certificates" },
-                        { name: "Gallery", link: "/gallery" },
-                      ].map((item, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-3 py-2"
-                        >
-                          <span className="text-black-600">
-                            <SlArrowRight className="w-3 h-3" />
-                          </span>
-                          <a href={item.link} className="hover:text-red-900">
-                            {item.name}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
+  {footerLinks.map((item, index) => (
+    <div key={index} className="flex items-center space-x-3 py-2">
+      <span className="text-black-600">
+        <SlArrowRight className="w-3 h-3" />
+      </span>
+      <a href={item.link} className="hover:text-red-900">
+        {item.name}
+      </a>
+    </div>
+  ))}
+</div>
+
                   </div>
                 </div>
               )}
