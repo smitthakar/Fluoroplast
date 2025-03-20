@@ -85,6 +85,34 @@ export default function Navbar() {
     }
   ];
 
+  const industries = [
+    { name: "Hydraulic & Pneumatic Cylinders", link: "/hydraulic-pneumatic" },
+    { name: "Valve Industry", link: "/valve-industry" },
+    { name: "Steel Industry", link: "/steel-industry" },
+    { name: "Food & Pharma Industry", link: "/food-pharma" },
+    { name: "Press Forming Industry", link: "/press-forming" },
+    { name: "Pump Motor & Gear Boxes", link: "/pump-motor-gearbox" },
+    { name: "Oil & Gas Industry", link: "/oil-gas" },
+    { name: "Earthmoving Industry", link: "/earthmoving" },
+    { name: "Tyre Industry", link: "/tyre" },
+    { name: "Engineering & Fabrication Industry", link: "/engineering-fabrication" },
+    { name: "Automobile Industry", link: "/automobile" },
+    { name: "Aluminum Industry", link: "/aluminum" },
+    { name: "Textile Industry", link: "/textile" },
+    { name: "Wind Mill Industry", link: "/wind-mill" },
+    { name: "Cement Industry", link: "/cement" },
+    { name: "Pulp & Paper Industry", link: "/pulp-paper" },
+    { name: "Sugar Industry", link: "/sugar" },
+    { name: "Chemical & Fertilizer Industry", link: "/chemical-fertilizer" },
+    { name: "Gems and Jewellery Industry", link: "/gems-jewellery" },
+    { name: "Plastic Industry", link: "/plastic" },
+    { name: "Pharmaceutical Industry", link: "/pharmaceutical" },
+    { name: "Chemical Industry", link: "/chemical" },
+    { name: "Marine Industry", link: "/marine" },
+  ];
+  
+
+
   return (
     <div className="lg:w-full md:w-full sm:w-full font-manropen fixed top-0 left-0 bg-white shadow-md z-50 border-b border-gray-200">
       {/* <nav className="bg-white w-full h-22 pt-3 relative"> */}
@@ -200,60 +228,15 @@ export default function Navbar() {
 
               {activeSection === "Industries Served" && (
                 <div className="grid grid-cols-4 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
-                  {[
-                    {
-                      name: "Hydraulic & Pneumatic Cylinders",
-                      link: "/hydraulic-pneumatic",
-                    },
-                    { name: "Valve Industry", link: "/valve-industry" },
-                    { name: "Steel Industry", link: "/steel-industry" },
-                    { name: "Food & Pharma Industry", link: "/food-pharma" },
-                    { name: "Press Forming Industry", link: "/press-forming" },
-                    {
-                      name: "Pump Motor & Gear Boxes",
-                      link: "/pump-motor-gearbox",
-                    },
-                    { name: "Oil & Gas Industry", link: "/oil-gas" },
-                    { name: "Earthmoving Industry", link: "/earthmoving" },
-                    { name: "Tyre Industry", link: "/tyre" },
-                    {
-                      name: "Engineering & Fabrication Industry",
-                      link: "/engineering-fabrication",
-                    },
-                    { name: "Automobile Industry", link: "/automobile" },
-                    { name: "Aluminum Industry", link: "/aluminum" },
-                    { name: "Textile Industry", link: "/textile" },
-                    { name: "Wind Mill Industry", link: "/wind-mill" },
-                    { name: "Cement Industry", link: "/cement" },
-                    { name: "Pulp & Paper Industry", link: "/pulp-paper" },
-                    { name: "Sugar Industry", link: "/sugar" },
-                    {
-                      name: "Chemical & Fertilizer Industry",
-                      link: "/chemical-fertilizer",
-                    },
-                    {
-                      name: "Gems and Jewellery Industry",
-                      link: "/gems-jewellery",
-                    },
-                    { name: "Plastic Industry", link: "/plastic" },
-                    {
-                      name: "Pharmaceutical Industry",
-                      link: "/pharmaceutical",
-                    },
-                    { name: "Chemical Industry", link: "/chemical" },
-                    { name: "Marine Industry", link: "/marine" },
-                  ].map((item, index) => (
-                    <div
+                  {industries.map((item, index) => (
+                    <a
                       key={index}
-                      className="flex items-center space-x-3 font-['Red Hat Display']"
+                      href={item.link}
+                      className="flex items-center space-x-3 hover:text-red-900 transition-all"
                     >
-                      <span className="text-black-600">
-                        <SlArrowRight className="w-3 h-3" />
-                      </span>
-                      <a href={item.link} className="hover:text-red-900">
-                        {item.name}
-                      </a>
-                    </div>
+                      <SlArrowRight className="w-3 h-3" />
+                      <span>{item.name}</span>
+                    </a>
                   ))}
                 </div>
               )}
