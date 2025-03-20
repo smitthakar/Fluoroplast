@@ -1,0 +1,93 @@
+.tech-docs-wrapper {
+    width: 100%;
+    padding: 112px 144px 180px 144px;
+  }
+  
+  .tech-docs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .tech-docs-title {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 84px;
+    margin-bottom: 16px;
+  }
+  
+  .tech-docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 24px;
+  }
+  
+  .tech-docs-card {
+    background: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tech-docs-card:hover {
+    background-color: #9D0A0E;
+    color: #ffffff;
+  }
+  
+  .tech-docs-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .tech-docs-content {
+    flex-grow: 1;
+    padding: 16px 24px;
+  }
+
+  .divider-line {
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 0 auto 0.75rem auto;
+  }
+
+  
+
+  .tech-docs-card:hover .divider-line {
+    background-color: #ffffff;
+    transition: background 0.3s ease;
+  }
+  
+  
+  .tech-docs-card-title {
+    width: 190px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .tech-docs-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* border-top: 1px solid #e5e7eb; */
+    padding: 0.75rem 24px;
+  }
+  
+  .tech-docs-download-icon {
+    width: 30px;
+    height: 30px;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .group:hover .tech-docs-download-icon {
+    filter: brightness(200);
+  }
+  
