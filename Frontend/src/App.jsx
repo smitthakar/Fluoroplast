@@ -32,7 +32,7 @@ function AnimatedRoutes() {
           <Route path="/contact-us" element={<AnimatedPage><ContactUs /></AnimatedPage>} />
           <Route path="/document" element={<AnimatedPage><Document /></AnimatedPage>} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/certificates" element={<Certificates />} />
+          <Route path="/certificates" element={<AnimatedPage><Certificates /></AnimatedPage>} />
           <Route path="/industryserved" element={<AnimatedPage><AutomotivePage /></AnimatedPage>} />
           <Route path="/quality-assurance" element={<AnimatedPage><QualityAssurance /></AnimatedPage>} />
           <Route path="/news&events" element={<AnimatedPage><Event /></AnimatedPage>} />
