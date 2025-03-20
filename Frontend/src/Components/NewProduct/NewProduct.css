@@ -4,9 +4,10 @@
    padding-bottom: 112px;
    padding-right: 144px;
    padding-left: 144px;
-    width: 100%;
+    width: 1440px;
     height: 1076px;
     gap: 32px;
+    margin :0 auto;
   }
 
   .new-products-header{
@@ -59,7 +60,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 235px;
+    width: 210px;
     height: 323px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -154,7 +155,7 @@
     line-height: 22.4px;
     font-weight: 600;
     font-family: 'Manrope', sans-serif;
-    width: 204px;
+    width: 170px;
     height: 23px;
     gap: 10px;
     padding-bottom: 36px;
