@@ -66,7 +66,7 @@ export default function Navbar() {
     { name: "Downloads", link: "/downloads" }
   ];
 
-  const footerLinks = [
+  const resourceItemsLinks = [
     { name: "Online Tools", link: "/online-tools" },
     { name: "Certificates", link: "/certificates" },
     { name: "Gallery", link: "/gallery" },
@@ -281,7 +281,7 @@ export default function Navbar() {
                     </div>
 
                     <div>
-                      {footerLinks.map((item, index) => (
+                      {resourceItemsLinks.map((item, index) => (
                         <div
                           key={index}
                           className="flex items-center space-x-3 py-2"
@@ -289,9 +289,9 @@ export default function Navbar() {
                           <span className="text-black-600">
                             <SlArrowRight className="w-3 h-3" />
                           </span>
-                          <a href={item.link} className="hover:text-red-900">
+                          <Link to={item.link} className="hover:text-red-900">
                             {item.name}
-                          </a>
+                          </Link>
                         </div>
                       ))}
                     </div>
