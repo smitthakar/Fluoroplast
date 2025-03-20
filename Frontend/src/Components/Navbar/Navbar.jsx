@@ -68,8 +68,8 @@ export default function Navbar() {
 
   const footerLinks = [
     { name: "Online Tools", link: "/online-tools" },
-    { name: "Certificates", link: "/Certificates" },
-    { name: "Gallery", link: "/Gallery" },
+    { name: "Certificates", link: "/certificates" },
+    { name: "Gallery", link: "/gallery" },
   ];
   
   const productItems = [
