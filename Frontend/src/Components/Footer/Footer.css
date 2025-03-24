@@ -53,9 +53,9 @@
     }
 
     .footer-social img {
-        border-radius: 48px;
-        width: 56px;
-        height: 45px;
+        border-radius: 100%;
+        width: 57px;
+        height: 40px;
     }
 
     .footer-company {
@@ -154,16 +154,16 @@
         align-items: center;
         gap: 16px;
         color: #ffffff;
-        width: 35%;
+        width: 45%;
     }
     .footer-icon{
-        width: 40px;
+        width: 45px;
         height: 40px;
     }
 
     .footer-icon1{
         /* padding-left: -190px; */
-        width: 70px;
+        width: 90px;
         height: 40px;
     }
 
