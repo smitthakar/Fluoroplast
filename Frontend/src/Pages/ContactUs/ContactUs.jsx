@@ -91,9 +91,9 @@ const ContactPage = () => {
                 <input type="email" name="email" placeholder="Your Email *" value={formData.email} onChange={handleChange} required />
                 <input type="text" name="fax" placeholder="Fax *" value={formData.fax} onChange={handleChange} required />
                 <input type="text" name="address" placeholder="Your Address *" value={formData.address} onChange={handleChange} required />
+              <input type="text" name="subject" placeholder="Subject *" value={formData.subject} onChange={handleChange} required />
               </div>
 
-              <input type="text" name="subject" placeholder="Subject *" value={formData.subject} onChange={handleChange} required />
               <textarea name="message" placeholder="Leave Your Message (Optional)" value={formData.message} onChange={handleChange}></textarea>
 
               <button className="contact-btn" type="submit">

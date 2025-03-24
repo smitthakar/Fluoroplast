@@ -1,7 +1,7 @@
 .contact-container {
     width: 100%;
     height: 1156px;
-    padding: 112px 144px 0;
+    padding: 112px 114px ;
     background: white;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,7 @@
   }
   
   .contact-wrapper {
+    width: 1432px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,9 +19,10 @@
   
   
   .contact-info {
+    margin-left: -190px;
     gap: 10px;
     width: 400px;
-    padding: 220px 0 0 0;
+    padding: 250px 0 0 0;
   }
   
   .contact-details {
@@ -100,7 +102,8 @@
   }
   
   .form-grid {
-    padding-bottom: 20px;
+    width: 120%;
+    /* padding-bottom: 20px; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -108,6 +111,7 @@
   
   .contact-form input,
   .contact-form textarea {
+    width: 120%;
     padding: 14px 20px ;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -128,7 +132,7 @@
     outline: none;
     transition: 0.3s ease;
     font-size: 16px;
-    width: 100%;
+    width: 120%;
     /* background: #f9f9f9; */
   }
   
