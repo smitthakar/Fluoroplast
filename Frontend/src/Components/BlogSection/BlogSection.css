@@ -44,7 +44,7 @@
   width: 200px;
   height: 50px;
   border-radius: 9999px;
-  border: 2px solid transparent;
+  border: transparent;
   background: linear-gradient(to right, #9d0a0e, #f15922);
   color: white;
   font-weight: 600;
@@ -59,7 +59,7 @@
 .custom-blog-btn:hover {
   background: white;
   color: #9d0a0e;
-  border-color: #9d0a0e;
+  border:2px solid #9d0a0e;
 }
 
 .custom-blog-btn span:first-child {
