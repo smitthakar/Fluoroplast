@@ -15,7 +15,7 @@ import machinery from "../../assets/IndustrialMachinery.png";
 import cylinder from "../../assets/cylinder.png";
 import arrRight from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
-// import CaseStudyCarousel from "../../Components/CaseStudyCarousel/CaseStudyCarousel";
+import CaseStudyCarousel from "../../Components/CaseStudyCarousel/CaseStudyCarousel";
 import Footer from "../../Components/Footer/Footer";
 
 const categories = [

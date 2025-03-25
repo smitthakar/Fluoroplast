@@ -5,7 +5,7 @@ import RotarySeal from "../../assets/DocTwo.png";
 import ORings from "../../assets/DocThree.png";
 import Corporate from "../../assets/DocFour.png";
 import Chemical from "../../assets/DocFive.png";
-import Download from "../../assets/pdfIcon.png";
+import Download from "../../assets/pdfIcon.svg";
 import NeedHelp from "../../Components/NeedHelp/NeedHelp";  
 import "./Documents.css";
 const documents = [
