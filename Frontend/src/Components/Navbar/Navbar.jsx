@@ -5,6 +5,10 @@ import { IoCaretDownOutline, IoClose } from "react-icons/io5";
 import { SlArrowRight } from "react-icons/sl";
 import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
+
+
+
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState(null);
@@ -121,111 +125,90 @@ export default function Navbar() {
 
 
   return (
-    <div className="lg:w-full md:w-full sm:w-full font-manropen fixed top-0 left-0 bg-white shadow-md z-50 border-b border-gray-200">
-      {/* <nav className="bg-white w-full h-22 pt-3 relative"> */}
-      <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between relative">
-        <div className="hidden md:flex w-[168px] h-[28px] space-x-10  text-[#0A0A0A] flex-grow size-[20px] justify-right font-['Manrope']">
+    <div className="header">
+      <div className="header-inner">
+        <div className="menu-wrapper">
           {["Products", "Industries Served", "Resources"].map((section) => (
             <button
               key={section}
-              className={`relative pb-2 transition-all flex items-center space-x-1 ${
-                activeSection === section
-                  ? "text-black-600 font-semibold after:absolute after:left-0 after:bottom-[-24px] after:w-full after:h-[4px] after:bg-red-600"
-                  : "hover:text-black-600"
+              className={`menu-button ${
+                activeSection === section ? "active" : ""
               }`}
               onClick={() => handleSectionClick(section)}
             >
               <span>{section}</span>
-              <IoCaretDownOutline className="w-[22px] h-[29px] py-[9px] px-[7px] gap-[10px]" />
+              <IoCaretDownOutline className="menu-icon" />
             </button>
           ))}
         </div>
 
-        <div className="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center mt-5">
+        <div className="logo-container">
           <Link to="/">
-            <img
-              src={logo}
-              alt="Fluoroplast Engineers Pvt. Ltd."
-              className="h-12"
-            />
+            <img src={logo} alt="Fluoroplast Engineers Pvt. Ltd." />
           </Link>
-          <p className="text-xs text-black-600 mt-1 mb-6 text-center font-['Manrope']">
-            Welcome to the world of possibilities
-          </p>
+          <p className="logo-tagline">Welcome to the world of possibilities</p>
         </div>
 
-        <div className="flex items-center space-x-6 flex-grow justify-end">
-          <select className="bg-transparent text-gray-700 border-none focus:outline-none cursor-pointer">
+        <div className="navbar-right">
+          <select className="language-select">
             <option>English</option>
           </select>
 
-          <Link
-            to="/Contact-Us"
-            className="relative bg-gradient-to-r from-red-700 to-orange-500 text-white px-6 py-3 rounded-full flex items-center justify-center font-medium transition-all duration-300 group overflow-hidden"
-          >
-            <span className="absolute inset-0 bg-black opacity-0 transition-all duration-300 group-hover:opacity-100 rounded-full"></span>
-            <span className="relative flex items-center z-10 text-white transition-all duration-300">
-              <FaPhoneAlt className="mr-2 ml-4 justify-center" />
+          <Link to="/Contact-Us" className="contact-button">
+            <span className="bg-hover"></span>
+            <span className="btn-content">
+              <FaPhoneAlt style={{ marginRight: "8px", marginLeft: "16px" }} />
               Contact us
-              <span className="ml-2 relative w-5 h-5 flex items-center justify-center overflow-hidden">
-                <FaArrowRight className="absolute left-[-10px] opacity-0 transition-all duration-300 group-hover:left-0 group-hover:opacity-100" />
+              <span className="arrow">
+                <FaArrowRight className="arrow-icon" />
               </span>
             </span>
           </Link>
 
-          <button className="text-gray-700 text-2xl" onClick={toggleMenu}>
+          <button className="menu-toggle" onClick={toggleMenu}>
             {menuOpen ? <IoClose /> : "☰"}
           </button>
         </div>
       </div>
       {/* </nav> */}
 
-      {(activeSection || menuOpen) && (
-        <div className="w-full h-[3px] bg-red-600"></div>
-      )}
+      {(activeSection || menuOpen) && <div className="navbar-indicator"></div>}
 
       {!menuOpen && activeSection && (
         <div
-          className="absolute w-full bg-white transition-all duration-300 py-10 px-6 z-50"
-          onMouseLeave={() => setActiveSection(null)}
-        >
-          <div className="max-w-screen-xl mx-auto">
-            <motion.div
-              key={activeSection}
-              initial={
-                activeSection === "Industries Served"
-                  ? "hiddenRight"
-                  : "hiddenLeft"
-              }
-              animate="visible"
-              exit={{ opacity: 0, x: 0 }}
-              variants={contentVariants}
-            >
+        className="mega-dropdown"
+        onMouseLeave={() => setActiveSection(null)}
+      >
+        <div className="mega-dropdown-inner">
+          <motion.div
+            key={activeSection}
+            initial={
+              activeSection === "Industries Served"
+                ? "hiddenRight"
+                : "hiddenLeft"
+            }
+            animate="visible"
+            exit={{ opacity: 0, x: 0 }}
+            variants={contentVariants}
+          >
               {activeSection === "Products" && (
-                <div className="grid grid-cols-1 md:grid-cols-2 items-start">
+                <div className="products-section">
                   <div>
-                    <h2 className="text-4xl  font-bold text-gray-900 font-['Red Hat Display']">
-                      Our Products
-                    </h2>
-                    <p className="text-black-600 mt-2 text-lg font-['Red Hat Display']">
+                    <h2 className="products-title">Our Products</h2>
+                    <p className="products-description">
                       We offer high-quality, precision-engineered products,
                       designed to meet the demanding needs of modern
                       manufacturing across a range of applications.
                     </p>
                   </div>
                   <div>
-                    <ul className="text-lg text-gray-800 font-medium space-y-4">
+                    <ul className="product-list">
                       {productItems.map((item, index) => (
-                        <li
-                          key={index}
-                          className="flex items-center space-x-3 font-['Red Hat Display']"
-                        >
+                        <li key={index} className="product-item">
                           <span>
-                            <SlArrowRight className="text-black-600 w-3 h-3" />
+                            <SlArrowRight className="icon" />
                           </span>
-                          <Link to={item.link} className="hover:text-red-900">
-                            {item.name}
-                          </Link>
+                          <Link to={item.link}>{item.name}</Link>
                         </li>
                       ))}
                     </ul>
@@ -234,14 +217,18 @@ export default function Navbar() {
               )}
 
               {activeSection === "Industries Served" && (
-                <div className="grid grid-cols-4 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
+                <div className="industries-grid">
                   {industries.map((item, index) => (
                     <a
                       key={index}
                       href={item.link}
-                      className="flex items-center space-x-3 hover:text-red-900 transition-all"
+                      className={`industry-item ${
+                        item.name === "Hydraulic & Pneumatic Cylinders"
+                          ? "active"
+                          : ""
+                      }`}
                     >
-                      <SlArrowRight className="w-3 h-3" />
+                      <SlArrowRight className="industry-icon" />
                       <span>{item.name}</span>
                     </a>
                   ))}
@@ -249,12 +236,10 @@ export default function Navbar() {
               )}
 
               {activeSection === "Resources" && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <div className="resources-section">
                   <div>
-                    <h2 className="text-4xl font-bold text-gray-900 font-['Red Hat Display']">
-                      Resources
-                    </h2>
-                    <p className="text-black-600 mt-2 text-lg font-['Red Hat Display']">
+                    <h2 className="resources-title">Resources</h2>
+                    <p className="resources-description">
                       Our comprehensive resources include advanced manufacturing
                       technologies, a skilled workforce, and cutting-edge
                       facilities to ensure top-tier production capabilities and
@@ -262,37 +247,29 @@ export default function Navbar() {
                     </p>
                   </div>
 
-                  {/* Splitting into Two Columns */}
-                  <div className="grid grid-cols-2 gap-4 text-lg text-gray-800 font-medium font-['Red Hat Display']">
+                  <div className="resources-links">
                     <div>
                       {resourceItems.map((item, index) => (
-                        <div
+                        <Link
+                          to={item.link}
                           key={index}
-                          className="flex items-center space-x-3 py-2"
+                          className="resources-link-item"
                         >
-                          <span className="text-black-600">
-                            <SlArrowRight className="w-3 h-3" />
-                          </span>
-                          <Link to={item.link} className="hover:text-red-900">
-                            {item.name}
-                          </Link>
-                        </div>
+                          <SlArrowRight className="resources-link-icon" />
+                          {item.name}
+                        </Link>
                       ))}
                     </div>
-
                     <div>
                       {resourceItemsLinks.map((item, index) => (
-                        <div
+                        <Link
+                          to={item.link}
                           key={index}
-                          className="flex items-center space-x-3 py-2"
+                          className="resources-link-item"
                         >
-                          <span className="text-black-600">
-                            <SlArrowRight className="w-3 h-3" />
-                          </span>
-                          <Link to={item.link} className="hover:text-red-900">
-                            {item.name}
-                          </Link>
-                        </div>
+                          <SlArrowRight className="resources-link-icon" />
+                          {item.name}
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -302,58 +279,43 @@ export default function Navbar() {
           </div>
         </div>
       )}
+
       {menuOpen && !activeSection && (
         <div
-          className="absolute w-full bg-white transition-all duration-300 py-10 px-6 z-50"
+          className="dropdown-wrapper"
           onMouseLeave={() => {
-            setMenuOpen(false); // Close menu on mouse leave
+            setMenuOpen(false);
             setActiveSection(null);
           }}
         >
-          <div className="max-w-screen-xl mx-auto grid grid-cols-2 gap-10">
+          <div className="dropdown-grid">
             {/* Left Column */}
             <div>
-              <h3 className="text-xl font-bold font-redhat text-gray-900 font-['Red Hat Display']">
-                Our Company
-              </h3>
-              <ul className="mt-3 space-y-4 text-gray-700 font-medium">
-                <li className="flex items-center space-x-2">
-                  <SlArrowRight className="text-black-600 w-3 h-3" />
-                  <Link to="/aboutus">
-                    <span className="hover:text-red-900 font-['Red Hat Display']">
-                      About Us
-                    </span>
-                  </Link>
+              <h3 className="dropdown-heading">Our Company</h3>
+              <ul className="dropdown-list">
+                <li className="dropdown-item">
+                  <SlArrowRight className="icon" />
+                  <Link to="/aboutus">About Us</Link>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <SlArrowRight className="text-black-600 w-3 h-3" />
-                  <Link to="/news&events">
-                    <span className="hover:text-red-900 font-['Red Hat Display']">
-                      News & Events
-                    </span>
-                  </Link>
+                <li className="dropdown-item">
+                  <SlArrowRight className="icon" />
+                  <Link to="/news&events">News & Events</Link>
                 </li>
               </ul>
             </div>
 
             {/* Right Column */}
             <div>
-              <h3 className="text-xl font-semibold py-2 font-['Red Hat Display'] text-gray-900">
-                Innovation & Quality
-              </h3>
-              <ul className="mt-3 space-y-4 text-gray-700 font-medium font-['Red Hat Display']">
-                <li className="flex items-center space-x-2">
-                  <SlArrowRight className="text-black-600 w-3 h-3" />
-                  <span className="hover:text-red-900">
-                    Research & Development
-                  </span>
+              <h3 className="dropdown-heading">Innovation & Quality</h3>
+              <ul className="dropdown-list">
+                <li className="dropdown-item">
+                  <SlArrowRight className="icon" />
+                  <span>Research & Development</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <SlArrowRight className="text-black-600 w-3 h-3 " />
+                <li className="dropdown-item">
+                  <SlArrowRight className="icon" />
                   <Link to="/quality-assurance">
-                    <span className="hover:text-red-900">
-                      Quality Assurance & Certifications
-                    </span>
+                    Quality Assurance & Certifications
                   </Link>
                 </li>
               </ul>

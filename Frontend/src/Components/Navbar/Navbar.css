@@ -1,0 +1,451 @@
+/* Header wrapper */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 50;
+    border-bottom: 1px solid #e5e7eb; /* gray-200 */
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  /* Inner container */
+  .header-inner {
+    max-width: 1280px; /* max-w-screen-xl */
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+
+.menu-wrapper {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    color: #0a0a0a;
+  }
+  
+  /* Button Style */
+  .menu-button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  
+  .menu-button:hover {
+    color: #1a1a1a;
+  }
+  
+  .menu-button.active {
+    font-weight: 600;
+  }
+  
+  .menu-button.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -21px;
+    width: 100%;
+    height: 2px;
+    background-color: #dc2626; 
+  }
+  
+  /* Icon Style */
+  .menu-icon {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+
+  /* navbar.css */
+
+/* Centered Logo Container */
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; 
+  }
+  
+  /* Logo Image */
+  .logo-container img {
+    height: 48px; 
+  }
+  
+  /* Tagline Text */
+  .logo-tagline {
+    margin-top: 4px;  /* mt-1 */
+    margin-bottom: 24px; /* mb-6 */
+    font-size: 12px;
+    text-align: center;
+    color: #0a0a0a; 
+    font-family: 'Manrope', sans-serif;
+  }
+
+  
+  /* navbar.css */
+
+/* Right side container */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* space-x-6 */
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  
+  /* Language selector */
+  .language-select {
+    background: transparent;
+    color: #374151; /* text-gray-700 */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Contact Button */
+  .contact-button {
+    position: relative;
+    background: linear-gradient(to right, #b91c1c, #f97316); /* from-red-700 to-orange-500 */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  /* Background overlay on hover */
+  .contact-button .bg-hover {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 0;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    z-index: 0;
+  }
+  
+  .contact-button:hover .bg-hover {
+    opacity: 1;
+  }
+  
+  /* Text inside the button */
+  .contact-button .btn-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  /* Arrow on hover */
+  .contact-button .arrow {
+    margin-left: 8px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .contact-button .arrow-icon {
+    position: absolute;
+    left: -10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-button:hover .arrow-icon {
+    left: 0;
+    opacity: 1;
+  }
+
+  /* Mega Dropdown Wrapper */
+.mega-dropdown {
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 24px; /* py-10 px-6 */
+    z-index: 50;
+    transition: all 0.3s ease;
+  }
+  
+  /* Inner container (centered content) */
+  .mega-dropdown-inner {
+    max-width: 1280px; /* max-w-screen-xl */
+    margin: 0 auto;
+  }
+  
+  
+  /* Hamburger Menu Button */
+  .menu-toggle {
+    color: #374151;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navbar-indicator {
+    width: 100%;
+    height: 3px;
+    background-color: #dc2626; /* red-600 */
+  }
+
+  
+  /* Grid layout for the section */
+.products-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+
+  
+  /* Title and description */
+  .products-title {
+    font-size: 2.25rem; /* ~text-4xl */
+    font-weight: bold;
+    color: #111827; /* text-gray-900 */
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  .products-description {
+    margin-top: 0.5rem;
+    font-size: 1.125rem; /* text-lg */
+    color: #4B5563; /* text-black-600 */
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  /* List and items */
+  .product-list {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #1F2937; /* text-gray-800 */
+    font-family: 'Red Hat Display', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* space-x-3 */
+    margin-bottom: 1rem; /* space-y-4 */
+  }
+  
+  .product-item .icon {
+    width: 12px;
+    height: 12px;
+    color: #4B5563; /* text-black-600 */
+  }
+  
+  .product-item a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .product-item a:hover {
+    color: #7f1d1d; /* hover:text-red-900 */
+  }
+  
+  
+  /* Grid layout for industries */
+.industries-grid {
+    display: grid;
+    /* grid-template-columns: repeat(1, 1fr); */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 500;
+    color: #1f2937; /* text-gray-800 */
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+
+  
+  /* Each industry link */
+  .industry-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* space-x-3 */
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .industry-item:hover {
+    color: #7f1d1d; /* text-red-900 */
+  }
+  
+  .industry-icon {
+    width: 12px;
+    height: 12px;
+  }
+  
+  /* Optional: style for selected/active industry */
+  .industry-item.active {
+    color: #7f1d1d;
+  }
+  
+
+  /* Outer Grid */
+.resources-section {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; /* gap-10 */
+    align-items: start;
+  }
+  
+  
+  /* Left Column */
+  .resources-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700;
+    color: #111827; /* text-gray-900 */
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  .resources-description {
+    margin-top: 0.5rem;
+    font-size: 1.125rem; /* text-lg */
+    color: #4B5563; /* text-black-600 */
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  /* Right Column (2 inner columns) */
+  .resources-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* gap-4 */
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #1f2937; /* text-gray-800 */
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  /* Individual link rows */
+  .resources-link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* space-x-3 */
+    padding: 0.5rem 0; /* py-2 */
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .resources-link-item:hover {
+    color: #7f1d1d; /* hover:text-red-900 */
+  }
+  
+  /* Icon size */
+  .resources-link-icon {
+    width: 12px;
+    height: 12px;
+    color: #4B5563;
+  }
+
+  /* Outer dropdown wrapper */
+.dropdown-wrapper {
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 24px; /* py-10 px-6 */
+    z-index: 50;
+    transition: all 0.3s ease;
+  }
+  
+  /* Grid layout inside */
+  .dropdown-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; /* gap-10 */
+  }
+  
+ 
+  
+  /* Section titles */
+  .dropdown-heading {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700;
+    color: #111827; /* text-gray-900 */
+    font-family: 'Red Hat Display', sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* List styling */
+  .dropdown-list {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space-y-4 */
+    color: #374151; /* text-gray-700 */
+    font-weight: 500;
+    font-family: 'Red Hat Display', sans-serif;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  /* List item */
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* space-x-2 */
+    font-family: 'Red Hat Display', sans-serif;
+  }
+  
+  .dropdown-item .icon {
+    width: 12px;
+    height: 12px;
+    color: #4B5563;
+  }
+  
+  .dropdown-item span,
+  .dropdown-item a {
+    transition: color 0.3s ease;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .dropdown-item span:hover,
+  .dropdown-item a:hover {
+    color: #7f1d1d; /* hover:text-red-900 */
+  }
+  
+  
