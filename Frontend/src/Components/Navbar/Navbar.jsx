@@ -159,8 +159,8 @@ export default function Navbar() {
             <option>English</option>
           </select>
 
-          <a
-            href="/Contact-Us"
+          <Link
+            to="/Contact-Us"
             className="relative bg-gradient-to-r from-red-700 to-orange-500 text-white px-6 py-3 rounded-full flex items-center justify-center font-medium transition-all duration-300 group overflow-hidden"
           >
             <span className="absolute inset-0 bg-black opacity-0 transition-all duration-300 group-hover:opacity-100 rounded-full"></span>
@@ -171,7 +171,7 @@ export default function Navbar() {
                 <FaArrowRight className="absolute left-[-10px] opacity-0 transition-all duration-300 group-hover:left-0 group-hover:opacity-100" />
               </span>
             </span>
-          </a>
+          </Link>
 
           <button className="text-gray-700 text-2xl" onClick={toggleMenu}>
             {menuOpen ? <IoClose /> : "☰"}
