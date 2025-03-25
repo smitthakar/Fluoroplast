@@ -1,8 +1,8 @@
 import Main from "../../assets/AboutMain.svg";
 import Navbar from "../../Components/Navbar/Navbar";
-import vision from "../../assets/vision.png";
-import mission from "../../assets/mission.png";
-import values from "../../assets/value.png";
+import vision from "../../assets/vision.svg";
+import mission from "../../assets/mission.svg";
+import values from "../../assets/value.svg";
 import { motion } from "framer-motion";
 import one from "../../assets/One.png";
 import two from "../../assets/Two.png";
