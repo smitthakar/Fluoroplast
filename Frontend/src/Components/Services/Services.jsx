@@ -1,11 +1,11 @@
 import { useState, useRef } from "react";
 import { useSwipeable } from "react-swipeable";
 import { motion } from "framer-motion"; // Import Framer Motion
-import GroupOne from "../../assets/GroupOne.png";
-import GroupTwo from "../../assets/GroupTwo.png";
-import GroupThree from "../../assets/GroupThree.png";
-import pneumatic from "../../assets/pneumatic.png";
-import combination from "../../assets/combination.png";
+import GroupOne from "../../assets/GroupOne.svg";
+import GroupTwo from "../../assets/GroupTwo.svg";
+import GroupThree from "../../assets/GroupThree.svg";
+import pneumatic from "../../assets/pneumatic.svg";
+import combination from "../../assets/combination.svg";
 import arr from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
 import { FaArrowRight } from "react-icons/fa";

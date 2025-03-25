@@ -25,11 +25,11 @@
 }
 
 .custom-heading {
-  font-size: 48px;
-  max-width: 80%;
-  font-weight: 500;
+  font-size:65px;
+  max-width: 100%;
+  font-weight: 600;
   text-align: center;
-  line-height: 68px;
+  line-height: 88px;
   font-family: 'Red Hat Display', sans-serif;
 }
 

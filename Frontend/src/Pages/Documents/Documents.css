@@ -82,8 +82,9 @@
   }
   
   .tech-docs-download-icon {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 9px;
     transition: filter 0.3s ease;
    
   }
