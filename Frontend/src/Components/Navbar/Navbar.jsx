@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
-import logo from "../../assets/logo.jpeg";
+import logo from "../../assets/logo.svg";
 import { IoCaretDownOutline, IoClose } from "react-icons/io5";
 import { SlArrowRight } from "react-icons/sl";
 import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
-
 
 
 export default function Navbar() {
@@ -219,9 +217,9 @@ export default function Navbar() {
               {activeSection === "Industries Served" && (
                 <div className="industries-grid">
                   {industries.map((item, index) => (
-                    <a
+                    <Link
                       key={index}
-                      href={item.link}
+                      to={item.link}
                       className={`industry-item ${
                         item.name === "Hydraulic & Pneumatic Cylinders"
                           ? "active"
@@ -230,7 +228,7 @@ export default function Navbar() {
                     >
                       <SlArrowRight className="industry-icon" />
                       <span>{item.name}</span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}

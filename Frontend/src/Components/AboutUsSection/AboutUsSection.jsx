@@ -1,4 +1,4 @@
-import newImage from "../../assets/Group 1.png"; // Your combined image
+import newImage from "../../assets/Group 1.svg"; // Your combined image
 import { FaArrowRight } from "react-icons/fa6";
 import "./AboutUsSection.css";
 
