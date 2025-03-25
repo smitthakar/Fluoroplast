@@ -2,7 +2,7 @@
 .why-choose-us {
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 100%;
     margin-bottom: 90px;
   }
   
@@ -10,7 +10,7 @@
   .why-choose-left {
     position: relative;
     width: 50%;
-    height: 97.7%;
+    height: auto;
     background-color: #510002;
     color: white;
     display: flex;
@@ -20,7 +20,11 @@
     padding: 80px 100px 80px 144px;
     gap: 10px;
   }
-  
+  .why-choose-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
   /* Background Image */
   .why-choose-bg {
     position: absolute;

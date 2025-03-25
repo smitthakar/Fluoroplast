@@ -24,7 +24,7 @@
 .article-container {
     width: 100%;
     border-radius: 8px;
-    width: 1439px;
+    /* width: 1439px; */
     display: flex;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -45,7 +45,7 @@
 
 .article-content-section {
     width: 50%;
-    height: 372px;
+    height: auto;
     padding-right: 32px;
     padding-left: 32px;
     gap: 16px;
@@ -55,8 +55,8 @@
 }
 
 .article-meta-info {
-    width: 748px;
-    height: 48px;
+    width: 100%;
+    height: auto;
     display: flex;
     /* align-items: center; */
     gap: 16px;
@@ -64,8 +64,8 @@
 }
 
 .article-date {
-    width: 115px;
-    height: 28px;
+    width: 100%;
+    height: auto;
     font-family: 'Manrope', sans-serif;
     font-size: 20px;
     color: #0A0A0A;
@@ -73,8 +73,8 @@
 }
 
 .article-category-tag {
-    width: 185px;
-    height: 28px;
+    width: 100%;
+    height: auto;
     font-family: 'Manrope', sans-serif;
     line-height: 28px;
     font-size: 20px;
@@ -85,9 +85,9 @@
 .article-heading {
     font-family: 'Red Hat Display', sans-serif;
     color: #0A0A0A;
-    width: 680px;
-    height: 101px;
-    font-size: 36px;
+    width: 100%;
+    height: auto;
+    font-size: 34px;
     font-weight: 700;
     line-height: 50px   ;
     display: flex;
@@ -106,8 +106,8 @@
 }
 
 .article-summary {
-    width: 680px;
-    height: 45px;
+    width: 100%;
+    height: auto;
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
     color: #0A0A0A;
@@ -124,5 +124,3 @@
     font-size: 16px;
     line-height: 22.4px;
 }
-
-
