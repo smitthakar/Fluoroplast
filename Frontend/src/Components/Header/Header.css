@@ -8,8 +8,8 @@
 
 .custom-absolute-container {
   position: absolute;
-  width: 90%; /* Fluid width */
-  max-width: 1600px; /* Prevents it from going too wide on large screens */
+  width: 100%; /* Fluid width */
+ /* Prevents it from going too wide on large screens */
   height: 100%;
   gap: 2.5rem; /* 40px */
   inset: 0;
@@ -25,16 +25,17 @@
 }
 
 .custom-heading {
-  font-size: 48px;
-  max-width: 80%;
-  font-weight: 500;
+  font-size: 72px;
+  max-width: 100%;
+  font-weight: 800;
   text-align: center;
-  line-height: 68px;
+  line-height: 100.8px;
   font-family: 'Red Hat Display', sans-serif;
 }
 
 .custom-paragraph {
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 400;
   font-family: 'Red Hat Display', sans-serif;
   text-align: center;
 }
