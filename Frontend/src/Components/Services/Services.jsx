@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import { motion } from "framer-motion"; // Import Framer Motion
 import GroupOne from "../../assets/GroupOne.png";
@@ -73,25 +73,24 @@ const ServicesCarousel = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+useEffect(() => {
+  const handleResize = () => setIsMobile(window.innerWidth <= 768);
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
 
   // Move to next slide
- const nextSlide = () => {
-    if (currentIndex >= services.length) {  
-      setCurrentIndex(0);
-      carouselRef.current.scrollLeft = 0;
-    } else {
-      setCurrentIndex(currentIndex + 1);
-    }
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % services.length);
   };
-
+  
   const prevSlide = () => {
-    if (currentIndex <= 0) {
-      setCurrentIndex(services.length());
-      carouselRef.current.scrollLeft = carouselRef.current.scrollWidth;
-    } else {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((prev) => (prev - 1 + services.length) % services.length);
   };
+  
 
   // Swipeable gesture handling
   const handlers = useSwipeable({
@@ -141,55 +140,76 @@ const ServicesCarousel = () => {
       </div>
 
       <section className="carousel-section">
-        {/* Carousel Wrapper (Handles Touchpad Dragging) */}
-        <div
-          {...handlers}
-          ref={carouselRef}
-          className="carousel-wrapper"
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-        >
-          {/* Animated Slider Container */}
-          <motion.div
-            className="slider-container"
-            animate={{
-              x: ["0%", "-100%"], // Moves from right to left
-            }}
-            transition={{
-              duration: 35, // Slow movement (increase for even slower)
-              repeat: Infinity, // Infinite loop
-              ease: "linear", // Smooth transition
-            }}
-          >
-            {infiniteServices.map((service, index) => (
-              <div key={index} className="carousel-slide">
-                <div className="service-card">
-                  {/* Icon & Title */}
-                  <div className="service-content">
-                    <img
-                      src={service.icon}
-                      alt={service.title}
-                      className="service-icon"
-                    />
-                    <h3 className="service-title">{service.title}</h3>
-                    <p className="service-description">{service.description}</p>
-                  </div>
-
-                  {/* Read More Button */}
-                  <a href="#" className="read-more">
-                    Read More
-                    <span className="read-more-arrow">
-                      <FaArrowRight className="w-[15px] h-[15px]" />
-                    </span>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+  {isMobile ? (
+    // 👉 MOBILE: Single card slider with buttons
+    <div className="carousel-wrapper mobile">
+      <div className="carousel-slide">
+        <div className="service-card">
+          <div className="service-content">
+            <img
+              src={services[currentIndex].icon}
+              alt={services[currentIndex].title}
+              className="service-icon"
+            />
+            <h3 className="service-title">{services[currentIndex].title}</h3>
+            <p className="service-description">
+              {services[currentIndex].description}
+            </p>
+          </div>
+          <a href="#" className="read-more">
+            Read More
+            <span className="read-more-arrow">
+              <FaArrowRight className="w-[15px] h-[15px]" />
+            </span>
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  ) : (
+    // 👉 DESKTOP: Infinite motion carousel (as-is)
+    <div
+      {...handlers}
+      ref={carouselRef}
+      className="carousel-wrapper"
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+    >
+      <motion.div
+        className="slider-container"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{
+          duration: 35,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        {infiniteServices.map((service, index) => (
+          <div key={index} className="carousel-slide">
+            <div className="service-card">
+              <div className="service-content">
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="service-icon"
+                />
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+              </div>
+              <a href="#" className="read-more">
+                Read More
+                <span className="read-more-arrow">
+                  <FaArrowRight className="w-[15px] h-[15px]" />
+                </span>
+              </a>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  )}
+</section>
     </div>
   );
 };

@@ -182,3 +182,59 @@
   line-height: 1.4;
   font-family: 'Red Hat Display', sans-serif;
 }
+@media (max-width: 768px) {
+  .custom-container {
+    height: 500px; /* Use a smaller fixed height instead of auto */
+    margin-top: 65px;
+  }
+
+  .custom-absolute-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .custom-heading {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  .custom-paragraph {
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
+
+  .custom-button {
+    width: 180px;
+    height: 48px;
+    font-size: 14px;
+    margin-top: 0.5rem;
+  }
+
+  .custom-button .arrow {
+    display: none;
+  }
+
+  .custom-pagination-container {
+    bottom: 12px;
+  }
+
+  .custom-dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+  }
+
+  .custom-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    padding: 1rem;
+  }
+
+  .custom-stat-number {
+    font-size: 32px;
+  }
+
+  .custom-stat-text {
+    font-size: 14px;
+  }
+}
