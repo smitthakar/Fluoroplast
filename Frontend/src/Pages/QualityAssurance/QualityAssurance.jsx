@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BG from "../../assets/BG.png";
 import help from "../../assets/help.png";
 import parts from "../../assets/parts.png";
@@ -12,10 +13,13 @@ const QualityAssurance = () => {
       <Navbar />
       <div className="max-w-7xl mx-auto p-6 mt-20">
         {/* Breadcrumb */}
-
         <nav className="breadcrumb">
-          <span className="highlight">Home</span> /
-          <span className="highlight mx-1">Innovation & Quality /</span>
+          <Link to="/" className="breadcrumb-link">
+            <span className="highlight">Home</span>
+          </Link>
+          <span className="separator">/</span>
+          <span className="highlight">Innovation & Quality</span>
+          <span className="separator">/</span>
           <span className="current">Quality Assurance</span>
         </nav>
 
@@ -43,13 +47,17 @@ const QualityAssurance = () => {
 
           {/* Image Section */}
           <div className="quality-image">
-            <img src={BG} alt="Quality Assurance" />
+            <img
+              src={BG}
+              alt="Quality Assurance"
+              className="quality-img-desk"
+            />
           </div>
         </div>
 
         {/* Additional Text Below the Image */}
         <div className="text-block">
-          <p>
+          <p className="quality-paragraph">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -66,7 +74,7 @@ const QualityAssurance = () => {
             need to be sure there isn’t anything embarrassing hidden in the
             middle of text.
           </p>
-          <p>
+          <p className="quality-paragraph">
             All the Lorem Ipsum generators on the Internet tend to repeat
             predefined chunks as necessary, making this the first true generator
             on the Internet. It uses a dictionary of over 200 Latin words,
