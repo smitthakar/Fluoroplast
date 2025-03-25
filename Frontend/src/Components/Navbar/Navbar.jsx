@@ -7,10 +7,10 @@ import { FaPhoneAlt, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSectionClick = (section) => {
     setActiveSection((prevSection) =>
@@ -65,7 +65,7 @@ export default function Navbar() {
     { name: "Blog", link: "/blogs" },
     { name: "Case Studies", link: "/case-studies" },
     { name: "Technical Documents", link: "/document" },
-    { name: "Downloads", link: "/downloads" }
+    { name: "Downloads", link: "/downloads" },
   ];
 
   const resourceItemsLinks = [
@@ -73,7 +73,7 @@ export default function Navbar() {
     { name: "Certificates", link: "/certificates" },
     { name: "Gallery", link: "/gallery" },
   ];
-  
+
   const productItems = [
     {
       name: "Engineering Plastics",
@@ -91,7 +91,7 @@ export default function Navbar() {
     {
       name: "FEP and PFA Lined Valves & Fittings",
       link: "/fep-pfa-valves",
-    }
+    },
   ];
 
   const industries = [
@@ -104,7 +104,10 @@ export default function Navbar() {
     { name: "Oil & Gas Industry", link: "/oil-gas" },
     { name: "Earthmoving Industry", link: "/earthmoving" },
     { name: "Tyre Industry", link: "/tyre" },
-    { name: "Engineering & Fabrication Industry", link: "/engineering-fabrication" },
+    {
+      name: "Engineering & Fabrication Industry",
+      link: "/engineering-fabrication",
+    },
     { name: "Automobile Industry", link: "/automobile" },
     { name: "Aluminum Industry", link: "/aluminum" },
     { name: "Textile Industry", link: "/textile" },
@@ -119,8 +122,6 @@ export default function Navbar() {
     { name: "Chemical Industry", link: "/chemical" },
     { name: "Marine Industry", link: "/marine" },
   ];
-  
-
 
   return (
     <div className="header">
@@ -163,9 +164,30 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <button className="menu-toggle" onClick={toggleMenu}>
-            {menuOpen ? <IoClose /> : "☰"}
-          </button>
+          <button
+  className="menu-toggle"
+  onClick={() => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      setMobileMenuOpen((prev) => !prev);
+      setMenuOpen(false);
+    } else {
+      setMenuOpen((prev) => !prev);
+      setMobileMenuOpen(false);
+    }
+
+    setActiveSection(null);
+  }}
+>
+  {(window.innerWidth <= 768 ? mobileMenuOpen : menuOpen) ? (
+    <IoClose />
+  ) : (
+    "☰"
+  )}
+</button>
+
+
         </div>
       </div>
       {/* </nav> */}
@@ -174,21 +196,21 @@ export default function Navbar() {
 
       {!menuOpen && activeSection && (
         <div
-        className="mega-dropdown"
-        onMouseLeave={() => setActiveSection(null)}
-      >
-        <div className="mega-dropdown-inner">
-          <motion.div
-            key={activeSection}
-            initial={
-              activeSection === "Industries Served"
-                ? "hiddenRight"
-                : "hiddenLeft"
-            }
-            animate="visible"
-            exit={{ opacity: 0, x: 0 }}
-            variants={contentVariants}
-          >
+          className="mega-dropdown"
+          onMouseLeave={() => setActiveSection(null)}
+        >
+          <div className="mega-dropdown-inner">
+            <motion.div
+              key={activeSection}
+              initial={
+                activeSection === "Industries Served"
+                  ? "hiddenRight"
+                  : "hiddenLeft"
+              }
+              animate="visible"
+              exit={{ opacity: 0, x: 0 }}
+              variants={contentVariants}
+            >
               {activeSection === "Products" && (
                 <div className="products-section">
                   <div>
@@ -318,6 +340,100 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      )}
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="mobile-menu">
+          <div className="menu-section">
+            English <IoCaretDownOutline />
+          </div>
+
+          {[
+            "Products",
+            "Industries Served",
+            "Resources",
+            "Our Company",
+            "Innovation & Quality",
+          ].map((section) => (
+            <div key={section}>
+              <div
+                className="menu-section"
+                onClick={() => handleSectionClick(section)}
+              >
+                {section} <SlArrowRight />
+              </div>
+              {activeSection === section && (
+                <div className="submenu">
+                  {section === "Products" &&
+                    productItems.map((item) => (
+                      <Link
+                        to={item.link}
+                        key={item.name}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  {section === "Industries Served" &&
+                    industries.slice(0, 10).map((item) => (
+                      <Link
+                        to={item.link}
+                        key={item.name}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  {section === "Resources" &&
+                    [...resourceItems, ...resourceItemsLinks].map((item) => (
+                      <Link
+                        to={item.link}
+                        key={item.name}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  {section === "Our Company" && (
+                    <>
+                      <Link
+                        to="/aboutus"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        About Us
+                      </Link>
+                      <Link
+                        to="/news&events"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        News & Events
+                      </Link>
+                    </>
+                  )}
+                  {section === "Innovation & Quality" && (
+                    <>
+                      <Link to="#" onClick={() => setMobileMenuOpen(false)}>
+                        Research & Development
+                      </Link>
+                      <Link
+                        to="/quality-assurance"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Quality Assurance
+                      </Link>
+                    </>
+                  )}
+                </div>
+              )}
+            </div>
+          ))}
+
+          <div className="menu-section">
+            <Link to="/Contact-Us" onClick={() => setMobileMenuOpen(false)}>
+              Contact Us
+            </Link>
           </div>
         </div>
       )}
