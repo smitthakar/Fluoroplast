@@ -1,0 +1,49 @@
+/* Gallery Section Wrapper */
+.gallery-section {
+  width: 1432px;
+  padding: 112px 91px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Gallery Title */
+.gallery-title {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 84px;
+  height: 84px;
+  width: 100%;
+}
+
+/* Responsive Image Grid */
+.gallery-grid {
+    width: 100%;
+  display: grid;
+  gap: 14px;
+  height: auto;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+
+/* Gallery Card */
+.gallery-card {
+    width: 252px;
+    height: 305px;
+    border-radius: 8px;
+  background-color: white;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Image Styling */
+/* .gallery-card img {
+  width: 232px;
+  height: 305px;
+  object-fit: cover;
+  border-radius: 8px;
+} */
