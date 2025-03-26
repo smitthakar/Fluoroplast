@@ -326,6 +326,8 @@
     text-decoration: underline;
 }
 
+
+
 @media (max-width: 768px) {
     .footer {
         padding-top: 100px;
@@ -379,8 +381,8 @@
     }
 
     .footer-social img {
-        width: 56px;
-        height: 56px;
+        width: 46px;
+        height: 46px;
     }
 
     .footer-company,
@@ -492,8 +494,5 @@
         max-width: 100%;
     }
 
-
-
-
-
 }
+ 
