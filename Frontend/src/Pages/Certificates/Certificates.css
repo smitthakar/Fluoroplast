@@ -80,4 +80,33 @@
     transform: scale(1);
   }
   
+  @media (max-width: 768px) {
+    .certificate-wrapper {
+      padding: 48px 16px;
+      gap: 16px;
+      margin-top: 25px;
+    }
+  
+    .certificate-title {
+      font-size: 28px;
+      line-height: 36px;
+      height: auto;
+      margin-bottom: 24px;
+    }
+  
+    .certificate-grid {
+      grid-template-columns: 1fr; /* Show one certificate per row */
+      gap: 16px;
+    }
+  
+    .certificate-card {
+      padding: 2px;
+    }
+  
+    .certificate-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
   
