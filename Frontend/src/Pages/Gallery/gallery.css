@@ -47,3 +47,36 @@
   object-fit: cover;
   border-radius: 8px;
 } */
+@media (max-width: 768px) {
+  .gallery-section {
+    width: 100%;
+    padding: 48px 16px;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .gallery-title {
+    font-size: 28px;
+    line-height: 36px;
+    height: auto;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 columns on mobile */
+    gap: 12px;
+  }
+
+  .gallery-card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4; /* Keeps similar size ratio */
+    margin-bottom: 12px;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+}

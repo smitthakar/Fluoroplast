@@ -5,6 +5,7 @@ import slider2 from "../../assets/HeroTwo.png";
 import slider3 from "../../assets/HeroThree.png";
 import slider4 from "../../assets/HeroFour.png";
 import { FaArrowRight } from "react-icons/fa";
+import { AnimatePresence } from "framer-motion";
 import "./Header.css";
 
 const images = [slider1, slider2, slider3, slider4];
@@ -27,6 +28,19 @@ const HeroSlider = () => {
   const sliderRef = useRef(null);
   const statsRef = useRef(null);
   const [startCount, setStartCount] = useState(false);
+  // Add inside component state
+const [mobileStatIndex, setMobileStatIndex] = useState(0);
+
+// Auto-switch stats in mobile view
+useEffect(() => {
+  if (isMobile) {
+    const interval = setInterval(() => {
+      setMobileStatIndex((prev) => (prev + 1) % stats.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }
+}, [isMobile]);
+
 
   // Handle resize
   useEffect(() => {
@@ -129,27 +143,55 @@ const HeroSlider = () => {
 
       {/* Stats Section */}
       <div className="custom-stats-container" ref={statsRef}>
-        <div className="custom-stats-grid">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              className={`custom-stat-item ${index === stats.length - 1 ? "last" : ""}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={startCount ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <p className="custom-stat-number">
-                {startCount ? (
-                  <CountUp end={parseInt(stat.value, 10)} suffix={stat.suffix || ""} />
-                ) : (
-                  "0"
-                )}
-              </p>
-              <span className="custom-stat-text">{stat.label}</span>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+  {isMobile ? (
+  <div className="mobile-single-stat">
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={mobileStatIndex}
+      className="custom-stat-item"
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -100, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <p className="custom-stat-number">
+        {stats[mobileStatIndex].value}
+        {stats[mobileStatIndex].suffix || ""}
+      </p>
+      <span className="custom-stat-text">{stats[mobileStatIndex].label}</span>
+    </motion.div>
+  </AnimatePresence>
+
+  <div className="mobile-stat-dots">
+    {stats.map((_, i) => (
+      <span
+        key={i}
+        className={`mobile-dot ${i === mobileStatIndex ? "active" : ""}`}
+        onClick={() => setMobileStatIndex(i)}
+      />
+    ))}
+  </div>
+</div>
+  ) : (
+    <div className="custom-stats-grid">
+      {stats.map((stat, index) => (
+        <motion.div
+          key={index}
+          className={`custom-stat-item ${index === stats.length - 1 ? "last" : ""}`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={startCount ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: index * 0.2 }}
+        >
+          <p className="custom-stat-number">
+            {startCount ? <CountUp end={parseInt(stat.value)} suffix={stat.suffix || ""} /> : "0"}
+          </p>
+          <span className="custom-stat-text">{stat.label}</span>
+        </motion.div>
+      ))}
+    </div>
+  )}
+</div>
+
     </>
   );
 };

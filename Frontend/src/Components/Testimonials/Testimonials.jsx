@@ -59,99 +59,95 @@ const testimonials = [
 
 const TestimonialCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+  checkMobile(); // Initial check
+  window.addEventListener("resize", checkMobile);
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
+
+const nextSlide = () => {
+  setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+};
+
+const prevSlide = () => {
+  setCurrentIndex(
+    (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+  );
+};
+
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
-    );
-  };
-
-  useEffect(() => {
-    if (isMobile) return; // 👈 Don't autoplay on mobile
+    if (isMobile) return; // ❌ Skip autoplay on mobile
+  
     const interval = setInterval(() => {
       nextSlide();
     }, 3000);
     return () => clearInterval(interval);
   }, [isMobile]);
+  
 
   return (
-    <div className="justify-center overflow-hidden ml-[100px] mr-[100px]">
+    <div className="testimonial-slider-wrapper overflow-x-hidden px-4 sm:px-[100px]">
       <div className="testimonial-header">
-        <h3 className="testimonial-subtitle">Testimonials</h3>
-        <h2 className="testimonial-title">
-          What Our <span>Clients</span> Say
-        </h2>
-        <div className="testimonial-controls">
-          <button onClick={prevSlide}>
-            <img src={arrLeft} alt="Previous" />
-          </button>
-          <button onClick={nextSlide}>
-            <img src={arr} alt="Next" />
-          </button>
+  <h3 className="testimonial-subtitle">Testimonials</h3>
+  <h2 className="testimonial-title">
+    What Our <span>Clients</span> Say
+  </h2>
+  <div className="testimonial-controls">
+    <button onClick={prevSlide}>
+      <img src={arrLeft} alt="Previous" />
+    </button>
+    <button onClick={nextSlide}>
+      <img src={arr} alt="Next" />
+    </button>
+  </div>
+</div>
+
+<div
+  className="testimonial-slider-track"
+  style={{
+    transform: isMobile
+      ? `translateX(-${currentIndex * 104}%)`
+      : `translateX(-${currentIndex * 100}%)`
+  }}
+>
+
+  {testimonials.map((testimonial, index) => (
+    <div key={index} className="testimonial-card">
+      <div>
+        <div className="testimonial-user">
+          <img
+            src={testimonial.image}
+            alt={testimonial.name}
+            className="testimonial-avatar"
+          />
+        </div>
+        <img src={quoteOpen} alt="Quote" className="testimonial-quote" />
+        <p className="testimonial-text">{testimonial.text}</p>
+      </div>
+      <div className="testimonial-footer">
+        <div className="testimonial-line"></div>
+        <div>
+          <h4 className="testimonial-name">{testimonial.name}</h4>
+          <p className="testimonial-role">{testimonial.role}</p>
         </div>
       </div>
+    </div>
+  ))}
+</div>
 
-      <div className="testimonial-slider-wrapper">
-        <div
-          className="testimonial-slider-track"
-          style={{
-            transform: `translateX(-${currentIndex * 100}%)`,
-            transition: "transform 0.7s ease",
-          }}
-          
-        >
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
-              <div>
-                <div className="testimonial-user">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="testimonial-avatar"
-                  />
-                </div>
-                <img
-                  src={quoteOpen}
-                  alt="Quote"
-                  className="testimonial-quote"
-                />
-                <p className="testimonial-text">{testimonial.text}</p>
-              </div>
-              <div className="testimonial-footer">
-                <div className="testimonial-line"></div>
-                <div>
-                  <h4 className="testimonial-name">{testimonial.name}</h4>
-                  <p className="testimonial-role">{testimonial.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+<div className="testimonial-viewall">
+  <button>
+    <span>View All</span>
+    <span>
+      <FaArrowRight />
+    </span>
+  </button>
+</div>
 
-      <div className="testimonial-viewall">
-        <button>
-          <span>View All</span>
-          <span>
-            <FaArrowRight />
-          </span>
-        </button>
-      </div>
     </div>
   );
 };
