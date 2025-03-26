@@ -110,7 +110,7 @@ const prevSlide = () => {
   className="testimonial-slider-track"
   style={{
     transform: isMobile
-      ? `translateX(-${currentIndex * 104}%)`
+      ? `translateX(-${currentIndex * 100 }%)`
       : `translateX(-${currentIndex * 100}%)`
   }}
 >

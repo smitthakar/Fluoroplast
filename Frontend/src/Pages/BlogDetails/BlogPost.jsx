@@ -6,11 +6,11 @@ import Ellipse from "../../assets/Ellipse.png";
 import calendar from "../../assets/calendar.png";
 import category from "../../assets/category.png";
 import correct from "../../assets/correct.png";
-// import Facebook from "../../assets/Facebook.png";
-import Instagram from "../../assets/Instagram.png";
-import LinkedIn from "../../assets/LinkedIn.png";
-import Twitter from "../../assets/Twitter.png";
-import Youtube from "../../assets/YouTube.png";
+import Facebook from "../../assets/Facebook.svg";
+import Instagram from "../../assets/Instagram.svg";
+import LinkedIn from "../../assets/LinkedIn.svg";
+import Twitter from "../../assets/Twitter.svg";
+import Youtube from "../../assets/YouTube.svg";
 import "./BlogPost.css";
 
 const BlogPost = () => {
@@ -166,9 +166,9 @@ const BlogPost = () => {
                   <a href="#">
                     <img src={Instagram} alt="Instagram" />
                   </a>
-                  {/* <a href="#">
+                  <a href="#">
                     <img src={Facebook} alt="Facebook" />
-                  </a> */}
+                  </a>
                   <a href="#">
                     <img src={Twitter} alt="Twitter" />
                   </a>
