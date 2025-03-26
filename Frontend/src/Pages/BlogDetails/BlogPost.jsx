@@ -12,6 +12,8 @@ import LinkedIn from "../../assets/LinkedIn.png";
 import Twitter from "../../assets/Twitter.png";
 import Youtube from "../../assets/YouTube.png";
 import "./BlogPost.css";
+import arr from "../../assets/Arrow rigth.png";
+import arrLeft from "../../assets/Arrow left.png";
 
 const BlogPost = () => {
   return (
@@ -182,20 +184,40 @@ const BlogPost = () => {
               </div>
 
               {/* Pagination */}
-              <div className="blog-pagination">
-                <Link to="/previous-post" className="pagination-item">
-                  <span className="pagination-label">Previous</span>
-                  <span className="pagination-title">
-                    Importers achieve cost savings through...
-                  </span>
-                </Link>
-                <Link to="/next-post" className="pagination-item text-right">
-                  <span className="pagination-label">Next</span>
-                  <span className="pagination-title">
-                    Importers achieve cost savings through...
-                  </span>
-                </Link>
-              </div>
+              {/* Desktop Pagination */}
+<div className="blog-pagination desktop-pagination">
+  <Link to="/previous-post" className="pagination-item">
+    <span className="pagination-label">Previous</span>
+    <span className="pagination-title">
+      Importers achieve cost savings through...
+    </span>
+  </Link>
+  <Link to="/next-post" className="pagination-item text-right">
+    <span className="pagination-label">Next</span>
+    <span className="pagination-title">
+      Importers achieve cost savings through...
+    </span>
+  </Link>
+</div>
+
+{/* Mobile Pagination */}
+<div className="mobile-pagination">
+  <div className="mobile-pagination-item">
+    <Link to="/previous-post" className="circle-btn left">
+      <img src={arrLeft} alt="Previous" className="arrow-icon" />
+    </Link>
+    <span className="pagination-title">Importers achieve cost savings through...</span>
+  </div>
+
+  <div className="mobile-pagination-item">
+    <Link to="/next-post" className="circle-btn right">
+      <img src={arr} alt="Next" className="arrow-icon" />
+    </Link>
+    <span className="pagination-title">Importers achieve cost savings through...</span>
+  </div>
+</div>
+
+
             </div>
           </div>
         </div>

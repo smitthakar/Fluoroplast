@@ -124,3 +124,233 @@
     font-size: 16px;
     line-height: 22.4px;
 }
+.article-section-container {
+    width: 100%;
+    padding: 112px 144px 180px;
+    box-sizing: border-box;
+}
+
+.article-section-title {
+    width: 100%;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.article-container {
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-direction: row;
+    margin-bottom: 32px;
+}
+
+.article-image-section {
+    width: 50%;
+    height: 372px;
+}
+
+.article-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-content-section {
+    width: 50%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.article-meta-info {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.article-date,
+.article-category-tag {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.article-category-tag {
+    color: #9d0a0e;
+}
+
+.article-heading {
+    font-family: 'Red Hat Display', sans-serif;
+    color: #0A0A0A;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.article-heading::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 100%;
+    background: #9d0a0e;
+    margin-right: 10px;
+    border-radius: 18px;
+}
+
+.article-summary {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    color: #0A0A0A;
+    font-size: 16px;
+    line-height: 22.4px;
+}
+
+.article-read-more {
+    border-top: 1px solid black;
+    padding-top: 20px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    color: #0A0A0A;
+    font-size: 16px;
+    line-height: 22.4px;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .article-section-container {
+        padding: 96px 64px 120px;
+    }
+
+    .article-section-title {
+        font-size: 48px;
+    }
+
+    .article-container {
+        flex-direction: column;
+    }
+
+    .article-image-section,
+    .article-content-section {
+        width: 100%;
+    }
+
+    .article-image-section {
+        height: 300px;
+    }
+
+    .article-heading {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .article-section-container {
+        padding: 72px 24px 96px;
+        height: auto;
+    }
+
+    .article-section-title {
+        font-size: 36px;
+    }
+
+    .article-image-section {
+        height: 240px;
+    }
+
+    .article-content-section {
+        padding: 24px 16px;
+    }
+
+    .article-date,
+    .article-category-tag {
+        font-size: 16px;
+    }
+
+    .article-heading {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .article-summary,
+    .article-read-more {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .article-meta-info {
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-family: 'Manrope', sans-serif;
+    }
+    
+    .article-date,
+    .article-category-tag {
+        font-family: 'Manrope', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #0A0A0A;
+        width: auto; /* important fix */
+        white-space: nowrap; /* important fix */
+    }
+    
+    .article-category-tag {
+        color: #9d0a0e;
+    }
+    
+    .article-heading {
+        font-family: 'Red Hat Display', sans-serif;
+        color: #0A0A0A;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin: 0;
+        position: relative;
+        padding-left: 12px;
+    }
+    
+    .article-heading::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #9d0a0e;
+        border-radius: 18px;
+    }
+    .article-summary {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 400;
+        color: #0A0A0A;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .article-read-more {
+        border-top: 1px solid black;
+        padding-top: 12px;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #0A0A0A;
+    }
+}
+
