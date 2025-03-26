@@ -89,6 +89,13 @@
     font-weight: 700;
     font-family: 'Manrope', sans-serif;
   }
+  .feature-titlee {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+  }
   
   /* CTA Button */
   .custom-explor-btn {
@@ -159,5 +166,108 @@
   .explor-btn:hover span:last-child {
     opacity: 1;
     transform: translateX(8px);
+  }
+  @media (max-width: 768px) {
+    .why-choose-us {
+      flex-direction: column;
+      margin-bottom: 60px;
+    }
+  
+    .why-choose-left {
+      width: 100%;
+      padding: 40px 24px;
+      gap: 24px;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .why-choose-title {
+      font-size: 24px;
+      line-height: 1.4;
+      width: 100%;
+      font-weight: 800;
+    }
+  
+    .why-choose-subtitle {
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 800;
+    }
+  
+    .feature-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 24px;
+      column-gap: 0;
+      margin-top: 24px;
+    }
+    
+  
+    .feature-item {
+      width: 30%; /* 4 items per row with no space */
+      display: flex;
+      flex-direction: column;
+      /* align-items: flex-end; */
+      text-align: left;
+    }
+    .feature-titlee {
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      line-height: 1.2;
+      /* margin-left: 50px; */
+    }
+    
+    
+    
+  
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .feature-title {
+      font-size: 14px;
+      margin-top: 6px;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  
+    .custom-explor-btn {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  
+    .explor-btn {
+      width: 180px;
+      height: 48px;
+      font-size: 14px;
+      padding: 12px 16px;
+    }
+  
+    .explor-btn span:first-child {
+      position: static;
+      transform: none;
+    }
+  
+    .explor-btn span:last-child {
+      display: none;
+    }
+  
+    .why-choose-image {
+      width: 100%;
+      /* padding: 16px; */
+    }
+  
+    .why-choose-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
   }
   

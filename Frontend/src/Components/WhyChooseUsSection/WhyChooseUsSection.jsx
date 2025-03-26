@@ -1,9 +1,9 @@
 import rightImage from "../../assets/right.png";
 import backgroundImage from "../../assets/left.png"; // Left section background image
-import qualityIcon from "../../assets/quality-icon.png";
-import innovationIcon from "../../assets/innovation-icon.png";
-import expertiseIcon from "../../assets/expertise-icon.png";
-import customerFocusIcon from "../../assets/customer-focus-icon.png";
+import qualityIcon from "../../assets/quality-icon.svg";
+import innovationIcon from "../../assets/innovation-icon.svg";
+import expertiseIcon from "../../assets/expertise-icon.svg";
+import customerFocusIcon from "../../assets/customer-focus-icon.svg";
 import { FaArrowRight } from "react-icons/fa";
 import "./WhyChooseUsSection.css";
 
@@ -46,7 +46,7 @@ const WhyChooseUsSection = () => {
               alt="Customer Focus"
               className="feature-icon"
             />
-            <p className="feature-title">Customer Focus</p>
+            <p className="feature-titlee">Customer Focus</p>
           </div>
         </div>
 

@@ -94,4 +94,50 @@
     margin-left: 10px;
     margin-top: 10%;
   }
+  @media (max-width: 768px) {
+    .global-presence-section {
+      height: auto;
+      padding: 100px 1rem 60px;
+      /* margin-top: 0; */
+      /* margin-bottom: 60px; */
+    }
+  
+    .global-presence-title {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-top: 0;
+      letter-spacing: 0.04em;
+    }
+  
+    .global-presence-heading {
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: center;
+      margin-top: 8px;
+      padding: 0 1rem;
+    }
+  
+    .find-distributor-btn {
+      width: 200px;
+      height: 48px;
+      font-size: 14px;
+      margin: 20px 0;
+      padding: 12px 20px;
+    }
+  
+    .map-container {
+      margin-top: 10px;
+      height: auto;
+      padding: 0 1rem;
+    }
+  
+    .map-image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin-top: 0;
+      margin-left: 0;
+      object-fit: contain;
+    }
+  }
   

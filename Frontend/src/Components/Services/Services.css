@@ -368,14 +368,7 @@
       align-items: center;
       justify-content: flex-start; /* Keep left aligned */
       color: #0A0A0A;
-      margin-top: auto; /* Push it to bottom of the flex column */
-    }
-    
-  
-    .read-more-arrow {
-      opacity: 0;
-      transform: translateX(0);
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      margin-top: 40px; /* Push it to bottom of the flex column */
     }
   
     .service-card:hover .read-more-arrow {

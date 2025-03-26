@@ -80,3 +80,35 @@
   opacity: 1;
   transform: translateX(8px);
 }
+@media (max-width: 768px) {
+  .custom-blog-section {
+    padding: 64px 5vw 100px 5vw;
+  }
+
+  .custom-blog-subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 800;
+  }
+
+  .custom-blog-title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 40px;
+    margin-top: 8px;
+  }
+
+  .custom-blog-btn-container {
+    margin-top: 40px;
+  }
+
+  .custom-blog-btn {
+    width: 160px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .custom-blog-btn span:last-child {
+    margin-left: 50px;
+  }
+}
