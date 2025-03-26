@@ -14,7 +14,7 @@ const QualityAssurance = () => {
       <div className="max-w-7xl mx-auto p-6 mt-20">
         {/* Breadcrumb */}
         <nav className="breadcrumb">
-          <Link to="/" className="breadcrumb-link">
+          <Link to="/">
             <span className="highlight">Home</span>
           </Link>
           <span className="separator">/</span>
@@ -143,16 +143,12 @@ const QualityAssurance = () => {
         </div>
 
         {/* Image Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          <img
-            src={help}
-            alt="Ensuring Quality"
-            className="rounded-lg  w-[804px] h-[444px]"
-          />
+        <div className="supply-img-container">
+          <img src={help} alt="Ensuring Quality" className="supply-img" />
           <img
             src={parts}
             alt="Supplier Relationships"
-            className="rounded-lg  w-[804px] h-[444px]"
+            className="supply-img"
           />
         </div>
 
