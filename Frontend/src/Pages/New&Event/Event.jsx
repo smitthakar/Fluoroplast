@@ -9,6 +9,7 @@ import BG from "../../assets/BG.png";
 import arr from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
 import { FaArrowRight } from "react-icons/fa";
+import NeedHelp from "../../Components/NeedHelp/NeedHelp"
 // import arrow from "../../assets/arrow.png";
 import "./New&Event.css";
 const categories = [
@@ -195,6 +196,7 @@ const Event = () => {
       <Navbar />
       <div className="event-container">
         <div className="event-grid">
+         
           {/* Sidebar */}
           <div className="sidebar-category">
             <ul className="sidebar-list">
@@ -227,7 +229,7 @@ const Event = () => {
                     className="event-image-hover"
                   />
                 </div>
-                <div className="event-content group-hover:bg-red-700 group-hover:text-white">
+                <div className="event-content group-hover:bg-[#991b1b] group-hover:text-white">
                   <h3 className="event-title">{event.title}</h3>
                   <span className="event-divider"></span>
                   <button className="event-explore-btn">
@@ -246,6 +248,7 @@ const Event = () => {
           </div>
         </div>
       </div>
+      <NeedHelp />
       <Footer />
     </>
   );

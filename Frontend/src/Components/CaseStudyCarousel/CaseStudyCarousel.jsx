@@ -93,7 +93,7 @@ export default function CaseStudyCarousel() {
           {caseStudies.map((item) => (
             <div
               key={item.id}
-              className="relative bg-white shadow-lg rounded-lg w-[428px] h-[530px] overflow-hidden flex-shrink-0 group hover:bg-red-600 hover:text-white"
+              className="relative bg-white shadow-lg rounded-lg w-[428px] h-[530px] overflow-hidden flex-shrink-0 group hover:#991b1b hover:text-white"
             >
               <img
                 src={item.image}
