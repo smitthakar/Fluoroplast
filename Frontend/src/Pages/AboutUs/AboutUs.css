@@ -344,7 +344,13 @@
     text-align: justify;
     color: #070912;
   }
-
+  .about-card-img {
+    width: 60px;
+    height: 60px;
+    padding: 4px;
+    gap: 8px;
+    justify-self: center;
+}
   .history-image-container {
     width: 100%;
     justify-content: center;
