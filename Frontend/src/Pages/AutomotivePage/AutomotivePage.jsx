@@ -240,7 +240,7 @@ export default function AutomotivePage() {
           </button>
         </div>
       </div>
-      {/* <CaseStudyCarousel /> */}
+      <CaseStudyCarousel />
       <Footer />
     </div>
   );
