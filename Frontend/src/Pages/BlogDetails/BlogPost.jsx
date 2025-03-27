@@ -6,11 +6,11 @@ import Ellipse from "../../assets/Ellipse.png";
 import calendar from "../../assets/calendar.png";
 import category from "../../assets/category.png";
 import correct from "../../assets/correct.png";
-import Facebook from "../../assets/Facebook.svg";
-import Instagram from "../../assets/Instagram.svg";
-import LinkedIn from "../../assets/LinkedIn.svg";
-import Twitter from "../../assets/Twitter.svg";
-import Youtube from "../../assets/YouTube.svg";
+import Facebook from "../../assets/FacebookBlog.svg";
+import Instagram from "../../assets/InstagramBlog.svg";
+import LinkedIn from "../../assets/LinkedInBlog.svg";
+import Twitter from "../../assets/TwitterBlog.svg";
+import Youtube from "../../assets/YouTubeBlog.svg";
 import "./BlogPost.css";
 import arr from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
@@ -22,21 +22,13 @@ const BlogPost = () => {
       <div className="blog-wrapper">
         {/* Breadcrumb */}
         <div className="blog-breadcrumb">
-          <div className="breadcrumb-container">
-            <Link to="/" className="breadcrumb-link">
-              Home
-            </Link>
-            <span className="breadcrumb-separator">/</span>
-
-            <Link to="/blogs" className="breadcrumb-link">
-              Blog
-            </Link>
-            <span className="breadcrumb-separator">/</span>
-
-            <span className="breadcrumb-current">
-              Importers achieve cost savings through the First Sale rule!
-            </span>
-          </div>
+        <div className="breadcrumb-container">
+  <Link to="/" className="breadcrumb-link">Home</Link>
+  <span className="breadcrumb-separator">/</span>
+  <Link to="/blogs" className="breadcrumb-link">Blogs</Link>
+  <span className="breadcrumb-separator">/</span>
+  <span className="breadcrumb-current">Importers achieve cost savings through the First Sale rule!</span>
+</div>
 
           <div className="blog-body ">
             <div className="blog-article">
@@ -204,14 +196,14 @@ const BlogPost = () => {
 <div className="mobile-pagination">
   <div className="mobile-pagination-item">
     <Link to="/previous-post" className="circle-btn left">
-      <img src={arrLeft} alt="Previous" className="arrow-icon" />
+      <img src={arrLeft} alt="Previous" />
     </Link>
     <span className="pagination-title">Importers achieve cost savings through...</span>
   </div>
 
   <div className="mobile-pagination-item">
     <Link to="/next-post" className="circle-btn right">
-      <img src={arr} alt="Next" className="arrow-icon" />
+      <img src={arr} alt="Next"  />
     </Link>
     <span className="pagination-title">Importers achieve cost savings through...</span>
   </div>
