@@ -1,5 +1,4 @@
 import { useState, useRef,useEffect } from "react";
-import { useSwipeable } from "react-swipeable";
 import GroupOne from "../../assets/GroupOne.svg";
 import GroupTwo from "../../assets/GroupTwo.svg";
 import GroupThree from "../../assets/GroupThree.svg";
