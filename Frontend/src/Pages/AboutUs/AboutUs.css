@@ -138,12 +138,14 @@
   background-color: #ffffff;
   box-shadow: #19213D1C 0px 4px 10px;
   /* display: flex; */
-  padding-top: 30px;
+  padding-top: 14px;
+  /* margin-top: 20px; */
 
 }
 
 
 .about-card-img {
+  margin-top: 15px;
   width: 60px;
   height: 60px;
   padding: 4px;
@@ -237,7 +239,7 @@
 
 .team-card {
   width: 272.2px;
-  height: 372.2px;
+  height: 350px;
   background: #ffffff;
   padding: 16px;
   border-radius: 8px;
@@ -436,7 +438,7 @@
 
   .team-card {
     width: 175px;
-    height: 228px;
+    height: 222px;
     padding: 16px;
 }
 

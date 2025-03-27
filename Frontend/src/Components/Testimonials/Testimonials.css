@@ -284,5 +284,23 @@
       margin-left: 0;
       padding-right: 0;
     }
+
+    .testimonial-viewall button:hover {
+      background: linear-gradient(to right, #9d0a0e, #f15922) !important;
+      color: white !important;
+      border: none !important;
+    }
+    
+    .testimonial-viewall button:hover span:last-child {
+      opacity: 0 !important;
+      transform: translateX(0) !important;
+    }
+    
+    /* Optional: add active tap feedback */
+    .testimonial-viewall button:active {
+      transform: scale(0.97);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    
     
 }

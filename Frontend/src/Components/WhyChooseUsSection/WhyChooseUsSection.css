@@ -262,5 +262,35 @@
       height: auto;
       object-fit: contain;
     }
+
+    .explor-btn:hover {
+      background: #ffffff !important;
+      color: #9d0a0e !important;
+      border-color: transparent !important;
+    }
+    
+    .explor-btn:hover span:last-child {
+      opacity: 0 !important;
+      transform: translateX(0) !important;
+    }
+
+    .explor-btn:hover {
+      background: #ffffff;
+      color: #9d0a0e;
+      border-color: transparent;
+    }
+    
+    /* Remove arrow visibility */
+    .explor-btn:hover span:last-child {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    
+    /* Add active (press) feedback */
+    .explor-btn:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    
   }
   

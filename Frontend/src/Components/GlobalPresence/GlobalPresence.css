@@ -132,12 +132,23 @@
     }
   
     .map-image {
-      width: 100%;
-      max-width: 100%;
+      width: 590px;
+      max-width: 130%;
       height: auto;
       margin-top: 0;
       margin-left: 0;
+      padding: auto;
       object-fit: contain;
     }
+    .find-distributor-btn:hover {
+      background: white !important;
+      color: #9D0A0E !important;
+    }
+    
+    .find-distributor-btn:hover span {
+      opacity: 0 !important;
+      transform: translateX(0) !important;
+    }
+    
   }
   

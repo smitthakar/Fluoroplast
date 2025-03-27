@@ -5,6 +5,7 @@ import AvatarThree from "../../assets/AvatarThree.png";
 import { FaArrowRight } from "react-icons/fa";
 import "./BlogSection.css";
 import MainBlog from "../MainBlog/MainBlog";
+import { Link } from "react-router-dom";
 
 export default function BlogSection() {
   const blogs = [
@@ -55,9 +56,12 @@ export default function BlogSection() {
         </div>
 
         {/* Blog Grid with MainBlog */}
-        <div className="custom-blog-grid">
+          {/* Blog Grid with MainBlog */}
+          <div className="custom-blog-grid">
           {blogs.map((blog) => (
-            <MainBlog key={blog.id} blog={blog} />
+            <Link to={`/blogs`} key={blog.id}>
+              <MainBlog blog={blog} />
+             </Link>
           ))}
         </div>
       </div>

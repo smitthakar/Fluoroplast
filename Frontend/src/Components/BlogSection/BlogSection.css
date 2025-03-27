@@ -81,6 +81,7 @@
   transform: translateX(8px);
 }
 @media (max-width: 768px) {
+  
   .custom-blog-section {
     padding: 64px 5vw 100px 5vw;
   }
@@ -111,4 +112,22 @@
   .custom-blog-btn span:last-child {
     margin-left: 50px;
   }
+
+  .custom-blog-btn:hover {
+    background: linear-gradient(to right, #9d0a0e, #f15922) !important;
+    color: white !important;
+    border: none !important;
+  }
+  
+  .custom-blog-btn:hover span:last-child {
+    opacity: 0 !important;
+    transform: translateX(0) !important;
+  }
+  
+  /* Optional: add active tap feedback */
+  .custom-blog-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
 }

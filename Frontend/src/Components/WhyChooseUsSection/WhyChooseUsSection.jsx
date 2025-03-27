@@ -6,6 +6,7 @@ import expertiseIcon from "../../assets/expertise-icon.svg";
 import customerFocusIcon from "../../assets/customer-focus-icon.svg";
 import { FaArrowRight } from "react-icons/fa";
 import "./WhyChooseUsSection.css";
+import { Link } from "react-router-dom";
 
 const WhyChooseUsSection = () => {
   return (
@@ -52,12 +53,14 @@ const WhyChooseUsSection = () => {
 
         {/* CTA Button */}
         <div className="custom-explor-btn">
-          <button className="explor-btn">
-            <span>Explore Industry</span>
-            <span>
-              <FaArrowRight />
-            </span>
-          </button>
+          <Link to="/coming-soon">
+            <button className="explor-btn">
+              <span>Explore Industry</span>
+              <span>
+                <FaArrowRight />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
 

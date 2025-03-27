@@ -18,6 +18,7 @@ import BlogDetails from "./Pages/BlogDetails/BlogPost";
 import AnimatedPage from "./Components/AnimatedPage/AnimatedPage";
 // import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop"; // Import ScrollToTop
+import UnderConstruction from "./Components/UnderContruction/UnderConstruction";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -38,6 +39,7 @@ function AnimatedRoutes() {
           <Route path="/news&events" element={<AnimatedPage><Event /></AnimatedPage>} />
           <Route path="/blogs" element={<AnimatedPage><Blogs/></AnimatedPage>} />
           <Route path="/blog-details" element={<AnimatedPage><BlogDetails /></AnimatedPage>} />
+          <Route path="/coming-soon" element={<AnimatedPage><UnderConstruction /></AnimatedPage>} />
         </Routes>
       </AnimatePresence>
     </>

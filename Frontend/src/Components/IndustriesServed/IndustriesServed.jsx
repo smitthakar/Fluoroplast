@@ -6,6 +6,7 @@ import chemicalImg from "../../assets/Chemical.png";
 import arr from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
 import "./IndustriesServed.css";
+import { Link } from "react-router-dom";
 
 const industries = [
   { name: "Automotive", src: chemicalImg },
@@ -63,11 +64,13 @@ const IndustriesCarousel = () => {
         >
           {industries.map((industry, idx) => (
             <div key={idx} className="industry-slide">
+              <Link to="/coming-soon">
               <img
                 src={industry.src}
                 alt={industry.name}
                 className="industry-image"
               />
+              </Link>
               <p className="industry-name">{industry.name}</p>
             </div>
           ))}
