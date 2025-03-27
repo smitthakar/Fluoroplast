@@ -13,7 +13,7 @@ import Instagram from "../../assets/Instagram.svg";
 import LinkedIn from "../../assets/LinkedIn.svg";
 import Twitter from "../../assets/Twitter.svg";
 import Youtube from "../../assets/YouTube.svg";
-import Logo from "../../assets/logo_all 1.png";
+import Logo from "../../assets/logo_all 1.svg";
 import call from "../../assets/call.png";
 import email from "../../assets/mail.png";
 import location from "../../assets/location.png";

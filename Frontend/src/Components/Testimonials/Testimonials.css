@@ -1,288 +1,288 @@
-.testimonial-slider-wrapper{
+.testimonial-slider-wrapper {
   margin-bottom: -50px;
 }
 .testimonial-header {
-    height: 202px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+  height: 202px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  .testimonial-subtitle {
-    color: #9d0a0e;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33.6px;
-    text-transform: uppercase;
-    width: 197px;
-    height: 34px;
-    font-family: 'Red Hat Display', sans-serif;
-  }
+.testimonial-subtitle {
+  color: #9d0a0e;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33.6px;
+  text-transform: uppercase;
+  width: 197px;
+  height: 34px;
+  font-family: "Red Hat Display", sans-serif;
+}
 
-  .testimonial-title {
-    font-family: 'Red Hat Display', sans-serif;
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 84px;
-  }
+.testimonial-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 84px;
+}
 
-  .testimonial-title span {
-    color: #9d0a0e;
-  }
+.testimonial-title span {
+  color: #9d0a0e;
+}
 
-  .testimonial-controls {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 8px;
-    margin-top: -90px;
-    padding-right: 32px;
-    margin-left: 1000px;
-  }
+.testimonial-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+  margin-top: -90px;
+  padding-right: 32px;
+  margin-left: 1000px;
+}
 
-  .testimonial-controls button {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
-  }
+.testimonial-controls button {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
 
-  .testimonial-controls button:first-child {
-    background: #fee2e2;
-    color: #dc2626;
-  }
+.testimonial-controls button:first-child {
+  background: #fee2e2;
+  color: #dc2626;
+}
 
-  .testimonial-controls button:first-child:hover {
-    background: #fecaca;
-  }
+.testimonial-controls button:first-child:hover {
+  background: #fecaca;
+}
 
-  .testimonial-controls button:last-child {
-    background: #9d0a0e;
-    color: white;
-  }
+.testimonial-controls button:last-child {
+  background: #9d0a0e;
+  color: white;
+}
 
-  .testimonial-controls button:last-child:hover {
-    background: #7f1d1d;
+.testimonial-controls button:last-child:hover {
+  background: #7f1d1d;
+}
+
+.testimonial-slider-track {
+  transition: transform 0.7s ease;
+  display: flex;
+  display: flex;
+  gap: 20px;
+  padding-left: 40px;
+}
+
+.testimonial-card {
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  min-width: 366px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33.6px;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+}
+
+.testimonial-quote {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 16px;
+  margin-left: 12px;
+}
+
+.testimonial-text {
+  margin-bottom: 24px;
+  margin-left: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonial-line {
+  width: 4px;
+  height: 100%;
+  background: #4f4f4f;
+}
+
+.testimonial-name {
+  color: #0a0a0a;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+
+.testimonial-role {
+  color: #6b7280;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.testimonial-viewall {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.testimonial-viewall button {
+  width: 200px;
+  height: 50px;
+  border-radius: 90px;
+  border: transparent;
+  background: linear-gradient(to right, #9d0a0e, #f15922);
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 90px;
+}
+
+.testimonial-viewall button:hover {
+  background: white;
+  color: #9d0a0e;
+  border: 2px solid #9d0a0e;
+}
+
+.testimonial-viewall button span:first-child {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.testimonial-viewall button span:last-child {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  color: #9d0a0e;
+  margin-left: 80px;
+}
+
+.testimonial-viewall button:hover span:last-child {
+  opacity: 1;
+  transform: translateX(8px);
+}
+@media (max-width: 768px) {
+  .testimonial-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
   }
 
   .testimonial-slider-track {
     display: flex;
     transition: transform 0.7s ease;
+    width: 100%;
+  }
+
+  .testimonial-subtitle {
+    color: #9d0a0e;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Red Hat Display", sans-serif;
+
+  }
+
+  .testimonial-title {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 84px;
+    margin-top: -20px;
   }
 
   .testimonial-card {
-    background: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-    padding: 24px;
-    min-width: 28%;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Red Hat Display', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 33.6px;
+    flex: 0 0 100%;
+    width: 90%;
+    height: 490px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin: 0 auto;
   }
 
   .testimonial-user {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .testimonial-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 9999px;
+    width: 40px;
+    height: 40px;
   }
 
   .testimonial-quote {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 16px;
-    margin-left: 12px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+    margin-left: 4px;
   }
 
   .testimonial-text {
-    margin-bottom: 24px;
-    margin-left: 16px;
-    display: -webkit-box;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 33.6px;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+    display: -webkit-box;
     overflow: hidden;
-  }
-
-  .testimonial-footer {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .testimonial-line {
-    width: 4px;
-    height: 100%;
-    background: #4f4f4f;
   }
 
   .testimonial-name {
-    color: #0a0a0a;
-    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
     font-weight: 800;
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 4px;
   }
 
   .testimonial-role {
-    color: #6b7280;
-    font-family: 'Manrope', sans-serif;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 22.4px;
+    font-weight: 400;
   }
-
-  .testimonial-viewall {
+  .testimonial-controls {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-  }
-
-  .testimonial-viewall button {
-    width: 200px;
-    height: 50px;
-    border-radius: 90px;
-    border: transparent;
-    background: linear-gradient(to right, #9d0a0e, #f15922);
-    color: white;
-    font-weight: 600;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    margin-bottom: 90px;
+    gap: 16px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    margin-left: 0;
+    padding-right: 0;
   }
-
-  .testimonial-viewall button:hover {
-    background: white;
-    color: #9d0a0e;
-    border:2px solid #9d0a0e;
-  }
-
-  .testimonial-viewall button span:first-child {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .testimonial-viewall button span:last-child {
-    opacity:0;
-    transform: translateX(0);
-    transition: all 0.3s ease;
-    color: #9d0a0e;
-    margin-left: 80px;
-  }
-
-  .testimonial-viewall button:hover span:last-child {
-    opacity: 1;
-    transform: translateX(8px);
-  }
-  @media (max-width: 768px) {
-    .testimonial-slider-wrapper {
-      overflow: hidden;
-      width: 100%;
-    }
-  
-    .testimonial-slider-track {
-      display: flex;
-      transition: transform 0.7s ease;
-      width: 100%;
-    }
-  
-
-    .testimonial-subtitle {
-      color: #9d0a0e;
-      font-weight: 800;
-      font-size: 16px;
-      text-transform: uppercase;
-      font-family: 'Red Hat Display', sans-serif;
-    }
-
-    .testimonial-title {
-      font-family: 'Red Hat Display', sans-serif;
-      font-weight: 800;
-      font-size: 24px;
-      line-height: 84px;
-    }
-  
-  
-    .testimonial-card {
-      flex: 0 0 100%;
-      width: 100%;
-      max-width: 100%;
-      min-width: 100%;
-      height: auto;
-      box-sizing: border-box;
-      margin-top: 50px;
-      padding-left:12px ;
-      padding-right: 12px;
-    }
-    
-    
-    .testimonial-user {
-      margin-bottom: 12px;
-    }
-    
-    .testimonial-avatar {
-      width: 40px;
-      height: 40px;
-    }
-    
-    .testimonial-quote {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 12px;
-      margin-left: 4px;
-    }
-    
-    .testimonial-text {
-      margin-bottom: 20px;
-      font-size: 24px;
-      line-height: 33.6px;
-      -webkit-line-clamp: 6;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      overflow: hidden;
-    }
-    
-    .testimonial-name {
-      font-size: 16px;
-      font-weight: 800;
-    }
-    
-    .testimonial-role {
-      font-size: 16px;
-      font-weight: 400;
-    }
-    .testimonial-controls {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      margin-top: 16px;
-      margin-left: 0;
-      padding-right: 0;
-    }
-    
 }

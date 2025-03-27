@@ -127,7 +127,8 @@
     /* padding-top: 0; */
     /* padding-left: 50px; */
     /* margin-top: -5px; */
-    margin-left: 150px;
+    margin-left: 0;
+    padding-left: 124px;
     position: relative;
     z-index: 20;
   }
@@ -152,8 +153,9 @@
   /* Animated Slider Container */
   .slider-container {
     display: flex;
-    width: 100%;
+    width: max-content;
   }
+  
   
   /* Individual Slide */
   .carousel-slide {

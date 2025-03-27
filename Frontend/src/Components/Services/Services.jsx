@@ -1,11 +1,9 @@
 import { useState, useRef,useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
-import { motion } from "framer-motion"; // Import Framer Motion
 import GroupOne from "../../assets/GroupOne.svg";
 import GroupTwo from "../../assets/GroupTwo.svg";
 import GroupThree from "../../assets/GroupThree.svg";
 import pneumatic from "../../assets/pneumatic.svg";
-import combination from "../../assets/combination.svg";
 import arr from "../../assets/Arrow rigth.png";
 import arrLeft from "../../assets/Arrow left.png";
 import { FaArrowRight } from "react-icons/fa";
@@ -52,16 +50,6 @@ const services = [
       "Mechanical actuators that convert hydraulic energy into linear motion, providing force in lifting, pushing, and pulling.",
     icon: pneumatic,
   },
-  {
-    title: (
-      <>
-        Hydraulic <br /> Cylinders
-      </>
-    ),
-    description:
-      "FEP and PFA lined valves and fittings offer high chemical resistance for corrosive fluid handling industries like chemical and pharmaceuticals.",
-    icon: combination,
-  },
 ];
 
 // Duplicate services for seamless infinite loop
@@ -70,9 +58,6 @@ const infiniteServices = [...services, ...services];
 const ServicesCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
 useEffect(() => {
@@ -81,43 +66,42 @@ useEffect(() => {
   return () => window.removeEventListener("resize", handleResize);
 }, []);
 
-
-  // Move to next slide
-  const nextSlide = () => {
+const nextSlide = () => {
+  if (isMobile) {
     setCurrentIndex((prev) => (prev + 1) % services.length);
-  };
-  
-  const prevSlide = () => {
+  } else {
+    const card = carouselRef.current.querySelector(".carousel-slide");
+    const cardStyle = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const gap = parseInt(cardStyle.marginRight || 0);
+    const totalScroll = cardWidth + gap;
+
+    carouselRef.current.scrollBy({ left: totalScroll, behavior: "smooth" });
+  }
+};
+
+
+const prevSlide = () => {
+  if (isMobile) {
     setCurrentIndex((prev) => (prev - 1 + services.length) % services.length);
-  };
+  } else {
+    const card = carouselRef.current.querySelector(".carousel-slide");
+    const cardStyle = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const gap = parseInt(cardStyle.marginRight || 0);
+    const totalScroll = cardWidth + gap;
+
+    carouselRef.current.scrollBy({ left: -totalScroll, behavior: "smooth" });
+  }
+};
+
+
+
   
 
-  // Swipeable gesture handling
-  const handlers = useSwipeable({
-    trackTouch: true,
-    trackMouse: true,
-    preventScrollOnSwipe: true,
-    delta: 10,
-  });
 
   // Handle touchpad & mouse drag (no clicking required)
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // Adjust sensitivity
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  
 
   return (
     <div className="services-container">
@@ -168,23 +152,10 @@ useEffect(() => {
   ) : (
     // 👉 DESKTOP: Infinite motion carousel (as-is)
     <div
-      {...handlers}
       ref={carouselRef}
       className="carousel-wrapper"
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
     >
-      <motion.div
-        className="slider-container"
-        animate={{ x: ["0%", "-100%"] }}
-        transition={{
-          duration: 35,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      >
+      <div className="slider-container">
         {infiniteServices.map((service, index) => (
           <div key={index} className="carousel-slide">
             <div className="service-card">
@@ -206,7 +177,7 @@ useEffect(() => {
             </div>
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   )}
 </section>
