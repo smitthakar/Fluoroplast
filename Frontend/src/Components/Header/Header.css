@@ -261,15 +261,15 @@
     margin-top: 0.5rem;
   }
 
-  .custom-button {
-    width: 180px;
-    height: 48px;
-    font-size: 14px;
-    margin-top: 0.5rem;
+  .custom-button:hover {
+    background: linear-gradient(to right, #9D0A0E, #F15922) !important;
+    color: white !important;
+    border: none !important;
   }
-
-  .custom-button .arrow {
-    display: none;
+  
+  .custom-button:hover .arrow {
+    opacity: 0 !important;
+    margin-left: 80px !important;
   }
 
   .custom-pagination-container {

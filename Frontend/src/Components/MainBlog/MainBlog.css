@@ -108,3 +108,26 @@
     background: #fff;
   }
   
+  @media (max-width: 768px){
+    .custom-blog-card:hover .custom-blog-content {
+      background: #fff !important;
+    }
+    
+    .custom-blog-card:hover .custom-blog-meta,
+    .custom-blog-card:hover .custom-blog-category,
+    .custom-blog-card:hover .custom-blog-description,
+    .custom-blog-card:hover .custom-blog-card-title,
+    .custom-blog-card:hover .author-name {
+      color: inherit !important;
+    }
+    
+    .custom-blog-card:hover .borderleft {
+      background: #9D0A0E !important;
+    }
+    .custom-blog-card:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+  }

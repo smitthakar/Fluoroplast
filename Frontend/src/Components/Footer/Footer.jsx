@@ -88,7 +88,7 @@ export default function Footer() {
               { name: "Downloads", path: "/downloads" },
               { name: "Technical Documents", path: "/document" },
               { name: "Gallery", path: "/gallery" },
-              { name: "Case Studies", path: "/case-studies" },
+              { name: "Case Studies", path: "/coming-soon" },
               { name: "Contact Us", path: "/contact-us" },
             ].map((item, index) => (
               <li key={index}>
@@ -103,20 +103,20 @@ export default function Footer() {
           <h3 className="footer-heading">Products</h3>
           <ul className="footer-links">
             {[
-              { name: "Engineering Plastics", link: "/engineering-plastics" },
-              { name: "Hydraulic Seals", link: "/hydraulic-seals" },
+              { name: "Engineering Plastics", link: "/coming-soon" },
+              { name: "Hydraulic Seals", link: "/coming-soon" },
               {
                 name: "Compressor Replacement Parts",
-                link: "/compressor-replacement",
+                link: "/coming-soon",
               },
-              { name: "Hydraulic Cylinders", link: "/hydraulic-cylinders" },
+              { name: "Hydraulic Cylinders", link: "/coming-soon" },
               {
                 name: "FEP and PFA Lined Valves & Fittings",
-                link: "/fep-pfa-valves",
+                link: "/coming-soon",
               },
             ].map((item, index) => (
               <li key={index}>
-                › <Link href={item.link}>{item.name}</Link>
+                › <Link to={item.link}>{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -273,7 +273,7 @@ export default function Footer() {
       {/* Copyright Section */}
       <div className="footer-bottom">
         <p className="footer-bottom-left">
-          Copyright © 2024 Fluoroplast Engineers | All Rights Reserved
+          Copyright © 2025 Fluoroplast Engineers | All Rights Reserved
         </p>
         <div className="footer-bottom-right">
           <a href="#" className="footer-link">

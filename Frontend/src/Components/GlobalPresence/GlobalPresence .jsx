@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import map from "../../assets/map.png"
 import { FaArrowRight } from "react-icons/fa";
 import './GlobalPresence.css'
+import { Link } from "react-router-dom";
 
 const GlobalPresence = () => {
   return (
@@ -26,12 +27,14 @@ const GlobalPresence = () => {
   </motion.h1>
 
   {/* CTA Button */}
-  <button className="find-distributor-btn">
+  <Link to="/coming-soon">  <button className="find-distributor-btn">
     Find A Distributor
     <span>
       <FaArrowRight />
     </span>
   </button>
+  </Link>
+
 
   {/* Map Section */}
   <div className="map-container">

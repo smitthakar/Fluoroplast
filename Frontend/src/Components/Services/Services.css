@@ -11,111 +11,135 @@
   padding-left: 0;
   margin: 0 auto;
 }
-  /* Subheading */
-  .section-subheading {
-    width: 100%;
-    height: 34px;
-    color: #9D0A0E; /* Matches text-red-700 */
-    font-weight: 800; /* Matches font-extrabold */
-    text-transform: uppercase; /* Matches uppercase */
-    font-size: 24px; /* Matches text-[24px] */
-    line-height: 33.6px; /* Matches leading-[33.6px] */
-    text-align: center;
-    letter-spacing: 0.06em; /* Matches tracking-[0.06em] */
-    font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
-  }
-  
-  /* Main Heading */
-  .section-heading {
-    width: 100%;
-    height: 84px;
-    color: #0A0A0A;
-    font-size: 60px; /* Matches text-[60px] */
-    line-height: 84px; /* Matches leading-[74px] */
-    font-weight: 800; /* Matches font-extrabold */
-    text-align: center;
-    /* margin-top: 8px; Matches mt-2 */
-    font-family: 'Red Hat Display', sans-serif; /* Matches font-redhat */
-  }
-  
-  .service-card {
-    background-color: #FFFFFF;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 106%;
+
+/* Subheading */
+.section-subheading {
+  width: 100%;
+  height: 34px;
+  color: #9D0A0E;
+  /* Matches text-red-700 */
+  font-weight: 800;
+  /* Matches font-extrabold */
+  text-transform: uppercase;
+  /* Matches uppercase */
+  font-size: 24px;
+  /* Matches text-[24px] */
+  line-height: 33.6px;
+  /* Matches leading-[33.6px] */
+  text-align: center;
+  letter-spacing: 0.06em;
+  /* Matches tracking-[0.06em] */
+  font-family: 'Red Hat Display', sans-serif;
+  /* Matches font-redhat */
+}
+
+/* Main Heading */
+.section-heading {
+  width: 100%;
+  height: 84px;
+  color: #0A0A0A;
+  font-size: 60px;
+  /* Matches text-[60px] */
+  line-height: 84px;
+  /* Matches leading-[74px] */
+  font-weight: 800;
+  /* Matches font-extrabold */
+  text-align: center;
+  /* margin-top: 8px; Matches mt-2 */
+  font-family: 'Red Hat Display', sans-serif;
+  /* Matches font-redhat */
+}
+
+.service-card {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 106%;
   max-width: 360px;
-    text-align: left;
-    height: 343.18px;
-    padding: 32px;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: flex-start; */
-    transition: background-color 0.3s ease-in-out;
-  }
+  text-align: left;
+  height: 343.18px;
+  padding: 32px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  transition: background-color 0.3s ease-in-out;
+}
 
-  .service-icon {
-    width: 37px;
-    height: 50px;
-    gap: 8px;
-    transition: filter 0.3s ease-in-out;
-  }
-  
-  
-  /* Navigation Buttons Container */
-  .nav-buttons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 16px; /* Matches gap-4 */
-    margin-bottom: 8px; /* Matches mb-2 */
-    margin-top: -80px; /* Matches mt-[-90px] */
-    margin-right: -90px;
-    /* margin-right: 0; */
-    /* padding-right: 1rem;  */
-  }
-  
-  /* Previous Button */
-  .nav-button-prev {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fee2e2; /* Matches bg-red-100 */
-    color: #dc2626; /* Matches text-red-600 */
-    border-radius: 50%; /* Makes it fully round */
-    transition: background-color 0.3s;
-  }
-  
-  .nav-button-prev:hover {
-    background-color: #fecaca; /* Matches hover:bg-red-200 */
-  }
-  
-  /* Next Button */
-  .nav-button-next {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #b91c1c; /* Matches bg-red-700 */
-    color: white; /* Matches text-white */
-    border-radius: 50%; /* Makes it fully round */
-    transition: background-color 0.3s;
-  }
-  
-  .nav-button-next:hover {
-    background-color: #991b1b; /* Matches hover:bg-red-800 */
-  }
+.service-icon {
+  width: 37px;
+  height: 50px;
+  gap: 8px;
+  transition: filter 0.3s ease-in-out;
+}
 
-  .service-content{
-    width: 100%;
+
+/* Navigation Buttons Container */
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  /* Matches gap-4 */
+  margin-bottom: 8px;
+  /* Matches mb-2 */
+  margin-top: -80px;
+  /* Matches mt-[-90px] */
+  margin-right: -90px;
+  /* margin-right: 0; */
+  /* padding-right: 1rem;  */
+}
+
+/* Previous Button */
+.nav-button-prev {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fee2e2;
+  /* Matches bg-red-100 */
+  color: #dc2626;
+  /* Matches text-red-600 */
+  border-radius: 50%;
+  /* Makes it fully round */
+  transition: background-color 0.3s;
+}
+
+.nav-button-prev:hover {
+  background-color: #fecaca;
+  /* Matches hover:bg-red-200 */
+}
+
+/* Next Button */
+.nav-button-next {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b91c1c;
+  /* Matches bg-red-700 */
+  color: white;
+  /* Matches text-white */
+  border-radius: 50%;
+  /* Makes it fully round */
+  transition: background-color 0.3s;
+}
+
+.nav-button-next:hover {
+  background-color: #991b1b;
+  /* Matches hover:bg-red-800 */
+}
+
+.service-content {
+  width: 100%;
   max-width: 320px;
-    height: 166px;
-    gap: 8px;
-  }
-  /* Section Wrapper */
+  height: 166px;
+  gap: 8px;
+}
+
+/* Section Wrapper */
 .carousel-section {
   width: 100%;
   /* max-width: 1200px; */
@@ -182,200 +206,285 @@
     height: 40px;
     transition: filter 0.3s ease-in-out;
 
-  }
+/* Carousel Wrapper */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  margin-top: 40px;
+  /* Matches mt-10 */
+  overflow: hidden;
+  padding-left: 5%;
+  cursor: grab;
+}
+
+.carousel-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Animated Slider Container */
+.slider-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Individual Slide */
+.carousel-slide {
+  flex: none;
+  width: 100%;
+  max-width: 360px;
+  /* Matches sm:w-1/2 */
+  padding: 0 16px;
+  /* Matches px-4 */
+  transition: transform 0.5s ease-in-out;
+}
 
 
-  
-  .service-card:hover .service-icon {
-    filter: invert(1) brightness(9);
-    
-  }
-  
-  /* Service Title */
-  .service-title {
-    font-size: 24px;
-    line-height: 33.6px;
-    font-weight: 800;
-    width: 100%;
+.carousel-slide {
+  width: 25%;
+  /* Matches lg:w-1/4 */
+}
+
+/* Hover Effect */
+.service-card:hover {
+  background-color: #9D0A0E;
+  /* Matches hover:bg-red-700 */
+}
+
+/* Service Icon */
+.service-icon {
+  width: 40px;
+  height: 40px;
+  transition: filter 0.3s ease-in-out;
+
+}
+
+
+
+.service-card:hover .service-icon {
+  filter: invert(1) brightness(9);
+
+}
+
+/* Service Title */
+.service-title {
+  font-size: 24px;
+  line-height: 33.6px;
+  font-weight: 800;
+  width: 100%;
   max-width: 340px;
-    height: 68px;
-    margin-top: 16px;
-    font-family: 'Red Hat Display', sans-serif;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .service-card:hover .service-title {
-    color: white;
-  }
-  
-  /* Service Description */
-  .service-description {
-    width: 100%;
+  height: 68px;
+  margin-top: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.service-card:hover .service-title {
+  color: white;
+}
+
+/* Service Description */
+.service-description {
+  width: 100%;
   max-width: 326px;
-    height: 90px;
-    color: #0A0A0A; /* Matches text-gray-600 */
-    font-size: 16px;
-    line-height: 22.4px;
-    font-weight: normal;
-    margin-top: 8px;
-    font-family: 'Manrope', sans-serif;
-    transition: color 0.3s ease-in-out;
+  height: 90px;
+  color: #0A0A0A;
+  /* Matches text-gray-600 */
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: normal;
+  margin-top: 8px;
+  font-family: 'Manrope', sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+
+.service-card:hover .service-description {
+  color: white;
+}
+
+/* Read More Button */
+.read-more {
+  color: #0A0A0A;
+  font-weight: bold;
+  margin-top: 80px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.service-card:hover .read-more {
+  color: white;
+}
+
+
+.read-more-arrow {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, scale 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.service-card:hover .read-more-arrow {
+  opacity: 1;
+  transform: translateX(4px) scale(1.25);
+}
+
+.carousel-wrapper.mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  overflow: visible;
+  width: 100%;
+}
+
+.carousel-slide {
+  width: 100%;
+  max-width: 360px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+  .section-subheading {
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
   }
-  
-  .service-card:hover .service-description {
-    color: white;
+
+  .section-heading {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 800;
+    text-align: center;
+    height: auto;
+    padding: 0 1rem;
   }
-  
-  /* Read More Button */
-  .read-more {
-    color: #0A0A0A;
-    font-weight: bold;
-    margin-top: 80px;
-    padding-top: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: color 0.3s ease-in-out;
+
+  .nav-buttons {
+    justify-content: center;
+    margin: 20px 0;
+    gap: 16px;
+    margin-right: 0;
+    margin-top: 16px;
   }
-  
-  .service-card:hover .read-more {
-    color: white;
+
+  .nav-button-prev,
+  .nav-button-next {
+    width: 48px;
+    height: 48px;
   }
-  
- 
-  .read-more-arrow {
-    opacity: 0;
-    transform: translateX(0);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, scale 0.3s ease-in-out;
-    font-size: 1rem;
+
+  .nav-button-prev img,
+  .nav-button-next img {
+    width: 20px;
+    height: 20px;
   }
-  
-  .service-card:hover .read-more-arrow {
-    opacity: 1;
-    transform: translateX(4px) scale(1.25);
+
+  .carousel-section {
+    margin-left: 0;
+    padding: 0 1rem;
+    height: auto;
   }
+
   .carousel-wrapper.mobile {
-    display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     padding: 0;
-    margin: 0 auto;
-    overflow: visible;
-    width: 100%;
   }
+
   .carousel-slide {
     width: 100%;
     max-width: 360px;
-    padding: 0 1rem;
-    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .service-card {
+    width: 330px;
+    height: 303px;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .service-title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: #0A0A0A;
+    font-family: 'Red Hat Display', sans-serif;
+  }
+
+  .service-description {
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #0A0A0A;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 16px;
+  }
+
+  .read-more {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Keep left aligned */
+    color: #0A0A0A;
+    margin-top: 40px;
+    /* Push it to bottom of the flex column */
+  }
+
+  .service-card:hover .read-more-arrow {
+    opacity: 1;
+    transform: translateX(6px);
+  }
+
+  .service-card:hover {
+    background-color: #ffffff !important;
   }
   
-  
-  @media (max-width: 768px) {
-    .section-subheading {
-      font-size: 14px;
-      line-height: 1.4;
-      letter-spacing: 0.04em;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 8px;
-    }
-  
-    .section-heading {
-      font-size: 20px;
-      line-height: 1.4;
-      font-weight: 800;
-      text-align: center;
-      height: auto;
-      padding: 0 1rem;
-    }
-    .nav-buttons {
-      justify-content: center;
-      margin: 20px 0;
-      gap: 16px;
-      margin-right: 0;
-      margin-top: 16px;
-    }
-    
-    .nav-button-prev,
-    .nav-button-next {
-      width: 48px;
-      height: 48px;
-    }
-    
-    .nav-button-prev img,
-    .nav-button-next img {
-      width: 20px;
-      height: 20px;
-    }
-    .carousel-section {
-      margin-left: 0;
-      padding: 0 1rem;
-      height: auto;
-    }
-  
-    .carousel-wrapper.mobile {
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      padding: 0;
-    }
-  
-    .carousel-slide {
-      width: 100%;
-      max-width: 360px;
-      padding: 0;
-    }
-  
-    .service-card {
-      width: 390px;
-      height: 298.17px;
-      border-radius: 8px;
-      margin: 0 auto;
-      padding: 32px;
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-  
-    .service-icon {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 12px;
-    }
-  
-    .service-title {
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 1.4;
-      margin-bottom: 8px;
-      color: #0A0A0A;
-      font-family: 'Red Hat Display', sans-serif;
-    }
-  
-    .service-description {
-      font-size: 16px;
-      line-height: 22.4px;
-      color: #0A0A0A;
-      font-family: 'Manrope', sans-serif;
-      margin-bottom: 16px;
-    }
-  
-    .read-more {
-      font-size: 16px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start; /* Keep left aligned */
-      color: #0A0A0A;
-      margin-top: 40px; /* Push it to bottom of the flex column */
-    }
-  
-    .service-card:hover .read-more-arrow {
-      opacity: 1;
-      transform: translateX(6px);
-    }
+  .service-card:hover .service-icon {
+    filter: none !important;
   }
   
+  .service-card:hover .service-title {
+    color: #0A0A0A !important;
+  }
+  
+  .service-card:hover .service-description {
+    color: #0A0A0A !important;
+  }
+  
+  .service-card:hover .read-more {
+    color: #0A0A0A !important;
+  }
+  
+  .service-card:hover .read-more-arrow {
+    opacity: 0 !important;
+    transform: translateX(0) scale(1) !important;
+  }
+}
+}

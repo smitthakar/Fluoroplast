@@ -63,13 +63,13 @@ export default function Navbar() {
 
   const resourceItems = [
     { name: "Blog", link: "/blogs" },
-    { name: "Case Studies", link: "/case-studies" },
+    { name: "Case Studies", link: "/coming-soon" },
     { name: "Technical Documents", link: "/document" },
-    { name: "Downloads", link: "/downloads" },
+    { name: "Downloads", link: "/coming-soon" },
   ];
 
   const resourceItemsLinks = [
-    { name: "Online Tools", link: "/online-tools" },
+    { name: "Online Tools", link: "/coming-soon" },
     { name: "Certificates", link: "/certificates" },
     { name: "Gallery", link: "/gallery" },
   ];
@@ -77,51 +77,49 @@ export default function Navbar() {
   const productItems = [
     {
       name: "Engineering Plastics",
-      link: "/engineering-plastics",
+      link: "/coming-soon",
     },
-    { name: "Hydraulic Seals", link: "/hydraulic-seals" },
+    { name: "Hydraulic Seals", link: "/coming-soon" },
     {
       name: "Compressor Replacement Parts",
-      link: "/compressor-replacement",
+      link: "/coming-soon",
     },
     {
       name: "Hydraulic Cylinders",
-      link: "/hydraulic-cylinders",
+      link: "/coming-soon",
     },
     {
       name: "FEP and PFA Lined Valves & Fittings",
-      link: "/fep-pfa-valves",
+      link: "/coming-soon",
     },
   ];
 
   const industries = [
-    { name: "Hydraulic & Pneumatic Cylinders", link: "/hydraulic-pneumatic" },
-    { name: "Valve Industry", link: "/valve-industry" },
-    { name: "Steel Industry", link: "/steel-industry" },
-    { name: "Food & Pharma Industry", link: "/food-pharma" },
-    { name: "Press Forming Industry", link: "/press-forming" },
-    { name: "Pump Motor & Gear Boxes", link: "/pump-motor-gearbox" },
-    { name: "Oil & Gas Industry", link: "/oil-gas" },
-    { name: "Earthmoving Industry", link: "/earthmoving" },
-    { name: "Tyre Industry", link: "/tyre" },
-    {
-      name: "Engineering & Fabrication Industry",
-      link: "/engineering-fabrication",
-    },
-    { name: "Automobile Industry", link: "/automobile" },
-    { name: "Aluminum Industry", link: "/aluminum" },
-    { name: "Textile Industry", link: "/textile" },
-    { name: "Wind Mill Industry", link: "/wind-mill" },
-    { name: "Cement Industry", link: "/cement" },
-    { name: "Pulp & Paper Industry", link: "/pulp-paper" },
-    { name: "Sugar Industry", link: "/sugar" },
-    { name: "Chemical & Fertilizer Industry", link: "/chemical-fertilizer" },
-    { name: "Gems and Jewellery Industry", link: "/gems-jewellery" },
-    { name: "Plastic Industry", link: "/plastic" },
-    { name: "Pharmaceutical Industry", link: "/pharmaceutical" },
-    { name: "Chemical Industry", link: "/chemical" },
-    { name: "Marine Industry", link: "/marine" },
+    { name: "Hydraulic & Pneumatic Cylinders", link: "/coming-soon" },
+    { name: "Valve Industry", link: "/coming-soon" },
+    { name: "Steel Industry", link: "/coming-soon" },
+    { name: "Food & Pharma Industry", link: "/coming-soon" },
+    { name: "Press Forming Industry", link: "/coming-soon" },
+    { name: "Pump Motor & Gear Boxes", link: "/coming-soon" },
+    { name: "Oil & Gas Industry", link: "/coming-soon" },
+    { name: "Earthmoving Industry", link: "/coming-soon" },
+    { name: "Tyre Industry", link: "/coming-soon" },
+    { name: "Engineering & Fabrication Industry", link: "/coming-soon" },
+    { name: "Automobile Industry", link: "/coming-soon" },
+    { name: "Aluminum Industry", link: "/coming-soon" },
+    { name: "Textile Industry", link: "/coming-soon" },
+    { name: "Wind Mill Industry", link: "/coming-soon" },
+    { name: "Cement Industry", link: "/coming-soon" },
+    { name: "Pulp & Paper Industry", link: "/coming-soon" },
+    { name: "Sugar Industry", link: "/coming-soon" },
+    { name: "Chemical & Fertilizer Industry", link: "/coming-soon" },
+    { name: "Gems and Jewellery Industry", link: "/coming-soon" },
+    { name: "Plastic Industry", link: "/coming-soon" },
+    { name: "Pharmaceutical Industry", link: "/coming-soon" },
+    { name: "Chemical Industry", link: "/coming-soon" },
+    { name: "Marine Industry", link: "/coming-soon" },
   ];
+  
 
   return (
     <div className="header">
@@ -330,7 +328,7 @@ export default function Navbar() {
               <ul className="dropdown-list">
                 <li className="dropdown-item">
                   <SlArrowRight className="icon" />
-                  <span>Research & Development</span>
+                  <Link to="/coming-soon">Research & Development</Link> 
                 </li>
                 <li className="dropdown-item">
                   <SlArrowRight className="icon" />
@@ -414,7 +412,7 @@ export default function Navbar() {
                   )}
                   {section === "Innovation & Quality" && (
                     <>
-                      <Link to="#" onClick={() => setMobileMenuOpen(false)}>
+                      <Link to="/coming-soon" onClick={() => setMobileMenuOpen(false)}>
                         Research & Development
                       </Link>
                       <Link
