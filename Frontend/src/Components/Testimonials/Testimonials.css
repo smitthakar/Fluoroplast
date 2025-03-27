@@ -1,3 +1,6 @@
+.testimonial-slider-wrapper{
+  margin-bottom: -50px;
+}
 .testimonial-header {
     height: 202px;
     display: flex;
@@ -206,6 +209,23 @@
       transition: transform 0.7s ease;
       width: 100%;
     }
+  
+
+    .testimonial-subtitle {
+      color: #9d0a0e;
+      font-weight: 800;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .testimonial-title {
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 84px;
+    }
+  
   
     .testimonial-card {
       flex: 0 0 100%;

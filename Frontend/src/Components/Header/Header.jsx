@@ -102,7 +102,8 @@ useEffect(() => {
         {/* Hero Text Overlay */}
         <div className="custom-absolute-container">
           <h1 className="custom-heading">
-            Global Leaders in Engineering Plastics, <br /> Hydraulic Seals, & <br />
+            Global Leaders in Engineering Plastics, <br /> Hydraulic Seals, &{" "}
+            <br />
             Advanced Industrial Solutions.
           </h1>
           <p className="custom-paragraph">
@@ -119,11 +120,17 @@ useEffect(() => {
         {/* Image Slider */}
         <div
           ref={sliderRef}
-          className={`custom-slider-container ${isTransitioning ? "" : "no-transition"}`}
+          className={`custom-slider-container ${
+            isTransitioning ? "" : "no-transition"
+          }`}
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {extendedImages.map((img, index) => (
-            <div key={index} className="custom-slide" style={{ backgroundImage: `url(${img})` }}></div>
+            <div
+              key={index}
+              className="custom-slide"
+              style={{ backgroundImage: `url(${img})` }}
+            ></div>
           ))}
         </div>
 
@@ -133,7 +140,9 @@ useEffect(() => {
             <span
               key={index}
               className={`custom-dot ${
-                index === (currentIndex - 1 + images.length) % images.length ? "active" : ""
+                index === (currentIndex - 1 + images.length) % images.length
+                  ? "active"
+                  : ""
               }`}
               onClick={() => handleDotClick(index)}
             />
@@ -143,55 +152,67 @@ useEffect(() => {
 
       {/* Stats Section */}
       <div className="custom-stats-container" ref={statsRef}>
-  {isMobile ? (
-  <div className="mobile-single-stat">
-  <AnimatePresence mode="wait">
-    <motion.div
-      key={mobileStatIndex}
-      className="custom-stat-item"
-      initial={{ x: 100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: -100, opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <p className="custom-stat-number">
-        {stats[mobileStatIndex].value}
-        {stats[mobileStatIndex].suffix || ""}
-      </p>
-      <span className="custom-stat-text">{stats[mobileStatIndex].label}</span>
-    </motion.div>
-  </AnimatePresence>
+        {isMobile ? (
+          <div className="mobile-single-stat">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={mobileStatIndex}
+                className="custom-stat-item"
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -100, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <p className="custom-stat-number">
+                  {stats[mobileStatIndex].value}
+                  {stats[mobileStatIndex].suffix || ""}
+                </p>
+                <span className="custom-stat-text">
+                  {stats[mobileStatIndex].label}
+                </span>
+              </motion.div>
+            </AnimatePresence>
 
-  <div className="mobile-stat-dots">
-    {stats.map((_, i) => (
-      <span
-        key={i}
-        className={`mobile-dot ${i === mobileStatIndex ? "active" : ""}`}
-        onClick={() => setMobileStatIndex(i)}
-      />
-    ))}
-  </div>
-</div>
-  ) : (
-    <div className="custom-stats-grid">
-      {stats.map((stat, index) => (
-        <motion.div
-          key={index}
-          className={`custom-stat-item ${index === stats.length - 1 ? "last" : ""}`}
-          initial={{ opacity: 0, y: 20 }}
-          animate={startCount ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: index * 0.2 }}
-        >
-          <p className="custom-stat-number">
-            {startCount ? <CountUp end={parseInt(stat.value)} suffix={stat.suffix || ""} /> : "0"}
-          </p>
-          <span className="custom-stat-text">{stat.label}</span>
-        </motion.div>
-      ))}
-    </div>
-  )}
-</div>
-
+            <div className="mobile-stat-dots">
+              {stats.map((_, i) => (
+                <span
+                  key={i}
+                  className={`mobile-dot ${
+                    i === mobileStatIndex ? "active" : ""
+                  }`}
+                  onClick={() => setMobileStatIndex(i)}
+                />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="custom-stats-grid">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className={`custom-stat-item ${
+                  index === stats.length - 1 ? "last" : ""
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={startCount ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                <p className="custom-stat-number">
+                  {startCount ? (
+                    <CountUp
+                      end={parseInt(stat.value)}
+                      suffix={stat.suffix || ""}
+                    />
+                  ) : (
+                    "0"
+                  )}
+                </p>
+                <span className="custom-stat-text">{stat.label}</span>
+              </motion.div>
+            ))}
+          </div>
+        )}
+      </div>
     </>
   );
 };

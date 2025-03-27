@@ -29,7 +29,7 @@ export default function GridLayout() {
   ];
 
   return (
-    <>
+    <div className="new-product-section">
       <div className="new-products-header">
         <p className="new-products-subtitle">NEW PRODUCTS/EXPANSIONS</p>
         <h2 className="new-products-title">Feature The Latest Expansions</h2>
@@ -63,6 +63,6 @@ export default function GridLayout() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
