@@ -19,10 +19,10 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
-  const toggleMenu = () => {
-    setMenuOpen((prevMenu) => !prevMenu);
-    setActiveSection(null);
-  };
+  // const toggleMenu = () => {
+  //   setMenuOpen((prevMenu) => !prevMenu);
+  //   setActiveSection(null);
+  // };
 
   // Content sliding animation
   const contentVariants = {

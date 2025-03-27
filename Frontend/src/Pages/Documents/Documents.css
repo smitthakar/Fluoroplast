@@ -135,5 +135,19 @@
       width: 20px;
       height: 20px;
     }
+
+    .tech-docs-card:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.tech-docs-card:hover .divider-line {
+  background-color: #e5e7eb;
+}
+
+.group:hover .tech-docs-download-icon {
+  filter: none;
+}
+
   }
   

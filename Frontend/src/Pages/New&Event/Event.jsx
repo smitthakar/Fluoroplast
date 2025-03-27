@@ -13,9 +13,9 @@ import NeedHelp from "../../Components/NeedHelp/NeedHelp"
 // import arrow from "../../assets/arrow.png";
 import "./New&Event.css";
 const categories = [
-  { name: "Latest News", path: "/news" },
-  { name: "Upcoming Events", path: "/events" },
-  { name: "Media Coverage", path: "/media" },
+  { name: "Latest News", path: "/coming-soon" },
+  { name: "Upcoming Events", path: "/coming-soon" },
+  { name: "Media Coverage", path: "/coming-soon" },
 ];
 
 const allEvents = [
@@ -144,6 +144,7 @@ const Event = () => {
 
     pages.push(
       <li key="prev">
+        
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
