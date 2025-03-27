@@ -216,14 +216,9 @@
       font-size: 13px;
       font-weight: 600;
       white-space: nowrap;
-      text-decoration: underline;
-      text-underline-offset: 3px;
       line-height: 1.2;
       /* margin-left: 50px; */
     }
-    
-    
-    
   
     .feature-icon {
       width: 40px;
@@ -234,8 +229,6 @@
       font-size: 14px;
       margin-top: 6px;
       font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 4px;
     }
   
     .custom-explor-btn {
