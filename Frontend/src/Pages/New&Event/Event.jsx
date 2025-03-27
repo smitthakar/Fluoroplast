@@ -144,7 +144,7 @@ const Event = () => {
 
     pages.push(
       <li key="prev">
-        
+
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
@@ -197,7 +197,6 @@ const Event = () => {
       <Navbar />
       <div className="event-container">
         <div className="event-grid">
-         
           {/* Sidebar */}
           <div className="sidebar-category">
             <ul className="sidebar-list">
@@ -230,12 +229,12 @@ const Event = () => {
                     className="event-image-hover"
                   />
                 </div>
-                <div className="event-content group-hover:bg-[#991b1b] group-hover:text-white">
+                <div className="event-content md:group-hover:bg-[#991b1b] md:group-hover:text-white">
                   <h3 className="event-title">{event.title}</h3>
                   <span className="event-divider"></span>
                   <button className="event-explore-btn">
                     Explore
-                    <span className="event-arrow group-hover:opacity-100">
+                    <span className="event-arrow md:group-hover:opacity-100">
                       <FaArrowRight />
                     </span>
                   </button>
