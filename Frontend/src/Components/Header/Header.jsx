@@ -12,7 +12,7 @@ const images = [slider1, slider2, slider3, slider4];
 
 const stats = [
   { value: "25000", label: "Sq Feet Area of Manufacturing" },
-  { value: "25000", label: "SKU Products" },
+  { value: "25000", label: <>SKU <br/> Products</> },
   { value: "500", label: "Products in Portfolio", suffix: "+" },
   { value: "500", label: "Customers Network", suffix: "+" },
   { value: "7", label: "Countries Served", suffix: "+" },

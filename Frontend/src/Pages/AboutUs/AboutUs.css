@@ -467,4 +467,25 @@
     margin-top: -3px;
   }
 
+
+  .team-card:hover {
+    background-color: #ffffff;
+    transform: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .team-card:hover .team-card-name,
+  .team-card:hover .team-card-role {
+    color: #070912;
+  }
+
+  .history-btn button:hover {
+    background: linear-gradient(to right, #9d0a0e, #f15922);
+    color: white;
+    border: none;
+  }
+
+  .history-btn button:hover span:last-child {
+    transform: none;
+  }
 }
