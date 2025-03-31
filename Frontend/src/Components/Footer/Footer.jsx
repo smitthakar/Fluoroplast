@@ -13,7 +13,7 @@ import Instagram from "../../assets/Instagram.svg";
 import LinkedIn from "../../assets/LinkedIn.svg";
 import Twitter from "../../assets/Twitter.svg";
 import Youtube from "../../assets/YouTube.svg";
-import Logo from "../../assets/logo_all 1.svg";
+import Logo from "../../assets/logo.svg";
 import call from "../../assets/call.png";
 import email from "../../assets/mail.png";
 import location from "../../assets/location.png";
@@ -61,7 +61,7 @@ export default function Footer() {
       <div className="footer-grid">
         {/* Left Section - Logo & About */}
         <div className="footer-left">
-          <img src={Logo} alt="Fluoroplast Engineers" />
+          <img src={Logo} alt="Fluoroplast Engineers" className="footer-logo"/>
           <p>
             The active and knowledgeable entrepreneur is now the promoter of the
             company and displays sharpness, enthusiasm, and professionalism.
@@ -71,7 +71,7 @@ export default function Footer() {
             {[Instagram, Facebook, Twitter, Youtube, LinkedIn].map(
               (icon, index) => (
                 <div key={index}>
-                  <img src={icon} alt="social-icon" />
+                  <img src={icon} alt="social-icon"  />
                 </div>
               )
             )}
